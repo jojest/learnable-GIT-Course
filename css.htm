@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>U-LEAF UI Standards & Guidelines</title>
+<link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=latin" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
+
+<link href="includes/style_new.css" rel="stylesheet" type="text/css" />
+<link href="includes/tabs.css" rel="stylesheet" type="text/css" />
+<link href="includes/element_styles.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="includes/print_style.css" type="text/css" media="print">
+
+
+<script type='text/javascript' src='script/jquery-1.6.2.min.js'></script>
+<script type="text/javascript" src="script/organictabs.jquery.js"></script>
+<script type="text/javascript" src="script/jquery_functions.js"></script>
+<script src="script/jquery.hoverIntent.js"></script>
+<script src="script/jquery.colorbox.js"></script>
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">
+        <div class="logoUnisys"><a href="index.htm"><img src="images/logo_unisys.png"  alt="Unisys" border="0" /></a></div>
+        <div class="logoUISG">U-LEAF UI Standards & Guidelines 2.0</div>
+    </div>
+    <div id="main-content">
+        <div id="nav-col">
+            <ul>
+                <li class="border-bottom"><a href="about.htm" class="link-about ">About U-LEAF UISG</a></li>
+                <li><a href="usability.htm" class="link-usability">Usability & Information Architecture</a></a></li>
+                <li><a href="accessibility.htm" class="link-accessibility">Accessibility &amp; Browser Support Standards</a></li>
+                <li><a href="egif.htm" class="link-egif">e-GIF Compliance</a></li>
+                <!--<li><a href="interface_design.htm" class="link-interface">User Interface Design</a></li>-->
+                <li class="border-bottom"><a href="site_structure.htm" class="link-structure">U-LEAF Application Structure</a></li>
+                <li><a href="branding.htm" class="link-brand">Branding and colour</a></li>
+				<!--<li><a href="typography.htm" class="link-typography" id=" ">Typography & Icons</a></li>-->                
+                <li><a href="standards.htm" class="link-xhtml">XHTML & Semantic Mark-up Standards</a></li>
+                <li class="border-bottom selected"><a href="css.htm" class="link-css">CSS</a></li>
+				<li class=" "><a href="javascript.htm" class="link-javascript">Javascript & jQuery</a></li>
+				<li class=""><a href="jsp.htm" class="link-jsp">JSP</a></li>
+                <li><a href="layouts.htm" class="link-visual ">Layouts and Templates</a></li>
+                <li class="border-bottom"><a href="elements.htm" class="link-xhtml">U-LEAF Interface Elements</a></li>
+                <li><a href="checklist_developers.htm" class="link-checklist">Developer - UI Checklist</a></li>
+                <li><a href="checklist_testers.htm" class="link-checklist">Tester - UI Checklist</a></li>                
+                <!--<li><a href="forms.htm" class="link-forms menuselect">Form Elements</a></li>-->
+                <!--<li class="checklist"><a href="checklist.htm">Checklist</a></li><li class="glossary"><a href="glossary.htm">Glossary</a></li>-->
+            </ul>
+		</div><!-- end nav-col-->
+        <div id="content-area">
+            <div class="title-s"><h1>U-LEAF Cascading Style Guides</h1></div>
+            <div class="sub-title-s">
+            
+            	<div class="content_abstract ">
+                <div>
+                	
+                    <ul>
+                       <li>1. <a href="#general">General Principles</a></li>
+                       <li>2. <a href="#templates">Templates</a></li>
+                    <li>3. <a href="#implement">Implementing CSS</a></li>
+                    
+                    <li>4. <a href="#typography">Typography</a></li>
+						 <li>5. <a href="#customFonts">Custom Fonts</a></li>
+                    
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                    <li>6. <a href="#links">Links</a></li>
+                       <li>7. <a href="#colors">Page Colours</a></li>
+                     <li>8. <a href="#references">References</a></li>
+                     
+						 <li>9. <a href="#fontIcons">Font Icons</a></li>
+						<li>10. <a href="#documentHistory">Document History</a></li>
+          			</ul>
+                </div>
+              </div>
+            
+            
+            </div>
+            <div class="date_updated">
+            	<div class="printLink" onClick="printit()">Print this page</div>
+            </div>
+            
+            <div class="content">
+                <div class="content_intro">
+                   <p>This document describes the use of Cascading Style Sheet (CSS) on U-LEAF screens. CSS can be used to minimise the code required to render a site and using with care and particular attention for cross-browser compatibility, it could provide reduced download times and simplify application maintenance.</p>
+            
+            
+            <p>A full discussion of CSS rules is beyond the scope of this document. Further resources are listed in the References section. This document MAY be more understandable when read in conjunction with the<a href="accessibility.htm#browser" title="Browser Support Standards"> Browser Support Standards</a> and <a href="xhtml_standards.htm">XHTML  Standards</a>.</p>
+                </div>
+            
+				<a name="general"></a>
+       		  <h2>1. General principles</h2> 
+            
+           <p> 1.1. CSS <strong>MUST</strong> be used to specify presentational aspects of page design such as typography, layout, interaction (along with JavaScript) and design features.</p><p>
+1.2. The page <strong>MUST</strong> be usable and readable without the CSS.</p><p>
+1.3. Style sheets <strong>SHOULD</strong> be tested against all level 1 and level 2 browsers, see <a href="accessibility.htm#browser">Browser Support Standards.</a>
+<ul><li>1.3.1. In Level 1 browsers the CSS <strong>MUST</strong> render a fully usable representation of the page design. In level 2 browsers a page <strong>MUST</strong> be readable and usable, but doesn't have to completely represent the design.</li></ul>
+</p>
+<p>
+1.4. Use of CSS <strong>MUST</strong> be valid according to a published W3C recommendation, <strong>UNLESS</strong> you need to deviate from this to keep within the Unisys U-LEAF <a href="accessibility.htm#browser">Browser Support Standards</a>.
+<ul><li>1.4.1. If you wish to use browser specific syntax, you <strong>SHOULD</strong> do so in such a way as to limit the impact on future browsers.</li></ul>
+</p><p>
+1.5. The presentation of any page employing CSS MUST degrade gracefully (see: <a href="accessibility.htm#browser">Browser Support Standards</a>) in browsers that do not support, or provide only partial support for certain CSS features.</p><p>
+1.6. You<strong> MUST NOT</strong> use <strong>!important. </strong></p>
+          
+
+
+           <a name="templates"></a>
+            <h2>2. Templates</h2> 
+            <p class="bold">U-LEAF Stylesheets arranged</p>
+            <p>All Holmes Portal screens should have a similar ‘look and feel’. The base Liferay components and theme are provided to enable this. It is appreciated that the functionality within the various module portlets will differ significantly, however the standards detailed within this document aim to address all aspects of the user interface and ensure a consistent ‘look and feel’ at all times.</p>
+            <h3>Styles used in U-LEAF</h3>
+            <p>In general, all the styling of the Holmes Portal is achieved via the Holmes theme CSS files. The CSS files can be found at the following location:</p>
+
+<p><strong>holmes2ng_futures_SDS\holmes2_vob\holmes2ng_code\implementation\holmes2themes\Holmes-theme\src\main\webapp\css</strong></p>
+
+<p>It is important to point out that Liferay has a standard set of base CSS files and a specific one for customising. </p>
+<p><strong>Base CSS Files:</strong></p>
+
+            <ul>
+            	<li><strong>css</strong> &gt; <strong>application.css </strong>This CSS includes all of the styling that is used for application elements, such as dialogs, inline popups, tabs, tags, and other elements.</li>
+                <li><strong>css</strong> &gt; <strong>aui.css</strong>: This CSS sets the default styles for the core, variables, mixins, path and other liferay specific styling components.</li>
+				<li><strong>css</strong> &gt; <strong>base.css</strong>: This CSS sets the default styles for the base components.</li>
+                <li><strong>css</strong> &gt; <strong>forms.css</strong>: This CSS sets the default styles for forms.</li>
+                <li><strong>css</strong> &gt; <strong>layout.css : </strong> This CSS controls the column layout of U-LEAF. It is not recommended that you change this file.</li>
+                <li><strong>css</strong> &gt; <strong>main.css</strong> : This is the main CSS that includes other CSS files.</li>
+                <li><strong>css</strong> &gt; <strong>navigation.css</strong>: This CSS sets the default styles for the main navigation.</li>
+                <li><strong>css</strong> &gt; <strong>portlet.css</strong>: This CSS sets the default styles for portlets.</li>
+                </ul>
+                <p></p>
+                <p><strong>Custom CSS File</strong></p>
+                <ul>
+                
+                <li><strong>css</strong> &gt; <strong>custom.css</strong>: This is where you would put all of your new styles and all of your overrides of the styles in the parent theme. Custom.css is loaded last, and so styles in this file are able to override any styles in the parent theme. Best practice recommends that you make all your custom themes using only the custom.css file, and that you not override any of the templates unless absolutely necessary. This will make future upgrades far easier, as you won't have to manually modify your templates to add support for new Liferay features. Most CSS styles required for future development already exist within this CSS and are documented accordingly in the following sections for reference. Any subsequent additions to the custom.css should be approved via the development team leader</li>
+               
+              
+                
+            </ul>
+            <p></p>
+            <p><strong>Deploying the Holmes Theme :</strong></p>
+            <p>The Holmes theme has to be built and deployed for the CSS styles to take effect. The Holmes theme is a ‘<strong>project</strong>’ in its own right and needs to be built and deployed in a similar way to any other '.war files.' The .war file is named <strong>Holmes-theme.war</strong> and needs to be placed in the standard <strong>JBoss</strong> deploy directory on startup.</p>
+           
+           
+           
+           
+           <a name="implement"></a>
+           <h2>3. Implementing CSS</h2> 
+            
+           <p> 2.1. Definitions for this section:
+<ul><li>	External CSS files = using &lt;link&gt; in the &lt;head&gt;</li>
+<li>	Document head CSS = using &lt;style&gt; in the &lt;head&gt;</li>
+<li>	Inline CSS = using the style attribute on a tag, i.e. &lt;div style="colour:red;"&gt;</li></ul></p>
+<p>2.2 External CSS files <strong>SHOULD</strong> be used in preference to document head CSS and document head CSS <strong>SHOULD</strong> be used in preference to inline CSS. There are several advantages to keeping all CSS rules in one or more separate files. The HTML documents become smaller, CSS files are stored in the browser cache and will only need to be downloaded once, and you only need to edit a single file to change the presentation of an entire website. </p>
+
+<p>2.3. CSS files <strong>MUST</strong> have the file extension '.css' and <strong>SHOULD</strong> be stored in the relevant includes directory in the site structure, usually /style/.</p>
+<p>2.4. The file size of CSS files <strong>SHOULD</strong> be kept as low as possible, especially on high demand pages. </p>
+<p>2.5. External CSS <strong>MUST</strong> be linked to using the
+<link> element which <strong>MUST</strong> be placed in the head section of the document.</p>
+<p>2.6. External style sheets <strong>MUST NOT</strong> be imported (i.e. using @import) as it impairs caching</p>
+<p>2.7. Document head CSS <strong>MAY</strong> be used where a style rule is only required for a specific page.</p>
+<p>2.8. Inline styles<strong> MUST NOT</strong> be used.</p>
+<p>2.9. Query string data (e.g. "style.css?v=0.1") <strong>MUST NOT</strong> be used on an external CSS file.</p>
+<p>2.10. Use the right Doctype: The doctype declaration matters a whole lot on whether or not your markup and CSS will validate. In fact, the entire look and feel of your site can change greatly depending on the DOCTYPE that you declare.</p>
+<p>2.11 <strong>Comment CSS: </strong>Just like any other language, it's a great idea to comment code in sections. To add a comment, simply add /* behind the comment, and */ to close it.</p>
+
+          
+
+           <a name="typography"></a>
+           <h2>4. Typography</h2> 
+            
+           <p> 4.1. A single generic font-family name <strong>MUST</strong> be appended to the end of a font statement as a fall-back. This MUST be serif, sans-serif, cursive, or monospace.</p><p>
+<strong>For example</strong>: "helvetica, arial, sans-serif".
+</p>
+           <p>4.2. Typographic sizes <strong>MUST NOT</strong> be specified in units that are not resizable in all browsers such as px and pt, except for in print stylesheets.</p>
+		   <p>4.3. Typography SHOULD be sized using em, but MAY be sized in % or keyword values.<p>
+           <p>4.4. Text <strong>MUST</strong> be readable when the text size is increased by two steps in any of the Level 1 supported browsers (Note: For browsers that support text resizing, as some only zoom the page).</p>
+           <p>4.5. Default U-LEAF font is <strong>Verdana</strong></p>
+
+            <a name="links"></a>
+            <h2>5. Links</h2> 
+            
+           <p> 5.1. Link properties <strong>SHOULD</strong> be set using <strong>CSS</strong>, including control of the underlining of links where appropriate.</p><p>
+4.2. When styling links the order is important, and as such you <span class="bold">SHOULD</span> order them using the LVHA method.
+
+
+           </p>
+          
+            <a name="colors"></a>
+            <h2>6. Page colours</h2> 
+            
+            <p>6.1. Always ensure that the use of colour on ULEAF is suitable for users who have some form of colour-blindness, vision impairment or have difficulty in reading text.</p>
+           <p> 6.2 You  <span class="bold">MUST</span> always define a page background colour in your CSS, even if it is white.</p><p>
+6.3 When specifying a text colour or a background image, you <strong>MUST</strong> specify a background colour that compliments it and vice versa.</p><p>
+6.4 A full default set of definitions for colours (equivalents of text, link, alink, vlink and bgcolour in html)  <span class="bold">MUST</span> be specified in the page's CSS style-sheet.</p><p>
+6.5 Please also refer to the <a href="accessibility.htm#color">Use of Colour</a> and <a href="accessibility.htm#color">Colour Contrast</a> Standard. </p>
+          
+           <a name="references"></a>
+            <h2>7. References</h2> 
+            
+            <ul>
+                <li><a href="http://www.w3.org/TR/CSS2/" target="_blank">W3C CSS2.1 standard</a>
+                <li><a href="http://jigsaw.w3.org/css-validator/" target="_blank">W3C CSS Validator</a>
+                <li><a href="http://developer.yahoo.com/yui/compressor/" target="_blank">YUI Compressor</a>
+                <li><a href="http://www.opera.com/company/education/curriculum/" target="_blank">Opera Web Standards Curriculum</a> 
+            </ul>
+
+          <p class="lineSpace"></p>
+           <h3>More information on CSS-based design can be found at</h3>
+
+<ul>
+<li><a href="http://www.w3schools.com/css/" target="_blank">http://www.w3schools.com/css/</a></li>
+<li><a href="http://www.w3.org/TR/CSS2/" target="_blank">http://www.w3.org/TR/CSS2/</a></li>
+<li><a href="http://www.w3.org/Style/CSS/learning" target="_blank">http://www.w3.org/Style/CSS/learning</a></li>
+<li><a href="http://www.positioniseverything.net/" target="_blank">http://www.positioniseverything.net/</a></li>
+<li><a href="http://css.maxdesign.com.au/index.htm" target="_blank">http://css.maxdesign.com.au/index.htm</a></li>
+<li><a href="http://www.csszengarden.com/" target="_blank">http://www.csszengarden.com/</a></li></ul>
+
+          
+
+
+            
+<a name="documentHistory"></a>
+        <h2>8. Document History</h2>  
+        <table width="90%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+  <th>Date</th>
+     <th>Version</th>
+    <th>Change</th>
+     <th>Author</th>
+  
+  </tr>
+  <tr>
+    <td>27 June 2012</td>
+    <td>1.0</td>
+    <td>First draft of CSS Guidelines</td>
+    <td>Shilpi Kumar, Phil Storer, Jojest Thomson</td>
+  </tr>
+
+
+</table>
+          
+			</div><!-- end content-->
+		</div><!-- end content-area-->
+	</div><!-- end  main-content -->
+    <div id="footer">
+	    <div class="copyright">
+        <h3>Confidential</h3>
+       	<p> This document is confidential and proprietary to Unisys Corporation. It is not to be used, reproduced, or disclosed outside Unisys without the written consent of Unisys Corporation. The information in this document is furnished for use by Unisys support personnel in servicing customer’s equipment or by a customer under a license agreement with Unisys.</p>
+		<p>Copyright © 2012 Unisys Corporation. All Rights Reserved.</p>
+		<p>Unisys is a trademark of Unisys Corporation.</p>
+		<p>All other brands and products referenced herein are acknowledged to be trademarks or registered trademarks of their respective holders.</p>
+		<p><strong>Version 1.0</strong> </p>
+        </div>
+    </div>
+</div>
+<div id="toTop">^ Back to Top</div>
+</body>
+</html>

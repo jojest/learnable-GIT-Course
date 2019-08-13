@@ -1,0 +1,443 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>U-LEAF UI Standards & Guidelines</title>
+<link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=latin" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
+
+<link href="includes/style_new.css" rel="stylesheet" type="text/css" />
+<link href="includes/tabs.css" rel="stylesheet" type="text/css" />
+<link href="includes/element_styles.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="includes/print_style.css" type="text/css" media="print">
+
+
+<script type='text/javascript' src='script/jquery-1.6.2.min.js'></script>
+<script type="text/javascript" src="script/organictabs.jquery.js"></script>
+<script type="text/javascript" src="script/jquery_functions.js"></script>
+<script src="script/jquery.hoverIntent.js"></script>
+<script src="script/jquery.colorbox.js"></script>
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">
+        <div class="logoUnisys"><a href="index.htm"><img src="images/logo_unisys.png"  alt="Unisys" border="0" /></a></div>
+        <div class="logoUISG">U-LEAF UI Standards & Guidelines 2.0</div>
+    </div>
+    <div id="main-content">
+        <div id="nav-col">
+            <ul>
+                <li class="border-bottom"><a href="about.htm" class="link-about ">About U-LEAF UISG</a></li>
+                <li><a href="usability.htm" class="link-usability">Usability & Information Architecture</a></a></li>
+                <li class="selected"><a href="accessibility.htm" class="link-accessibility">Accessibility &amp; Browser Support Standards</a></li>
+                <li><a href="egif.htm" class="link-egif">e-GIF Compliance</a></li>
+                <!--<li><a href="interface_design.htm" class="link-interface">User Interface Design</a></li>-->
+                <li class="border-bottom"><a href="site_structure.htm" class="link-structure">U-LEAF Application Structure</a></li>
+                <li><a href="branding.htm" class="link-brand">Branding and colour</a></li>
+				<!--<li><a href="typography.htm" class="link-typography" id=" ">Typography & Icons</a></li>-->                
+                <li><a href="standards.htm" class="link-xhtml">XHTML & Semantic Mark-up Standards</a></li>
+                <li  class="border-bottom"><a href="css.htm" class="link-css">CSS</a></li>
+                <li><a href="layouts.htm" class="link-visual ">Layouts and Templates</a></li>
+                <li class="border-bottom"><a href="elements.htm" class="link-xhtml">U-LEAF Interface Elements</a></li>
+                <li><a href="checklist_developers.htm" class="link-checklist">Developer - UI Checklist</a></li>
+                <li><a href="checklist_testers.htm" class="link-checklist">Tester - UI Checklist</a></li>                
+                <!--<li><a href="forms.htm" class="link-forms menuselect">Form Elements</a></li>-->
+                <!--<li class="checklist"><a href="checklist.htm">Checklist</a></li><li class="glossary"><a href="glossary.htm">Glossary</a></li>-->
+            </ul>
+		</div><!-- end nav-col-->
+        <div id="content-area">
+            <div class="title-s"><h1>Accessibility &amp; Browser Support Standards</h1></div>
+            <div class="sub-title-s">
+            
+            	<div class="content_abstract ">
+                <div>
+                	
+                    <ul>
+                       	<li>1. <a href="#images">Images, Structure, Functions and Navigation</a></li>
+                    	<li>2. <a href="#colour">Use of colour</a></li>
+                        <li>3. <a href="#text">Text Equivalent</a></li>
+                        <li>4. <a href="#textlink">Text Link Standards</a></li>
+                        
+                        <li>5. <a href="#browser-settings">Changing browser settings</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+	                 	<li>6. <a href="#browser">U-LEAF Browser support standard</a></li>
+                        <li>7. <a href="#crossBrowser">Cross-Browser Testing tools</a></li>
+                        <li>8. <a href="#externalLinks">External links</a></li>
+                        <li><h3 style="margin-bottom:0"><a href="#proposed"><span class="red">Proposed Accessibility Guidelines</span></a></h3></li>
+                        <li>1. <a href="#keyboard">Keyboard Access</a></li>
+          			</ul>
+                </div>
+              </div>
+            
+            
+            </div>
+            <div class="date_updated">
+            	<div class="printLink" onClick="printit()">Print this page</div>
+            </div>
+            
+            <div class="content">
+                <div class="content_intro">
+                   <p>For Unisys, providing universal access to the application is long-established institutional policy, and also is required by state or federal regulations. It is critical, therefore, that you validate your designs and page templates and the content throughout the development process to ensure that all pages are accessible to all users. Use the guidelines and techniques developed and maintained by the Web Accessibility Initiative (WAI) as a measure against which to test the accessibility of pages.</p>
+                   <p>This is a reference document for accessibility principles and design ideas.</p>
+                </div>
+            
+				<a name="images"></a>
+       		  <h2> 1.0 Images, Structure, Functions and Navigation</h2> 
+            
+           <p>1.1 U-LEAF content <strong>MUST</strong> make sense without reference to images <strong>UNLESS</strong> the subject matter can only be displayed via images (e.g. an 'icon').</p> <p>
+1.2 You <strong>MUST</strong> provide a text equivalent for every non-text element on your HTML pages. (Source:<a href="http://www.w3.org/TR/WCAG/" target="_blank"> W3C, Web Content Accessibility Guidelines(WCAG) 2.1</a>).  In certain circumstances, the content of this text equivalent <strong>MAY</strong> be null.</p> <p>
+1.3 Elements of HTML pages such as &lt;img&gt; <strong>MUST</strong> include an alt attribute.</p> 
+<p>1.4 Notes on Image usage</p>
+<ul>
+<li>1.4.1 Images that are purely presentational and are not content <strong>SHOULD</strong> be in the CSS, and <strong>SHOULD ONLY</strong> be in the HTML of the page. (Example: Buttons – Save, Add, Delete)</li>
+<li>1.4.2 Images that are, however, in the HTML <strong>SHOULD</strong> follow the alt attribute rules defined in section 1.3 above.
+</li><li>1.4.3 You <strong>SHOULD ONLY</strong> use transparent spacer images, as their function can be provided by CSS layout.</li></ul>
+<p></p>
+<p>1.5. Graphic Image</p>
+<li>1.5.1 : You <strong>SHOULD ONLY</strong> render text in a graphic image where the text is part of the brand image or Where characters/symbols cannot be assumed to be in the browser's standard character set (for example, mathematical/scientific symbols);</li>
+
+<p></p>
+
+
+        
+           <a name="colour"></a>
+           <h2>2.0 Use of colour</h2> 
+           <h3>2.1 Introduction</h3> 
+           <p> 2.1.1 These standards ensure that the use of colour on U-LEAF is suitable for people who have some form of colour-blindness, vision impairment or have difficulty in reading text.</p>
+            <h3>2.2 colour contrast for text and images of text</h3> 
+            <p>2.2.1 All colour combinations <strong>MUST</strong> pass the <a href="http://www.w3.org/TR/WCAG/" target="_blank">WCAG 2.1</a> AA-compliant colour contrast check in accordance with the <a href="http://snook.ca/technical/colour_contrast/colour.html" title="Snook colour contrast checker" target="_blank">Snook colour contrast checker</a>. This means you need a 'YES' result against:</p>
+            <ul>
+            	<li>'WCAG 2 AA Compliant' for normal text smaller than 18 pt; and/or</li>
+            	<li>'WCAG 2 AA Compliant (18pt+)' for normal text larger than 18 pt or bold text that is 14 pt or larger.</li>
+                
+            </ul>
+            <p>N.B. The <strong>'YES'</strong> result overrides any other issues that may be indicated such as Brightness or Colour Difference</span></p>
+            <p>2.2.2 This requirement applies to text and images of text (not including incidental text, e.g. text on a street sign that happens to appear within a photograph). Stylised text used in logos and branding is exempt from this requirement.</p>
+            <p>To test whether color contrast is sufficient to be read by users with color deficiencies or by those with low resolution monitors, print pages on a black and white printer (with backgrounds and colors appearing in grayscale). Also try taking the printout and copying it for two or three generations to see how it degrades. This will show you where you need to add redundant cues (example: hyperlinks are usually underlined on Web pages), or whether the cues are too small or indistinct to hold up well.</p>
+            
+            <a name="colorBlindness"></a>
+            <h3>2.3 colour blindness</h3>
+            <p>2.3.1 You <strong>MUST NOT</strong> use any colour combinations which will be indistinguishable by people with a form of colour-blindness (see <a href="https://www.color-blindness.com/coblis-color-blindness-simulator/" target="_new">Colour Vision Simulator Examples</a> for details).</p>
+            <p>2.3.2 You <strong>MAY</strong> use <a href="https://www.color-blindness.com/coblis-color-blindness-simulator/" target="_blank">Colour-blindness image checker</a> on your Image Files.</p>
+            <h3>Instructions:</h3>
+            <ul>
+            	<li>Take a screen grab (PC) or use Paperazzi (Mac) to grab an image of your page.</li>
+                <li>On the <a href="https://www.color-blindness.com/coblis-color-blindness-simulator/" title="Color Blindness" target="_blank">Color Blindness site</a> Drag and drop or paste your file in the section as in screenshot
+				<img src="images/coblis-color-blindness-simulator.PNG" alt="Color Blindness Simulator"></li>
+                <li>Select Options based on view needed.</li>
+                <li>Check that the colour blindness emulation complies with the Colour Contrast Standard.</li>
+                <li>Repeat the above for each type of colour blindness views: Trichromatic, Dichromatic  and Monochromatic.</li>
+            </ul>
+            <p></p>
+            <p>2.3.5 You <strong>SHOULD</strong> also check that your colour choices will not interact with each other when they are displayed on a CRT/TFT (gamma, moiré, bleeding etc.).</p>
+            <h3>2.4. Use of CSS</h3>
+            <p>2.4.1 You <strong>MUST</strong> define both the text and background colours of all textual areas on a page in a CSS style sheet, so users can override your colours with a style sheet of their own.</p>
+ <p>For further information, see the CSS standards and HTML Integrity Standards.</p>
+            <a name="text"></a>
+            <h2>3.0 Text Equivalent</h2> 
+           	<h3>3.1 Alt attribute</h3>
+            <p>3.1.1 Alt attributes provide a text description of images. They <strong>SHOULD</strong> be:</p>
+		<p class="tab">3.1.1.1 Concise: Unnecessarily long alt attributes are time consuming.</p>
+<p class="tab">3.1.1.2 Meaningful: Non-specific text does not provide sufficient information to users who cannot see the image.</p>
+		<p class="tab">3.1.1.3. Useful: They <strong>SHOULD</strong> describe the functional intent of the image.</p>
+<p class="tab">3.1.1.4 Presentational images in a page's HTML <strong>MUST</strong> carry an alt attribute which <strong>MUST</strong> be blank (that is, alt=""). Providing a blank alt attribute will allow screen-readers to skip the image.</p>
+<p class="tab">3.1.1.5 Graphic Text: The alt attribute of an image that features functionally significant text <strong>MUST</strong> include that text. If you require a call to action this, this can be achieved by having a text link placed over the picture.</p>
+<p class="tab">3.1.1.6 Functional images (for example, graphical buttons): If an image is essentially functional (for example, the "Save" or "Delete" button) the alt attribute <strong>MUST</strong> convey the function, or include the exact text featured on the button. The alt attribute <strong>MUST NOT</strong> carry a description of what the button looks like.</p>
+<p class="tab">3.1.1.7 Image maps: With image maps you <strong>MUST</strong> provide an alt attribute to every <area /> tag.</p>
+<p>3.1.2 Words you <strong>MUST NOT</strong> use in the alt attribute</p>
+<p class="tab">3.1.2.1 Screen readers tell the user that an image is an image; therefore, there is no need to duplicate this information in the alt attribute.</p>
+<p class="tab">3.1.2.2 You <strong>MUST NOT</strong> use phrases such as "image of", "picture of", "photo of" unless that fact has functional significance.</p>
+<p class="tab">3.1.2.3 You <strong>MUST NOTE</strong> use the words "brand" or "logo" in an alt attribute unless the fact that it is a logo or brand is editorially significant.</p>
+	
+<h3>3.2 Title Attribute</h3>
+<p>3.2.1 Title attributes <strong>MUST NOTE</strong> be used <strong>UNLESS</strong> the wording of the link text does not inform the user of the destination of the link, when read in isolation.</p>
+<p>3.2.3 You <strong>MUST NOTE</strong> simply repeat the link text in the title attribute.</p>
+<p>3.2.4 Title attributes MUST be used to describe or support the description of a link's destination; whether this link is around an image or text. This includes <area /> tags for image maps.</p>
+<p>3.2.5 Title attributes MUST contain human-readable data</p>
+<p>3.2.6 The title attribute <strong>MUST NOTE</strong> replicate the content of the alt attribute, but MAY include some of the same wording.</p>
+<p>3.2.7 Title attributes should be:</p>
+<p class="tab">3.2.7.1 Useful: They SHOULD ONLY be used where the destination description is not already provided in a text form, <strong>UNLESS</strong> they are supporting that definition with additional information.</p>
+<p class="tab">3.2.7.2 Concise: Unnecessarily long title attributes might not be displayed in the best possible way when appearing as "tooltips" as a user moves their mouse over a titled link. Title attributes <strong>SHOULD ONLY be</strong> more than 30 characters long.</p>
+	<p>3.2.8 You <strong>SHOULD ONLY use</strong> the following words in a title tag:</p>
+<p class="tab">3.2.8.1 "Link to", "jump to": you do not need to start your description with these phrases because users are normally already prompted with this information by their assistive technologies.</p>
+<p class="tab">3.2.8.2 "follow this link": this does not provide information about the link destination.</p>
+<p class="tab">3.2.8.2 "click here": this assumes users are using a mouse, which they may not be.</p>
+<p class="tab">3.2.8.3 "More...","More information..." screen readers strip the links from a page, which means they are often presented to the user out of context. Links MUST contain information about their destination. </p>
+
+
+
+           
+
+          
+          
+          <a name="textlink"></a>
+            <h2>4.0 Text Link Standards</h2> 
+           	<h3>4.1 Requirements</h3>
+            <p>4.1.1 Link text <strong>MUST</strong> describe the destination of the link. </p>
+<p>4.1.2 Title attributes <strong>SHOULD ONLY</strong> be used when the link's text does not fully describe the destination of that link.</p>
+<p>4.1.3 A text link's title-attribute <strong>SHOULD</strong> further describe the destination of the link and <strong>MUST NOT only</strong> repeat the link's text (refer to the Textual Equivalent Standards for more information).</p>
+<p>4.1.4 Example: If you roll over a button in Special Arrangement screen says "Delete". The title-attribute will say "Delete Special Arrangement"</p>
+<p>4.1.5  Link text <strong>MUST</strong> be meaningful out of context e.g. do not use "More", "Further Information", "Visit", "Watch Now", "Download" or "Click Here". You <strong>MAY</strong> hide further descriptive text in a manner that can be found by screen readers.</p>
+<p>4.1.6 You <strong>MUST NOT</strong> use the URL as link text, <strong>UNLESS displaying</strong> dynamic contents (such as search results) where there is no alternative.
+</p>
+
+<h3>4.2 Making links selectable</h3>
+<p>4.2.1 A text link <strong>SHOULD</strong> have sufficient space around it for the user to be able to accurately select the link, particularly where several links appear together.</p>
+<p>4.2.2 You <strong>SHOULD</strong> have a minimum of four pixels padding around a link; or equivalent, given your chosen units of measurement.</p>
+<h3>4.3 Making text self-evident</h3>
+<p>4.3.1 Links <strong>MUST</strong> be clearly identifiable and distinguishable from surrounding text, by use of a presentation or context cue.</p>
+<p class="tab">4.3.1.1 A presentation cue <strong>MUST</strong> be one or both of these:</p>
+
+    <ul class="tab">
+        <li>bold and underlined
+        </li><li>a different colour (all colours used <strong>MUST</strong> comply with colour contrast standards, including being visible to colour blind users).
+    	</li>
+    </ul>
+<p></p>
+<p class="tab">4.3.1.2 A context cue is when a link's position e.g. left-hand navigation or related links box conveys that it is clickable. In these cases use of bold is sufficient however visual elements <strong>SHOULD</strong> be used to indicate their significance, e.g. graphics or bullets.</p>
+<p>4.3.2 You <strong>MUST</strong> use a mouse-over state-change to indicate that a piece of text is a link. This <strong>MAY</strong> be either an underline or a change of colour. Underlines <strong>SHOULD ONLY</strong> disappear on mouse-over <strong>UNLESS</strong> the link is a graphic and has some other graphic form indicating a change of state.</p>
+<p>4.3.3 Your visited link colour <strong>SHOULD</strong> be different from the non-visited links' colour. This colour difference <strong>MUST</strong> be evident to colour blind users.</p>
+
+
+<a name='browser-settings'></a>
+<h2>5.0 Changing browser settings for accessibility testing</h2>
+<p>To set Internet Explorer to ignore the colours and fonts used in web sites, first go to the <strong>'Tools'</strong> menu and choose <strong>'Internet Options'</strong>. Then click on the button, then tick the, <strong>'ignore font styles'</strong> and <strong>'ignore font sizes'</strong> boxes . Then click <strong>OK</strong> to apply the settings. </p>
+
+<p>To change just the size of text go to <strong>'View - text size'</strong> and choose the setting you are most comfortable with (largest, larger, medium, smaller, smallest).</p>
+
+<p>You may also find it useful to change the default colours and fonts used on your computer. The procedure for doing this is different for different versions of Windows and other operating systems. You should therefore consult your computer's Help facility for instructions on doing this. Further information is available from AbilityNet's <strong>'My computer my way</strong>' web site - see <a href="http://www.abilitynet.org.uk/myway" title="http://www.abilitynet.org.uk/myway" target="_blank">http://www.abilitynet.org.uk/myway</a>.</p>
+
+
+
+
+
+
+<a name='browser'></a>
+<h2>6.0 U-LEAF Browser Support Standards</h2>  
+         <p class="strong">1.0 Introduction</p>
+         <p>1.1 Scope of this Document</p>
+
+<p class="tab">1.1.1. This standard applies to web browsers that are being used on desktop versions of Windows, Mac OS and Linux/Unix. This does not cover Tablets, PDAs, mobiles, and other mobile devices.</p>
+
+<h3>1.2. Web Browser Support</h3>
+
+<p class="tab">1.2.1. Unisys accepts that the nature of the web medium is such that web pages cannot be produced in such a way as to be uniformly rendered in all browsers, so as to provide a consistent experience for all users. We accept that small variations in this experience are acceptable within the 'Levels of Support'. </p>
+<p class="tab">1.2.2. Web browsers are assigned a 'Level of Support' by the U-LEAF Browser Support Standards Work Group. These levels of support are summarised in the Browser Support Table. (See Browser Support Table for details of how these levels of support are decided).</p>
+<p class="tab">1.2.3. There's nothing wrong with using all the latest bells and whistles to support funky features of newer browsers, but try to do it in a way that still allows users not supporting (or intentionally disabling) these features to access your basic content.</p>
+<p></p>
+
+
+<h3>2.0 Level of Support</h3>
+
+<p class="strong tab">2.1. Support Level 1 - supported web browser - Support definition</p>
+<p class="tab">2.1.1. All content MUST be readable and usable and all functionality MUST work.</p>
+<p class="tab">2.1.2. Variations to presentation of content MUST be minimised.</p>
+<p class="tab">2.1.3. Where CSS layout is used, the CSS MUST be rendered by supported web browsers, so that a fully-styled version of the page is presented to the user.</p>
+<p class="tab">2.1.4. Variations between browsers are inevitable. In these situations, when deciding which browsers should offer a better experience than other browsers (i.e. which would be the closest to the original design), you MUST base your decision on which outcome would maximise the 'Objectives of Web Browser Support'.</p>
+<p class="tab">2.1.5. Pages SHOULD be developed to maximise the user experience for users of the web browser with the highest proportion of users (IE7 PC at this time) UNLESS this would greatly compromise the 'Objectives of Web Browser Support'.</p>
+<p class="strong tab">2.2. Support Level 2 - partially-supported web browser - Support definition:</p>
+<p class="tab">2.2.1. All core content MUST be readable and usable and navigation MUST work.</p>
+<p class="tab">2.2.2. Any degradation to (client-side) application functionality MUST be graceful degradation.</p>
+<p class="tab">2.2.3. Any degradation to presentation MUST NOT obscure content.</p>
+<p class="tab">2.2.4. Where CSS layout is used, you MAY choose to provide an unstyled version of the page to partially-supported browser.</p>
+<p class="tab">2.3. Support Level 3 - unsupported web browser - Support definition:</p>
+<p class="tab">2.3.1. No support or testing necessary.</p>
+<p class="tab">2.3.2. Any web browsers not specifically listed in the support table MAY also be regarded as level 3; that is, unsupported.</p>
+
+
+<h3>3. Objectives of Web Browser Support</h3>
+
+
+<p>When considering which 'Level of Support' a web browser should be assigned, the following are some of the issues that are considered.</p>
+<h3>1.	U-LEAF should provide value for money to its users</h3>
+<ul><li>	Web application standards are good for the application and meeting these standards offers users value for money.
+</li><li>	U-LEAF Users use a variety of web browsers. U-LEAF aims to provide the best possible experience to the largest number of people.
+</li><li>	Some users do not have the choice of using a popular, modern web browser.
+</li><li>	Some users use accessibility tools - these users benefit greatly from web pages that are standards compliant.
+U-LEAF should not, where possible, provide a service that gives a competitive advantage to any particular product or service. (e.g. we should not add to any page 'works best in x browser').</li></ul>
+
+<h3>Browser Support Table</h3>
+<p>3.1. The table below defines the levels of support that MUST be adhered to</p>
+<table width="90%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+  <th>Browser</th>
+     <th>IE</th>
+    <th>FF</th>
+	  <th>Chrome</th>
+     </tr>
+  <tr>
+    <td>Platform</td>
+    <td>Windows</td>
+    <td>All</td>
+	  <td>All</td>
+    </tr>
+  <tr bgcolor="#f9f9f9">
+    <td>Level 1</td>
+    <td>10, 11</td>
+    <td>FF 66.0</td>
+	  <td>73.0</td>
+    </tr>
+   
+  <tr bgcolor="#f9f9f9">
+    <td>Must test</td>
+    <td>10,11</td>
+    <td>FF 65.0, 66.0 (PC Only)</td>
+	  <td>73.0 (PC Only)</td>
+    </tr>
+
+</table>
+
+<h3>Notes:</h3>
+<p>U-LEAF Legacy applications are IE Specific and supports version 7.0 ownards. Currently do not support other browsers include Chrome</p>
+
+  <p class="strong">Browser Abbreviations</p>   
+  <p class="strong tab">FF : Mozilla Firefox</p>
+  <p class="strong tab">IE : Microsoft Internet Explorer</p>
+  
+  <a name="crossBrowser"></a>
+  <h2>7.0 Reliable Cross-Browser Testing tools</h2>
+  <h3>Recommended IE Testing Solutions</h3>
+  <p></p>
+  <p><strong>1. Virtual Machines + IECollection</strong></p>
+  <p>One of the best solution is using dedicated virtual machines (VMs) and a tool called IE Collection.</p>
+  <p>Utilu's IE Collection offers the following:</p>
+        <li>A tested collection of standalone versions of IE, including versions 1 through 9;</li>
+        <li>Confirmed support for accurate rendering when compared against the original IE executables;</li>
+        <li>Confirmed support (to date) for the correct IE JavaScript engine implementations that shipped with the originals;</li>
+        <li>Confirmed support for the correct UA strings being detectable;</li>
+        <li>Support for both the 32-bit and 64-bit versions of Windows XP, 2003, Vista and 7;</li>
+        <li>Access to the IE Developer Toolbar, which comes with the standard IE Collection set-up; this is compatible with IE 5 and above, but you also have the option to install Firebug Lite if you prefer that.</li>
+        <p>Although the majority of IE versions are supported and function reliably within the collection, there are known issues with versions of IE 7 when used under Windows Vista or Windows 7 (as noted on Utilu's website)</p>
+        
+        <p><strong>2. Dedicated VMs for Each Version of IE</strong></p>
+        <p>Developers might wish to maintain a dedicated VM for each version of IE being tested. On these VMs, rather than using any third-party tools, they would install the original, official IEs instead.</p>
+        <p>The reasoning behind this is that it potentially minimizes the risk of individual browser configurations or overrides from interfering with one another, and it ensures that you get only the exact version of IE that you wish to test (and, in turn, the corresponding JavaScript engine in that version).</p>
+
+<p>If you're setting up dedicated VMs for individual releases of IE, I recommend the following set-up:</p>
+
+<li>Windows XP (SP3) for IE 6,</li>
+<li>Windows Vista (SP2) for IE 7,</li>
+<li>Windows Vista (SP2) for IE 8,</li>
+<li>Windows 7 for IE 9 and 10</li>
+  
+ <p></p>
+  
+  <p>For more info refer the link <a href="http://coding.smashingmagazine.com/2011/09/02/reliable-cross-browser-testing-part-1-internet-explorer/" target="_blank">Reliable Cross Browser Testing</a></p>    
+       
+       
+       
+       
+       <a name="externalLinks"></a>
+       <h2>8.0 External links</h2>
+<h3>AbilityNet</h3>
+<p><a href="http://www.abilitynet.org.uk/" title="AbilityNet Website Address" target="_blank">http://www.abilitynet.org.uk/</a></p>
+<p>AbilityNet provides free information and advice, individual assessment of technology needs, the supply of assistive technology with free support, a programme of awareness education, and consultancy for employers on system and workstation adaptations.</p>
+
+<h3>Skill</h3>
+<p><a href="http://www.skill.org.uk/" title="http://www.skill.org.uk/" target="_blank">http://www.skill.org.uk/</a></p>
+<p>The National Bureau for Students With Disabilities. Skill is a national charity promoting opportunities for young people and adults with any kind of disability in post-16 education, training and employment across the UK.</p>
+
+<h3>National Federation of ACCESS Centres</h3>
+<p><a href="http://www.nfac.org.uk/" title="http://www.nfac.org.uk/" target="_blank">http://www.nfac.org.uk/</a></p>
+<p>A network of specialist services that facilitate access for disabled people to education, training, employment and personal development. Services include quality assessment and support in the use of assistive technology and/or specialised learning strategies.</p>
+
+<h3>Royal National Institute for the Blind (RNIB)</h3>
+<p><a href="http://www.rnib.org.uk/" title="http://www.rnib.org.uk/" target="_blank">http://www.rnib.org.uk/</a></p>
+<p>Charity offering general information, advice and guidance for people with sight problems. </p>
+
+<h3>Royal National Institute for the Deaf (RNID)</h3>
+<p><a href="http://www.rnid.org.uk/" title="http://www.rnid.org.uk/" target="_blank">http://www.rnid.org.uk/</a></p>
+<p>Charity representing deaf and hard of hearing people.</p>
+
+<h3>SCOPE</h3>
+<p><a href="http://www.scope.org.uk/" title="http://www.scope.org.uk/" target="_blank">http://www.scope.org.uk/</a></p>
+<p>Scope runs a wide range of services for people with cerebral palsy, their families and carers. </p>
+
+<h3>British Dyslexia Association</h3>
+<p><a href="http://www.bdadyslexia.org.uk/" title="http://www.bdadyslexia.org.uk/" target="_blank">http://www.bdadyslexia.org.uk/</a></p>
+<p>Aims to influence government and other institutions to promote a dyslexia friendly society. </p>
+
+<h3>Action for Blind People</h3>
+<p><a href="http://www.actionforblindpeople.org.uk" title="http://www.actionforblindpeople.org.uk" target="_blank">http://www.actionforblindpeople.org.uk</a></p>
+<p>Lots of information about issues relating to sight loss and accessibility</p>
+       
+       
+        
+       
+       
+ <a name="proposed"></a>
+<h1>Proposed Accessibility Guidelines</h1>
+
+<a name="keyboard"></a>
+           <h2>1.0 Keyboard Access</h2> 
+            
+           <h3> 1.1 Introduction  </h3>
+           <p>Keyboard access to active elements of a page is important for many users who cannot use a pointing device (mouse) to navigate around the page. It is recommended for U-LEAF to reach the required accessibility standards for the future release.</p>
+           <a name="Tabbing"></a>
+           <h3>1.2 Tabbing</h3>
+           <p>1.2.1. All functionality on all U-LEAF applications and services <strong>SHOULD</strong> be fully controllable using the keyboard alone. </p>
+            <p>1.2.2 Pages <strong>SHOULD</strong> provide a logical tab order through elements, form controls and objects, to increase the pages' ease of navigation via the keyboard.</p>
+            <p>1.2.3 A logical tab order is one which makes sense when the layout is removed when vocalised by a screen reader – for example, elements which need to be read together (a heading and list of options) should be coded such that they are vocalised together rather than broken up by other elements.
+            </p>
+           <p class="tab">1.2.3.1. For HTML pages, you <strong>SHOULD</strong> do this in the way you code the page design in HTML.</p>
+ <p class="tab">1.2.3.2 You <strong>SHOULD NOT</strong> use a positive tabindex value. You <strong>MAY</strong> use a tabindex of 0 or -1 under certain circumstances where this can increase the accessibility of your Javascript. For further clarification, see <a href="http://www.w3.org/TR/html401/interact/forms.html#h-17.11.1" title="W3C HTML 4.0 recommendations" target="_blank">W3C HTML 4.0 recommendations</a> and also draft<a href="http://dev.w3.org/html5/spec/Overview.html#focus" title="W3C HTML 5.0 recommendations" target="_blank"> W3C HTML 5.0 recommendations</a> and <a href="http://www.w3.org/TR/wai-aria-practices/#focus_tabindex" title="W3 Aria recomendations" target="_blank">W3C Aria recommendations</a>. </p>
+           <a name="keyboardShortcuts"></a>
+           <h3>1.3 Keyboard Shortcuts</h3>
+           <p>1.3.1 You <strong>SHOULD</strong> include keyboard shortcuts to enable keyboard users to jump more quickly around the interface using the keyboard.</p>
+           
+
+      
+
+       <a name="documentHistory"></a>
+        <h2>Document History</h2>  
+        <table width="90%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+  <th>Date</th>
+     <th>Version</th>
+    <th>Change</th>
+     <th>Author</th>
+  
+  </tr>
+  <tr>
+    <td>27 June 2012</td>
+    <td>1.0</td>
+    <td>First draft of Accessibility and browser support standards checklist</td>
+    <td>Shilpi Kumar, Jojest Thomson, Phil Storer</td>
+  </tr>
+   <tr>
+    <td>02 July 2012</td>
+    <td>1.1</td>
+    <td>Review updates</td>
+    <td>Stephen H Potter, Shilpi Kumar, Jojest Thomson, Phil Storer</td>
+  </tr>
+			<tr>
+    <td>08 April 2019</td>
+    <td>1.2</td>
+    <td>Updates</td>
+    <td>Jojest Thomson</td>
+  </tr>
+
+
+</table>
+       
+			</div><!-- end content-->
+		</div><!-- end content-area-->
+	</div><!-- end  main-content -->
+    <div id="footer">
+	    <div class="copyright">
+        <h3>Confidential</h3>
+       	<p> This document is confidential and proprietary to Unisys Corporation. It is not to be used, reproduced, or disclosed outside Unisys without the written consent of Unisys Corporation. The information in this document is furnished for use by Unisys support personnel in servicing customer’s equipment or by a customer under a license agreement with Unisys.</p>
+		<p>Copyright © 2019 Unisys Corporation. All Rights Reserved.</p>
+		<p>Unisys is a trademark of Unisys Corporation.</p>
+		<p>All other brands and products referenced herein are acknowledged to be trademarks or registered trademarks of their respective holders.</p>
+		<p><strong>Version 2.0</strong> </p>
+        </div>
+    </div>
+</div>
+<div id="toTop">^ Back to Top</div>
+</body>
+</html>

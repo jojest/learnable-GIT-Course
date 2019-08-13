@@ -1,0 +1,211 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td
+{ margin:0;
+  padding:0; }
+  
+html
+{ background:#f6f6f6; }
+  
+li
+{ list-style:none; }
+
+h1,h2,h3,h4,h5,h6
+{ font-size:100%; }
+  
+input,textarea,select
+{ font:inherit inherit inherit; }
+
+input,textarea,select
+{ *font-size:100%; }  
+
+body
+{ font:13px/1.231 'pt sans', arial,helvetica,clean,sans-serif;
+  *font-size:small;
+  *font:x-small; }
+
+select,input,button,textarea
+{ font:99% arial,helvetica,clean,sans-serif; }
+
+table
+{ font-size:inherit;
+  font:100%; }
+
+pre,code,kbd,samp,tt
+{ *font:108%/100% monospace; }
+
+h1, h2, h3, h4, h5 { font-family: 'Open Sans', sans-serif; }
+
+h1
+{ font-size:170%;
+  font-weight:bold; }
+
+h2
+{ font-size:160%;
+	font-weight: normal;
+	color: #cd1543;
+	margin-bottom: 10px;
+  }
+
+h3
+{ font-weight:bold; margin:10px 0; color:#666 }
+
+h4
+{ font-weight:bold; }
+
+a
+{ color:#525252;
+  text-decoration:none; outline:none }
+  
+  a:hover
+{ text-decoration:underline;}
+
+
+em
+{ font-style:italic; }
+
+h4
+{ margin-bottom:5px;
+  font-size:120.5%;
+  text-shadow:-1px -1px 0 rgba(0,0,0,0.1); }
+
+p
+{ padding-bottom:1em; max-width:900px }
+
+img
+{ display:block; }
+
+.clearfix
+{ clear:both; }
+
+strong
+{ font-weight:bold; }
+
+
+table 
+	{ 
+	padding:2px; 
+	margin:0; max-width:900px
+	}
+th 	
+	{ 
+	background:#ece9e9; 
+	height:22px;  
+	border:1px solid #ccc; 
+	text-align:left; 
+	padding:2px
+	}
+td	
+	{ 
+	border:1px solid #ccc; 
+	border-top:none; 
+	padding:2px
+	}
+
+/*** layout ***/
+#wrapper {}
+
+/* Header */
+#header { height:60px; background:url(../images/content-header-glow.png) no-repeat 10px left;}
+#header .logoUnisys {float:left; width:131px; padding:10px 10px 5px 20px; }
+#header .logoUISG { float:right; padding:15px 30px 5px 20px; font-size:26px; font-weight:bold; letter-spacing:-1px; }
+
+
+/* main content */
+#main-content {background:url(../images/content-faux-background.png);
+  -webkit-box-shadow:0 3px 3px rgba(0,0,0,0.05);
+  border:1px solid #EEE;
+  background-color:#FFF;
+  color:#525252;
+  border-radius:5px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  overflow:hidden; width:100% }
+  
+/* Navigation */
+  
+#nav-col {width:191px; float:left;  margin-top:45px; }
+#nav-col ul li a
+{ font-size:16px;
+  color:#666;
+  text-decoration:none;
+  padding:5px 10px;
+  border:1px solid transparent; 
+}
+
+#nav-col li.selected
+{ font-weight:bold;
+  color:#5092bd !important;
+  background:url(../images/content-selected-arrow.png) no-repeat right center;
+   width:191px }
+   
+#nav-col li.selected a
+{color:#5092bd 
+	}   
+#nav-col li a:hover
+{ color:#5092bd; }
+
+#nav-col ul li a {
+text-align: right;
+display: block;
+padding: 5px 0;
+font-size: 14px;
+text-decoration: none;
+padding-right: 20px;
+}
+
+/* main content area */
+
+#content-area {margin-left: 191px;
+min-width:740px;  
+padding: 1em 0; 
+}
+
+#content-area .title {
+background: url(../images/content-header-bar.png)left bottom;
+height: 34px;
+border-bottom: 1px solid #EEE;
+border-top-right-radius: 5px;
+line-height: 24px;
+padding-left:1em; 
+}
+#content-area .sub-title { margin:10px 0}
+#content-area .sub-title .content_abstract
+	{ 
+	font-weight:normal; 
+	padding:0px 15px; 
+	float:left; width:100%; 
+	 margin-bottom:10px ; 
+	 box-shadow:0 3px 3px rgba(0,0,0,0.05);
+	}
+
+#content-area .sub-title .content_abstract a:link {color:#000} 
+
+#content-area .sub-title .content_abstract div {float:left; width:30%; margin:5px; margin-left:0 ; }
+#content-area .sub-title .content_abstract div li { float:left; width:100%;  display:block; margin:5px; margin-left:0;  padding-left:0px;   }
+.opaque{	
+	opacity: .8;
+	filter: alpha(opacity=80); 
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+}
+
+.date_updated {font-size:12px; font-weight:normal; font-style:italic;  padding:5px; clear:both; display:block; border-top:none; position:absolute; top:70px; right:20px}
+
+.date_updated .printLink {float:right; width:90px; background: url(../images/print.png) right top no-repeat; cursor:pointer}
+
+
+
+#content-area .content {padding:1em}
+
+#content-area .content .content_intro{ font-size:14px; font-weight:bold;  padding-top:30px; max-width:700px;}
+
+span.top { margin:5px 0; padding:5px; display:inline-block; clear:both;  float:right; text-align:right; width:98%; font-size:11px; font-weight:bold;  }
+span.top a {color:red}
+.greyBox a {color:#0000FF}
+
+
+/* footer */
+#footer { height:100px;}
+
+
+
+
+

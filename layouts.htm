@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>U-LEAF UI Standards & Guidelines</title>
+<link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=latin" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
+
+<link href="includes/style_new.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="includes/tabs.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="includes/element_styles.css" rel="stylesheet" type="text/css" media="screen"/>
+<link href="includes/colorbox.css"  rel="stylesheet"  type="text/css" media="screen" />
+<link href="includes/print_style.css"  rel="stylesheet" type="text/css" media="print">
+
+
+<script type='text/javascript' src='script/jquery-1.6.2.min.js'></script>
+<script type="text/javascript" src="script/organictabs.jquery.js"></script>
+<script type="text/javascript" src="script/jquery_functions.js"></script>
+<script src="script/jquery.hoverIntent.js"></script>
+<script src="script/jquery.colorbox.js"></script>
+
+<script>
+$(document).ready(function(){
+//Examples of how to assign the ColorBox event to elements
+});
+</script>
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">
+        <div class="logoUnisys"><a href="index.htm"><img src="images/logo_unisys.png"  alt="Unisys" border="0" /></a></div>
+        <div class="logoUISG">U-LEAF UI Standards & Guidelines 2.0</div>
+    </div>
+    <div id="main-content">
+        <div id="nav-col">
+            <ul>
+                <li class="border-bottom"><a href="about.htm" class="link-about ">About U-LEAF UISG</a></li>
+                <li><a href="usability.htm" class="link-usability">Usability & Information Architecture</a></a></li>
+                <li><a href="accessibility.htm" class="link-accessibility">Accessibility &amp; Browser Support Standards</a></li>
+                <li><a href="egif.htm" class="link-egif">e-GIF Compliance</a></li>
+                <!--<li><a href="interface_design.htm" class="link-interface">User Interface Design</a></li>-->
+                <li class="border-bottom"><a href="site_structure.htm" class="link-structure">U-LEAF Application Structure</a></li>
+                <li><a href="branding.htm" class="link-brand">Branding and colour</a></li>
+				<!--<li><a href="typography.htm" class="link-typography" id=" ">Typography & Icons</a></li>-->                
+                <li><a href="standards.htm" class="link-xhtml">XHTML & Semantic Mark-up Standards</a></li>
+                <li  class="border-bottom"><a href="css.htm" class="link-css">CSS</a></li>
+                <li class="selected"><a href="layouts.htm" class="link-visual ">Layouts and Templates</a></li>
+                <li class="border-bottom"><a href="elements.htm" class="link-xhtml">U-LEAF Interface Elements</a></li>
+                <li><a href="checklist_developers.htm" class="link-checklist">Developer - UI Checklist</a></li>
+                <li><a href="checklist_testers.htm" class="link-checklist">Tester - UI Checklist</a></li>                
+                <!--<li><a href="forms.htm" class="link-forms menuselect">Form Elements</a></li>-->
+                <!--<li class="checklist"><a href="checklist.htm">Checklist</a></li><li class="glossary"><a href="glossary.htm">Glossary</a></li>-->
+            </ul>
+		</div><!-- end nav-col-->
+        <div id="content-area">
+            <div class="title-s"><h1>Layouts and Templates</h1></div>
+            <div class="sub-title-s">
+            
+            	<div class="content_abstract ">
+                <div>
+                    <ul>
+                        <li>1. <a href="#homepage">U-LEAF Home page</a></li>
+                        <li>2. <a href="#header">Global Header &amp; Primary Navigation</a></li>
+                        <li>3. <a href="#Globalfooter">Global Footer</a></li>
+                        <li>4. <a href="#elements">U-LEAF - Universal Elements overview</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>5. <a href="#contentArea">Content Area</a></li>
+                        <li>6. <a href="#webElement">Web Element Styling  </a></li>
+                        <li>7. <a href="#javascript">Javascript  </a></li>
+                        <li>8. <a href="#jquery">JQuery  </a></li>
+                        <li>9. <a href="#documentHistory">Document history</a></li>
+          			</ul>
+                </div>
+              </div>
+            
+            
+            </div>
+            <div class="date_updated">
+            	<div class="printLink" onClick="printit()">Print this page</div>
+            </div>
+            
+            <div class="content elements">
+                <div class="content_intro">
+                   <p>The following document is a style guide to assist in the research and designing of U-LEAF application. To ensure design continuity and maintain the lifespan of application, it is important that everybody involved in the research, 
+            design maintenance and updating of sites read, understand and adhere to this guide. All  U-LEAF Portal screens should have a similar &lsquo;look and feel&rsquo;. The base 'Liferay  components' and 'theme' are provided to enable this. It is appreciated that the  functionality within the various module portlets will differ significantly,  however the standards detailed within this document aim to address all aspects  of the user interface and ensure a consistent &lsquo;look and feel&rsquo; at all times.</p>
+</div>
+            <div class="notice" style="margin-left:0"> U-LEAF Legacy application layouts are not covered in this section.</div>
+				
+            
+           
+
+
+ <a name="homepage"></a>
+            
+            <h2>1. U-LEAF Home page</h2>
+            <h3 class="large">Click to enlarge</h3>
+            <a href="images/uleaf_homepage.png" rel="example" title="U-LEAF Home Page">
+                <img src="images/uleaf_homepage_small.png" alt="U-LEAF Home Page" /></a> 
+            <p></p>
+            
+            
+            
+<p></p>
+            
+            <a name="header"></a>
+            <h2>2. Global Header &amp; Primary Navigation</h2>
+            <a name="navigation_system"></a>
+<h2>1. Navigation system</h2>
+<p>The U-LEAF application navigation is one of the main ways to make information accessible for users. The navigation helps users to go through the information structure of the application and tells them where they are, where they have been, and where they can go. </p>
+<p>This section outlines the main navigation elements:  
+</p><ul>
+<li>The Primary Navigation  as dropdown menu 
+</li></ul>	
+  <a href="images/global_header_big.png" rel="example" title="Global Header & Primary Navigation">
+            <img src="images/global_header_small.png" alt="Global Header" /></a> 
+
+            <p></p>
+            
+            <p>This area must be consistent from page to page. It holds important navigational elements: quick link functions, and 
+            primary navigations with drop down menu options.</p>
+            
+            <p>Drop down menu navigation section with a direct navigational link to home page. Items should accomodate the space of 1024px width in all circumstances. It is recommended to reduce the size of text if navigational link width exceeds specified width of 1024px. The location, width, height and appearance of this menu should not be changed from specified sizes. </p>
+            <p><strong>Customization:</strong> </p>
+            <ul>
+                <li>Size and location of this area is fixed.</li>
+            </ul>
+            <h3>Logo customization</h3>
+            <img src="images/logo_uleaf_implementation.png" width="340" height="142" alt="Logo customization" />
+<ul>    
+          <li>U-LEAF logo could be replaced with client logo, but should be resized to accomodate the space avilable for logo. The logo is a graphic that links back to UFSS home page and <strong>flexible width and height of 29px</strong>. Margin around logo must be 10px for top and bottom, 20px for left and right. Logo must not exceed in height as the size specified which might cause the part of logo will not be visible. There must have margin defined around logo. </li>
+          <li>Background or logo must be transperant and recommended logo image format is PNG-24</li>
+                <li>The colour of the primary navigation blue area can be changed to accomodate the theme color customer is choosen.</li>
+                <li></li>
+                <li></li>
+            </ul>
+
+            <p>&nbsp;</p>
+            
+<p></p>
+           
+           <a name="Globalfooter"></a>
+            
+            <h2>3. Global Footer</h2>
+           <p>No global footer as part of current ULEAF Design.</p>
+    <a href="images/global_footer_big.png" rel="example" title="Footer Grid">
+            <img src="images/global_footer_small.png" alt="Footer Grid" /></a> 
+
+            <p></p>
+            <p>&nbsp;</p>
+            
+
+            
+            
+            
+            <p></p>
+           
+           
+            <a name="elements"></a>
+            
+            <h2>4. U-LEAF - Universal Elements overview</h2>
+            
+            <p>These elements will appear on every interior page of the U-LEAF application. Appearance of
+            some elements may vary from section to section but in no circumstance will any of these
+            universal elements be omitted or structurally altered. </p>
+            <h3 class="large">Click to enlarge</h3>
+            <a href="images/home_elements.png" rel="example" title="U-LEAF - Home Elements overview">
+                <img src="images/home_elements_small.png" alt="U-LEAF - Home Elements overview" />
+            </a>
+            
+           
+            
+            
+            
+            
+            <p></p>
+            <p><a name="contentArea"></a>          </p>
+            <h2>5. Content Area </h2> 
+            <h3>Inner page elements</h3>
+				<p>ULEAF Layout contains two set of template to present content for individual modules. For example for SoftEntity  is using two set of templates - <strong>3 column</strong> for <strong>Search, View, Update and Create</strong> pages tabular section and <strong>2 column</strong> layout for <strong>Search Results, Associations, Profile, Marker</strong> etc. </p>
+            <a href="images/inner_page_elements_big.png" rel="example" title="Inner Page Content Section">
+            <img src="images/inner_page_elements.png" alt="Inner Page Content Section" /></a> 
+            <p></p>
+            <a href="images/inner_page_elements1.png" rel="example" title="Inner Page Content Section">
+            <img src="images/inner_page_elements1_small.png" alt="Inner Page Content Section" /></a> 
+            
+
+           
+            
+            
+            
+            
+            
+			
+
+
+            
+
+
+			  
+           
+            
+            
+            
+             <a name="webElement"></a>
+            <h2>6. Web Element Styling</h2>
+            
+  
+
+            <p></p>
+            <p>In general, all the styling of the Holmes Portal is achieved via the Holmes theme CSS files. Styling of the portal container, navigation bar, portlet border and portlet header should be in the U-LEAF Theme project. Refer <a href="site_structure.htm"><strong>ULEAF Application Structure</strong></a> for further information on ULEAF THEME </p>
+            
+           <p> It is important to point out that Liferay has a standard set of base CSS files and a specific one for customising. For example:</p>
+
+<h3>Base CSS Files:</h3>
+
+<p>application.css, base.css, forms.css, layout.css, main.css, navigation.css and portlet.css</p>
+
+<p><strong>The base CSS files, in general, should not be changed unless specified via the development team leader.</strong></p>
+
+<h3>Custom CSS File:</h3>
+<p>custom.css</p> 
+
+<p>The custom CSS file is where specific styles relating to the ‘<strong>Holmes</strong>’ theme reside. These styles cover all aspects of portlet development ranging from the outer portlet wrapper, down to specific field based styling. </p>
+
+<p>Most CSS styles required for future development already exist within this CSS and are documented accordingly in the following sections for reference. <strong style="red">Any subsequent additions to the custom.css should be approved via the development team leader.</strong></p>
+
+<strong>Deploying the Holmes Theme </strong>:
+
+<p>The Holmes theme has to be built and deployed for the SCSS(SASS)/CSS styles to take effect. The Holmes theme is a ‘project’ in its own right and needs to be built and deployed in a similar way to any other <strong>.war</strong> file. The .war file is named <strong>Holmes-theme.war</strong> and needs to be placed in the standard JBoss deploy directory on startup.</p>
+				<p>For further details on build and deployment of theme refer <a href="http://gbhlm-nexus01.uleaf.site:8080/JSPWiki/Wiki.jsp?page=ULEAF2%20Theme%20Development" target="_blank"><strong>JSP WIKI - ULEAF2 Theme Development</strong></a></p>
+
+<p>The CSS files can be found at the following location:</p>
+
+			<p><strong><i>uleaf-theme\docroot\_diffs\css</i></strong></p>
+
+            <p>There are number of other possible locations for web element styling information in the application and <strong>CSS</strong> files and <strong>Images</strong>, should be located as follows:</p>
+            <ul>
+            	
+                <li>1. Styling of content re-used across multiple U-LEAF portlets should be located in the <strong>shared-ui</strong> project alongside the javascript libraries (in particular jQuery) providing the re-usable elements. Styles specified here may well override styles used for the same elements in the portal container (which also employs a version of jQuery).<br />
+                </li>
+                
+                <li>2. Styling of the content of a particular portlet is driven by the UI component supporting the portlet. It should re-use style information from the <strong>shared-ui</strong> project where possible, but may override and extend the style information if necessary. </li>
+            
+            <h3>A portlet JSP page will typically have the following style references: </h3>
+            <pre><code>&lt;link rel="stylesheet" type="text/css" media="screen" href="${sharedContextPath}/css/smoothness/jquery-ui-&lt;version>.custom.css" /&gt;
+&lt;link  rel="stylesheet" type="text/css" media="screen" href="${myContextPath}/css/&lt;component&gt;.css" /&gt;</code></pre>
+            
+            </ul>
+            
+            
+            <p>Typical example could be find in <strong>SoftEntity-ui/**/jsp/searchableContainer.jsp</strong></p>
+            
+
+            <p><a name="javascript"></a></p>
+            <h2>7. Javascript </h2>
+            <p><span class="red bold">JavaScript functions that directly reference document elements should be avoided.</span> An element to be acted on should be passed as a parameter.</p>
+    <p>Where possible, JavaScript functions should be generalised and reusable and defined in '.js' files.</p>
+    <p>JavaScript functions that are specific to a single HTML/JSP document should be defined in the HTML/JSP document. Do not put them in shared script files. A better alternative is to rewrite them to be more generalised and reusable or at least factor out the re-usable parts. </p> 
+           	<p>For more information refer the section <a href="http://gbhlm-nexus01.uleaf.site:8080/JSPWiki/Wiki.jsp?page=Presentation%20Guidelines" target="_blank"><strong>Presentation Guidelines</strong></a> in JSPWIKI </p>
+            
+            
+            
+            <p><a name="jquery"></a></p>
+            <h2>8. jQuery </h2>
+            <p> Due to conflicts with the Liferay version of JQuery, we often create and use our own non-standard JQuery global variable (e.g. <span class="green bold">h2JQuery</span>). There is a technique, described below, that can be used to minimise the impact of using the non-standard global. This approach should always be used in our code.</p>
+    <p>Where possible, JavaScript functions should be generalised and reusable and defined in '.js' files.</p>
+    <p>JavaScript functions that are specific to a single HTML/JSP document should be defined in the HTML/JSP document. Do not put them in shared script files. A better alternative is to rewrite them to be more generalised and reusable or at least factor out the re-usable parts. </p> 
+           	<p>
+            
+           
+
+When the jquery.ready function invokes its parameter function, it passes itself as the first parameter. By convention, we can bind this parameter to the dollar($) local name (which is the standard 'global name' for jquery). All code within the ready function can then refer to jquery as $ rather than have to use the global name. The advantage of this is that the non-standard named (e.g. h2jquery) is referenced once so when we come to change it we have much less code to modify. In addition the code is protected from any overwriting of the global variable. </p>
+				<p>Current version of Jquery used by ULEAF is <strong>v3.2.1</strong></p>
+            <p>For more information refer the section <a href="http://gbhlm-nexus01.uleaf.site:8080/JSPWiki/Wiki.jsp?page=JQuery%20Version%20Handling" target="_blank"><strong>jQuery Version Handling</strong></a> in JSPWIKI </p>
+            <a name="documentHistory"></a>
+            
+            <h1>Document History</h1>
+
+            <table width="90%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <th>Date</th>
+                    <th>Version</th>
+                    <th>Change</th>
+                    <th>Author</th>
+                </tr>
+                <tr>
+                    <td>27 June 2012</td>
+                    <td>1.0</td>
+                    <td>First draft of Layouts and templates</td>
+                    <td>Shilpi Kumar, Phil Storer, Jojest Thomson</td>
+                </tr>
+                <tr>
+                    <td>06 November 2012</td>
+                    <td>1.1</td>
+                    <td>Added sections for Javascript and jQuery</td>
+                    <td>Jojest Thomson</td>
+                </tr>
+				<tr>
+                    <td>10 April 2019</td>
+                    <td>2.0</td>
+                    <td>Updated sections for Javascript and jQuery</td>
+                    <td>Jojest Thomson</td>
+                </tr>
+            </table>
+            
+		  </div><!-- end content-->
+		</div><!-- end content-area-->
+	</div><!-- end  main-content -->
+    <div id="footer">
+	    <div class="copyright">
+        <h3>Confidential</h3>
+       	<p> This document is confidential and proprietary to Unisys Corporation. It is not to be used, reproduced, or disclosed outside Unisys without the written consent of Unisys Corporation. The information in this document is furnished for use by Unisys support personnel in servicing customer’s equipment or by a customer under a license agreement with Unisys.</p>
+		<p>Copyright © 2012 Unisys Corporation. All Rights Reserved.</p>
+		<p>Unisys is a trademark of Unisys Corporation.</p>
+		<p>All other brands and products referenced herein are acknowledged to be trademarks or registered trademarks of their respective holders.</p>
+		<p><strong>Version 1.0</strong> </p>
+        </div>
+    </div>
+</div>
+<div id="toTop">^ Back to Top</div>
+</body>
+</html>

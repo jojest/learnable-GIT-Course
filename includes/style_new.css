@@ -1,0 +1,497 @@
+/*===========================================================================
+// U-LEAF
+//
+// Copyright (c) 2019, Unisys Corporation. All Rights Reserved.
+//
+// Warning: This computer program is protected by copyright law and international treaties.
+// Unauthorised reproduction or distribution of this program, or any portion of it, may result
+// in severe civil and criminal penalties, and will be prosecuted to the maximum extent
+// possible under law.
+//===================================================================================================
+// Filename: tabs.css
+//---------------------------------------------------------------------------------------------------
+// Developer         : Jojest Thomson
+// Application Name  : U-LEAF
+// Date Created      : 29/07/2012
+// Purpose           : This page defines styles for U-LEAF Styleguide Layout
+//                                   
+//===================================================================================================
+// M A I N T E N A N C E   H I S T O R Y
+//---------------------------------------------------------------------------------------------------
+//    DATE       CM#     WHO                      DESCRIPTION
+// ----------  --------  -----------------------  ---------------------------------------------------
+//
+//==================================================================================================*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td
+{ margin:0;
+  padding:0; }
+  
+html
+{ background:#f6f6f6;}
+  
+li
+{ list-style:none; *list-style:none; }
+
+img {border:none}
+h1,h2,h3,h4,h5,h6
+{ font-size:100%; }
+  
+input,textarea,select
+{ font:inherit inherit inherit; }
+
+input,textarea,select
+{ *font-size:100%; }  
+
+body
+{ font:13px/1.231 'Raleway', arial,helvetica,clean,sans-serif;
+  *font-size:small;
+  *font:x-small; }
+
+select,input,button,textarea
+{ font:99% 'Montserrat', arial,helvetica,clean,sans-serif; }
+
+
+input {
+border: 1px solid #8F9494;
+height: 18px;
+padding: 3px;
+}
+
+
+
+
+table
+{ font-size:inherit;
+  font:100%; width:100% }
+
+pre,code,kbd,samp,tt
+{ *font:108%/100% monospace; }
+
+pre { white-space: pre-wrap;       /* css-3 */
+ white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+ white-space: -pre-wrap;      /* Opera 4-6 */
+ white-space: -o-pre-wrap;    /* Opera 7 */
+ word-wrap: break-word;       /* Internet Explorer 5.5+ */}
+
+h1, h2, h3, h4, h5 { font-family: 'Open Sans', 'pt sans', arial,helvetica,clean, sans-serif; text-transform: uppercase;}
+
+h1
+{ font-size:170%;
+  font-weight:bold; }
+
+h2
+{ font-size:160%;
+	font-weight: normal;
+	color: #cd1543;
+	margin-bottom: 10px;
+  }
+
+h3
+{ font-weight:bold; margin:10px 0; color:#666 }
+
+h4
+{ font-weight:bold; }
+
+a,input
+{ color:#525252;
+  text-decoration:none; outline:none }
+  
+  a:hover
+{ text-decoration:underline;}
+
+
+em
+{ font-style:italic; }
+
+h4
+{ margin-bottom:5px;
+  font-size:120.5%;
+  text-shadow:-1px -1px 0 rgba(0,0,0,0.1); }
+
+p
+{ padding-bottom:1em; max-width:900px }
+
+p.default
+{ padding-bottom:10px; max-width:900px }
+
+p.top
+{ padding-top:20px; padding-bottom:0px; max-width:900px }
+.clearfix
+{ clear:both; }
+
+.strong
+{ font-weight:bold; }
+
+
+table 
+	{ 
+	padding:2px; 
+	margin:0; max-width:900px
+	}
+th 	
+	{ 
+	background:#ece9e9; 
+	height:22px;  
+	border:1px solid #ccc; 
+	text-align:left; 
+	padding:2px
+	}
+td	
+	{ 
+	border:1px solid #ccc; 
+	border-top:none; 
+	padding:2px
+	}
+.required { color:red}
+
+.important { color:red; margin:10px 0}
+.large { font-size:14px; font-weight:bold}
+.bold { font-weight:bold; color:red}
+.bolder {font-weight:bold}
+
+
+.border-bottom { border-bottom:1px  dashed #ccc}
+
+/*:::::::: TABS :::::::::::::::*/
+
+.tab {padding-left:20px}
+
+/***** COLORS ************/
+.red {color:red}
+.green {color:green}
+.blue {color:blue}
+
+/***** alignment ************/
+
+.left {text-align:left}
+.center {text-align:center}
+.right {text-align:right}
+.top {vertical-align:top}
+.bottom {vertical-align:bottom}
+
+/*** layout ***/
+#wrapper {}
+
+/* Header */
+#header { height:60px;	 background:url(../images/content-header-glow.png) no-repeat 10px left;}
+#header .logoUnisys {float:left; width:131px; padding:10px 10px 5px 20px; }
+#header .logoUISG { float:right; padding:15px 30px 5px 20px; font-size:26px; font-weight:bold; letter-spacing:-1px; }
+
+
+/* main content */
+#main-content {background:url(../images/content-faux-background.png);
+  -webkit-box-shadow:0 3px 3px rgba(0,0,0,0.05);
+  border:1px solid #EEE;
+  background-color:#FFF;
+  color:#000;
+  border-radius:5px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  }
+ 
+ 
+.home-content {background:#fff !important;}
+  
+/* Navigation */
+  
+#nav-col {width:191px; float:left;  margin-top:45px; }
+#nav-col ul li a
+{ font-size:16px;
+  color:#666;
+  text-decoration:none;
+  padding:5px 10px;
+  border:1px solid transparent; 
+}
+
+#nav-col li.selected
+{ font-weight:bold;
+  color:#5092bd !important;
+  background:url(../images/content-selected-arrow.png) no-repeat right center;
+   width:191px }
+   
+#nav-col li.selected a
+{color:#5092bd 
+	}   
+#nav-col li a:hover
+{ color:#5092bd; }
+
+#nav-col ul li a {
+text-align: right;
+display: block;
+padding: 5px 0;
+font-size: 14px;
+text-decoration: none;
+padding-right: 20px;
+}
+
+/* main content area */
+
+#content-area {margin-left: 191px;
+min-width:740px; min-height:400px;  
+padding: 1em 0; 
+}
+
+.homepage {margin-left: 20px !important;
+min-width:740px;  
+padding: 1em 0; 
+}
+
+
+#content-area .title-s {
+background: url(../images/content-header-bar.png)left bottom;
+height: 34px;
+border-bottom: 1px solid #EEE;
+border-top-right-radius: 5px;
+line-height: 24px;
+padding-left:1em; 
+}
+content-area .sub-title-s { margin:10px 0}
+
+
+#content-area .sub-title-s .content_abstract
+	{ 
+	font-weight:normal; 
+	float:left; width:100%; 
+	 margin-bottom:10px ; 
+	 box-shadow:0 3px 3px rgba(0,0,0,0.05);
+	}
+#content-area .sub-title-s .content_abstract div {	padding:0px 15px; 
+}
+
+#content-area .sub-title-s .content_abstract a:link {color:#000} 
+
+#content-area .sub-title-s .content_abstract div {float:left; width:30%; margin:5px; margin-left:0 ; }
+#content-area .sub-title-s .content_abstract div li { float:left; width:100%;  display:block; margin:5px; margin-left:0;  padding-left:0px;   }
+.opaque{	
+	opacity: .8;
+	filter: alpha(opacity=80); 
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+}
+
+.date_updated {font-size:12px; font-weight:normal; font-style:italic;  padding:5px; clear:both; display:block; border-top:none; position:absolute; top:70px; right:20px}
+
+.date_updated .printLink {float:right; width:90px; background: url(../images/print.png) right top no-repeat; cursor:pointer; padding-right:10px}
+
+
+
+#content-area .content {padding:1em; max-width:900px; }
+
+#content-area .content .content_intro{ font-size:14px; font-weight:bold;  padding-top:30px; }
+
+#content-area .content li {list-style-type: square;
+margin-left: 20px;
+line-height: 20px;}
+
+#content-area .elements li {list-style-type: none;
+margin-left: 0px !important;
+line-height: 20px;}
+
+span.top { margin:5px 0; padding:5px; display:inline-block; clear:both;  float:right; text-align:right; width:98%; font-size:11px; font-weight:bold;  }
+span.top a {color:red}
+.content a {color:#0000FF}
+.content h1 { font-size:140%; margin-bottom:10px}
+
+div.iconSets{ border:1px solid #CCC; padding:10px; margin:10px 0; width:90%; overflow:hidden }
+div.iconSets li{ list-style:none; display:inline; float:left  }
+
+
+dl.defs-table-narrow {
+width: 100%;
+float: left;
+overflow: hidden;
+margin-bottom: 1.08em;
+}
+dl {
+display: block;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+}
+dl.defs-table-narrow dt {
+clear: both;
+}
+
+dl.defs-table-narrow dt {
+width: 15%;
+padding-right: 3%;
+}
+
+dl.defs-table dt, dl.defs-table dd, dl.defs-table-narrow dt, dl.defs-table-narrow dd {
+display: block;
+float: left;
+margin: 0px;
+line-height: 1.5;
+font-weight: normal;
+margin-bottom: 0.5em;
+padding: 3px;
+}
+
+.background { border-top:1px solid #ccc; border-bottom:1px solid #ccc; width:40%; line-height: 2.5; }
+
+.check { border:none; margin:10px; vertical-align:middle; 
+    }
+
+/* footer */
+#footer { height:100px;}
+#footer .copyright_home { margin:10px 20px; width:}
+#footer .copyright { margin:10px 20px; margin-left:200px;}
+
+
+/*************** Colors *********************************/
+.red {color:red}
+.blue {color:blue}
+.green {color:green}
+
+
+/*********************Home  *****************************/
+
+
+.infobox {
+	position:relative;
+    border:3px solid #eaeaea; 
+    background-color:#CCC;
+    width:212px;  
+	cursor:pointer; 
+	float:left ; 
+	margin-right:10px;
+	margin-bottom:10px; 
+	
+    }
+.infobox a {color:#000}
+
+	
+.infobox .uidesign, .infobox .developer, .infobox .qa, .infobox .business_analyst  
+{ 
+width:196px; 
+height:290px; 
+padding:5px 5px 10px; 
+min-height:255px;
+}
+	
+.infobox .uidesign 
+{
+border:3px solid #f47b22; 
+background:url(../images/bg_home_uidesign.png) no-repeat top left; 
+}
+.infobox .developer {
+    border:3px solid #e53422; 
+    background:url(../images/bg_home_developer.png) no-repeat top left #d55b5c; 
+    }	
+	
+.infobox .qa {
+    border:3px solid #fec015; 
+    background:url(../images/bg_home_qa.png) no-repeat top left #fece48; 
+    }	
+
+.infobox .business_analyst {
+    border:3px solid #009edf; 
+    background:url(../images/bg_home_ba.png) no-repeat top left #5fbee5; 
+    }			
+			
+.infobox h3{ margin:180px 0 0 5px; font-size:16px; color:#000; }
+.infobox p{ margin:5px 0 0 5px; font-size:12px; color:#000; font-size:12px}
+.infobox .more
+	{
+	display:none;
+    }
+.infobox .more li
+	{
+		list-style:disc; margin-left:5px; padding-bottom:7px
+    }	
+.infobox .more p
+	{
+		font-weight:bold
+    }		
+.infobox .uidesign:hover .more, .infobox .developer:hover .more, .infobox .qa:hover .more, .infobox .business_analyst:hover .more {
+	display:block;
+    position:absolute;
+    z-index:1;
+    left:-1px;
+    top:-1px;
+    width:178px;
+    padding:10px;	
+	font-size:14px; 
+	font-weight:normal;
+	height:390px ; 
+	background-color:#fff
+}
+
+.infobox .uidesign:hover .more {
+    border:8px solid #f47b22; 
+	color:#000   
+    }
+.infobox .developer:hover .more {
+    border:8px solid #e53422; 
+    }	
+
+.infobox .qa:hover .more {
+    border:8px solid #fece48; 
+    }	
+.infobox .business_analyst:hover .more {
+    border:8px solid #5fbee5; 
+    }		
+
+.infobox .more li{ font-size:11px }
+.infobox .more li a:link, .infobox .more li a:visited, .infobox .more li a:hover, .infobox .more li a:active {color:#3e5a73; font-weight:bold  }
+div.home_title_content { padding:20px; padding-left:0;  font: bold 18px "PT Sans", Arial, "Times New Roman", Times, serif; width:800px}	
+
+div.home_main_content { padding:0 20px; height:330px}	
+
+div.notice { background-color:#fdcbcb; width:886px; margin:0 0 15px 22px; padding:6px; overflow:hidden }
+div.notice p { padding:0}
+
+div.home_linklists { background-color:#e1e1e1; width:886px; margin:0 0 15px 22px; padding:6px; overflow:hidden }
+
+div.home_linklists li {display:inline; padding:5px; color:#000; font-weight:normal}
+div.home_linklists li a { color:#333}
+
+div.home_linklists li.about_U-LEAF { font-size:18px; }
+div.home_linklists li.usability { font-size:16px; }
+div.home_linklists li.interface_elements { font-size:22px;  letter-spacing:-1px}
+div.home_linklists li.layout_templates { font-size:25px; letter-spacing:-1px }
+div.home_linklists li.branding_color { font-size:15px; }
+div.home_linklists li.typography { font-size:15px; }
+div.home_linklists li.iconography { font-size:18px; }
+div.home_linklists li.semantic { font-size:16px; }
+div.home_linklists li.css { font-size:17px; }
+div.home_linklists li.accessibility { font-size:20px; letter-spacing:-1px }
+div.home_linklists li.checklist { font-size:23px; letter-spacing:-1px }
+div.home_linklists li.glossary { font-size:13px; }
+
+
+/********   Back to top **********************/
+#toTop {
+		width:25px;
+		height:62px;
+        background:#f7f7f7;
+        text-align:center;
+        padding:5px;
+        position:fixed; /* this is the magic */
+        bottom:40%; /* together with this to put the div at the bottom*/
+        right:10px;
+        cursor:pointer;
+        display:none;
+        color:#333;
+        font-family:verdana;
+        font-size:11px;
+		background: url(../images/top.png) 0 0 no-repeat;
+		text-indent:-5000px;
+}
+
+/* EGIF */
+pre {border:1px solid #ccc; padding:10px; margin:0 10px 10px 5px; background-color:#fff}
+.example, .css-example {
+padding: .5em;
+margin-top: .25em;
+margin-bottom: .25em;
+}
+.off {
+display: none;
+}
+/* Elements */
+.tabs-wrapper .list-wrap pre {border:0px; padding:0px; margin:0 10px 10px 5px; background-color:#FAFAFA}
+
+
+/* From Elements */
+table.checklist input[type='radio'] {border:none}

@@ -1,0 +1,2282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>U-LEAF UI Standards & Guidelines</title>
+<link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=latin" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css' />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+<link href="includes/style_new.css" rel="stylesheet" type="text/css" />
+<link href="includes/tabs.css" rel="stylesheet" type="text/css" />
+<link href="includes/element_styles.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" href="includes/jq/jquery.ui.all.css">
+<link rel="stylesheet" href="includes/jq/demos.css">
+
+<script type='text/javascript' src='script/jquery-1.6.2.min.js'></script>
+<script type="text/javascript" src="script/organictabs.jquery.js"></script>
+<script type="text/javascript" src="script/jquery_functions.js"></script>
+<script src="script/jquery.colorbox.js"></script>
+
+<script src="script/jquery.ui.core.min.js"></script>
+<script src="script/jquery.ui.datepicker.min.js"></script>
+<script src="script/jquery.hoverIntent.js"></script>
+<script>
+$(function() {
+	$( "#datepicker" ).datepicker({
+	showOn: "button",
+	buttonImage: "images/icons/calendar.png",
+	buttonImageOnly: true,
+	changeMonth: true,		
+	changeYear: true
+	});
+});
+</script>
+</head>
+<body>
+
+
+
+<div id="wrapper">
+    <div id="header">
+        <div class="logoUnisys"><a href="index.htm"><img src="images/logo_unisys.png"  alt="Unisys" border="0" /></a></div>
+        <div class="logoUISG">U-LEAF UI Standards & Guidelines 2.0</div>
+    </div>
+    <div id="main-content">
+        <div id="nav-col">
+            <ul>
+                <li class="border-bottom"><a href="about.htm" class="link-about ">About U-LEAF UISG</a></li>
+                <li><a href="usability.htm" class="link-usability">Usability & Information Architecture</a></a></li>
+                <li><a href="accessibility.htm" class="link-accessibility">Accessibility &amp; Browser Support Standards</a></li>
+                <li><a href="egif.htm" class="link-egif">e-GIF Compliance</a></li>
+                <!--<li><a href="interface_design.htm" class="link-interface">User Interface Design</a></li>-->
+                <li class="border-bottom"><a href="site_structure.htm" class="link-structure">U-LEAF Application Structure</a></li>
+                <li><a href="branding.htm" class="link-brand">Branding and colour</a></li>
+				<!--<li><a href="typography.htm" class="link-typography" id=" ">Typography & Icons</a></li>-->                
+                <li><a href="standards.htm" class="link-xhtml">XHTML & Semantic Mark-up Standards</a></li>
+                <li  class="border-bottom"><a href="css.htm" class="link-css">CSS</a></li>
+                <li><a href="layouts.htm" class="link-visual ">Layouts and Templates</a></li>
+                <li class="border-bottom selected"><a href="elements.htm" class="link-xhtml">U-LEAF Interface Elements</a></li>
+                <li><a href="checklist_developers.htm" class="link-checklist">Developer - UI Checklist</a></li>
+                <li><a href="checklist_testers.htm" class="link-checklist">Tester - UI Checklist</a></li>                
+                <!--<li><a href="forms.htm" class="link-forms menuselect">Form Elements</a></li>-->
+                <!--<li class="checklist"><a href="checklist.htm">Checklist</a></li><li class="glossary"><a href="glossary.htm">Glossary</a></li>-->
+			</ul>
+		</div><!-- end nav-col-->
+		<div id="content-area">
+            <div class="title-s"><h1>U-LEAF Interface Elements</h1></div>
+            <div class="sub-title-s">
+
+                <div class="content_abstract ">
+                    <div>
+                        <h3>U-LEAF Template Elements</h3>
+                        <ul>
+                            <li>1. <a href="#softentities">Soft Entities</a></li>
+                            <li>2. <a href="#portlets">The Portlet</a></li>
+                            <li>3. <a href="#capitalizing">Capitalizing Titles, Sub Titles, Navigation, Form Labels and Text</a></li>
+                            <li>4. <a href="#portletBackground">The Portlet – Background Colour</a></li>
+                            <li>5. <a href="#portletCSS">Define a specific portlet CSS class to override the default CSS</a></li>
+                            <li>6. <a href="#actionButtons">Action buttons</a></li>
+                            <li>7. <a href="#dataGrid">Data Table View</a></li>
+                            <li>8. <a href="#statusMessages">Status Messages</a></li>
+                            <li>9. <a href="#softtabs">Soft Entity Tabs</a></li>
+                            <li>10. <a href="#help">ULEAF WIKI Help Configuration</a></li>
+                            <li><h3><a href="#formElements"><span class="red">U-LEAF Form Elements</span></a></h3></li>
+                            <li>11. <a href="#links">Links</a></li>
+                            <li>12. <a href="#titles">Titles</a></li>
+                            <li>13. <a href="#textbox_control"> Textboxes</a></li>
+                            <li>14. <a href="#labels"> Labels</a></li>
+                            <li>15. <a href="#listbox_control"> Listbox control</a></li>
+                            <li>16. <a href="#radio_buttons">  Radio buttons </a></li>
+                            <li>17. <a href="#check_boxes"> Check boxes</a></li>
+                        </ul>
+                    </div>
+                    <div>
+            	        <h3>&nbsp;</h3>
+               	        <ul>
+                            <li>18. <a href="#date_picker_control"> Date picker control</a></li>
+                            <li>19. <a href="#required_fields"> Required fields</a></li>
+                            <li>20. <a href="#input_fields"> Input fields and Text areas</a></li>
+                            <li>21. <a href="#field_labels"> Field labels</a></li>
+                            <li>22. <a href="#tabindex"> Tabindex</a></li>
+                            <li>23. <a href="#data_tables">  Data Tables</a></li>
+                            
+                            <li><h3><a href="#proposed"><span class="red">Proposed Changes</span></a></h3></li>
+                            <li>1. <a href="#warningMessage">Warning Message</a></li>
+                            <li>2. <a href="#systemHelp">System Help</a></li>
+                            <li>3. <a href="#toolTips">Tooltips</a></li>
+                            <li>4. <a href="#dataValidations">Data Validations</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="content elements">
+				<h1>U-LEAF Template Elements</h1>
+                <p>This section defines the use of HTML elements on U-LEAF functional pages.</p>
+                <div class="notice" style="margin-left:0"> U-LEAF SMART &amp; TAG Management interface elements are not covered in this styleguide.</div>
+
+<!-- :::::::::::::::::::::  Soft Entities :::::::::::::::::::::::::::::: -->            
+
+                <div class="elements_container">
+                    <a name="softentities"></a>
+                    <h2>1. Soft Entities</h2>
+                    <p>Soft Entities are a major feature introduced in the U-LEAF workstream that allows simple entity types to be created without the need for software changes. In place of the hard-coded approach to describing the characteristics and fields of an entity, a <strong>dynamic meta-data based approach</strong> is used. This meta-data is maintained in the <strong>U-LEAF database</strong>. The meta-data describes the type and format of the data fields of each soft entity, the rules for processing the data and simple field presentation information. Using this information, web pages are dynamically generated to perform entity searching, viewing, creation and update, and meta-data based validation rules are applied to each entity prior to storage.</p>
+					<p>For further technical details refer <a href="http://gbhlm-nexus01.uleaf.site:8080/JSPWiki/Wiki.jsp?page=Soft%20Entities" target="_blank"><strong>JSP Wiki > Soft Entities</strong></a></p>
+				</div>
+                 
+<!-- :::::::::::::::::::::  Portlets :::::::::::::::::::::::::::::: --> 
+
+                <div class="elements_container">
+                    <a name="portlets"></a>
+                    <h2>2. Portlets</h2>
+                    <p>Portlets are pluggable user interface software components that are managed and displayed in U-LEAF. Portlets produce fragments of markup code that are aggregated into U-LEAf functional pages. Typically, following the desktop metaphor, U-LEAF functional page is displayed as a collection of non-overlapping portlet windows, where each portlet window displays a portlet. Hence a portlet (or collection of portlets) resembles U-LEAF that is hosted in Liferay portal.</p>
+                    <p>All portlets should have the same portlet border and header style as shown below. This is provided as default by the standard portlet classes contained within the custom.css</p>
+<p>For further information on Portlets, refer <a href="https://dev.liferay.com/develop/tutorials/-/knowledge_base/7-0/portlets" target="_blank"><strong>Liferay Website > Portlets section</strong></a></p>
+                    <img src="images/portlets.png" width="756" height="512" alt="Portlets" />
+                    <div class="tabs-wrapper">
+                        <div id="jquery-tabs-thirtythree">
+                            <ul class="nav">
+                                <!-- <li class="nav-one"><a href="#example" class=" example">Example</a></li>-->
+                                <li class="nav-two"><a href="#html" class="current html">HTML Markup</a></li>
+                                <li class="nav-three"><a href="#css" class="css">CSS</a></li>
+                            
+                            </ul>
+                            <div class="list-wrap">
+                                <ul id="html">
+                                    <h3>HTML snippet for action button</h3>
+                                    <p>All buttons should have an appropriate title attribute, for example title=”Create an alert”, which will display on hover. </p>
+                                    <pre id="longselectexample" style="display: block; "><code>
+&lt;div class="portlet-topper"&gt;	
+&lt;span class="portlet-title"&gt;
+&lt;div class="portletIcon crossIndex"&gt;Cross Index Search &lt;/div&gt;
+&lt;/span&gt;		
+&lt;/div&gt;
+&lt;div class="portlet-content"&gt;	
+&lt;div style="" class="portlet-content-container"&gt;	
+<span style="color:red">Content Goes here</span> 
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </ul>
+                                <ul id="css" class="hide">
+                                    <h3>CSS for Page Title example</h3>
+                                    <pre id="longselectexample" style="display: block; "><code>Portlets CSS is defined in the 'Holmes-themes/custom.css' as follows:
+                                    
+.portlet-topper {
+background: url("../images/portlet/portlet_top.jpg") repeat-x scroll 0 0 transparent;
+margin: 0;
+padding: 0;
+position: relative;
+}
+.portlet-title {
+color: #333333;
+font-size: 12px;
+font-weight: bold;
+padding:5px 3;
+}
+
+.portlet-title .portletIcon {
+margin-left: 4px;
+margin-right: 30px;
+padding-left: 22px;
+padding-top: 2px;
+}
+.portlet-title .Nominal {
+background: url("../images/nominalIcon.png") no-repeat scroll left 85% transparent;
+}
+.portlet-content {
+padding: 12px 10px 10px;
+}
+</code></pre>
+</ul>
+
+</div> <!-- END List Wrap -->
+</div> <!-- END Organic Tabs (Example One) -->
+</div><!-- END tabs wrapper --> 
+ 
+
+<h3>Portlet Icons</h3>
+<p>The portlets have icon images in the top left corner. The icon image is defined within the liferay-portlet.xml file. For example:</p>
+<pre id="longselectexample" style="display: block; "><code>
+&lt;?xml version="1.0"?&gt;
+&lt;!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 5.2.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_5_2_0.dtd"&gt;
+&lt;liferay-portlet-app&gt;
+&lt;portlet&gt;
+&lt;portlet-name>welcomeui&lt;/portlet-name&gt;
+&lt;icon&gt;<span style="color:red">/images/my_account.png</span>&lt;/icon&gt;
+&lt;private-session-attributes&gt;false&lt;/private-session-attributes&gt;
+&lt;css-class-wrapper&gt;portlet-welcome&lt;/css-class-wrapper&gt;
+&lt;/portlet&gt;
+&lt;/liferay-portlet-app&gt;</code></pre>
+
+<h3>The Portlet – Background Colour</h3>
+<p>The portlet background colour generally consists of one of two colours; white (#FFFFFF) or light grey (#F2F4F4)</p>
+
+<p>The ‘smaller’ portlets often have the light grey background, whereas the larger transactional based portlets have white backgrounds with the content tables coloured accordingly. </p>
+
+<p>It is important to point out that the standard default portlet background is defined as white in the custom.css, thus:</p>
+
+<pre id="longselectexample" style="display: block; "><code>
+.portlet-content {
+padding: 12px 10px 10px;
+background:#FFF none;
+}</code></pre>
+<p></p>
+<p><strong>This can be overridden by defining a specific CSS class for a portlet and defining as follows:</strong></p>
+
+<pre id="longselectexample" style="display: block; "><code>
+.portlet-incident .portlet-content {
+
+background: #F2F4F4 none;
+
+}
+</code></pre>
+
+</div>
+<!-- :::::::::::::::::::::  Capitalising :::::::::::::::::::::::::::::: --> 
+
+                <div class="elements_container">
+                    <a name="capitalizing"></a>
+                    <h2>3. Capitalizing Titles, Sub Titles, Navigation, Form Labels and Text</h2>
+<p>Make titles, sub titles, labels and text for interface elements easy to understand and avoid technical jargon as much as possible. Try to be as specific as possible in any element that requires the user to make a choice, such as radio buttons, checkboxes, and buttons. Although it’s important to be concise, don’t sacrifice clarity for space.</p>
+<p>All interface element Titles, Sub Titles and Labels should use Title style capitalization as follows</p>
+<p></p>
+<h4>These are the words that should be capitalized:</h4> 
+<ul>
+<li>- The first and last words of the title</li>
+<li>- All nouns, pronouns, verbs, adverbs, and adjective
+<li>- <strong>Any conjunction or preposition of five letters or more</strong> --(This is optional. You can choose to go with an older rule that says not to capitalize prepositions or conjunctions regardless of length. The five letters or more standard has developed over the last two decades or so. Either form would be acceptable, as long as we use it consistently.) 
+</ul>
+<p></p>
+<h4>These are the words that should not be capitalized:</h4>
+<ul>
+<li>- <strong>Articles</strong> (the, a, an), unless the article is the first or (less likely, of course) last word of the title.
+<li>- <strong>Prepositions</strong> of four letters or fewer (unless the preposition is the first or last word of the title). 
+Prepositions convey the following relationships: agency (by); comparison (like, as . . . as); direction (to, toward, through); place (at, by, on); possession (of); purpose (for); source (from, out of); and time (at, before, on). 
+<li>- <strong>Conjunctions</strong> of four letters or fewer (unless the conjunction is the first or last word of the title) 
+<li>- The <strong>particle</strong> "to" used with an infinitive (unless the "to" is the first or last word of the title. For an example of the infinitive particle "to" capitalized at the end of the title, take my article "It's My Participle, and I'll Dangle It if I Want To". )
+</ul>
+<p></p>
+<h4>Text Style Guidelines</h4>
+<p>Text is prevalent throughout the ULEAF interface for such things as button names, menu labels, dialog messages, and help tags. Using text consistently and clearly is a critical component of UI design. First word text should be capitalized, and the rest of the words are lowercase, unless they are proper nouns or proper adjectives. If the text forms a complete sentence, end the sentence with proper punctuation; otherwise, do not add ending punctuation.</p>
+
+<table border="0" cellspacing="0" cellpadding="5">
+	<caption><strong>Proper capitalization of onscreen elements</strong></caption>
+    <tbody>
+    	<tr>
+        	<th scope="col" class="TableHeading_TableRow_TableCell"><p>Element</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p>Capitalization style</p></th>
+            <th scope="col" class="TableHeading_TableRow_TableCell"><p>Examples</p></th>
+        </tr>
+        <tr>
+        	<td scope="row"><p>Menu titles</p></td>
+            <td><p>CAPITAL</p></td>
+            <td>
+            	<p>SYSTEM</p>
+            	<p>INDEXES</p>
+				<p>INDEXING</p>
+				<p>DOCUMENTS</p>
+            </td></tr><tr><td scope="row"><p>Menu items</p></td><td><p>Title</p></td><td><p></p>
+<p>User Management</p>
+<p>Alert Maintenance</p>
+<p>Sign Out</p>
+<p>Register New Document</p>
+<p>Search for Schedule Printing</p>
+<p>List of Mispers</p>
+<p>Cross Index Enquiryl</p></td></tr><tr><td scope="row"><p>Action Buttons</p></td><td><p>CAPITAL</p></td><td><p></p>
+<p>RESET</p>
+<p>APPLY</p>
+<p>SEARCH</p>
+<p>MARK AS READ ONLY</p></td></tr><tr><td scope="row"><p>Labels that are not full sentences (for example, group box or list headings)</p></td><td><p>Title</p></td><td><p></p>
+  <p>Amend Association</p>
+  <p>Action Details</p>
+  <p>Date of Birth</p></td></tr><tr><td scope="row"><p>Options that are not strictly labels (for example, radio button or checkbox text), even if they are not full sentences</p></td><td><p>Sentence</p></td><td><p></p>
+    <p>Unknown</p>
+    <p>Unidentified</p>
+    <p>Image now available</p></td></tr><tr><td scope="row"><p>Dialog messages</p></td><td><p>Sentence</p></td><td><p>Checking for new software…</p>
+      <p>Are you sure you want to delete?</p></td></tr>
+      <tr><td scope="row"><p>Grid Icons</p></td><td><p>Title</p></td><td><p><img src="images/icon_refresh_grid.png" width="114" height="55" alt="Refresh Grid Icon Tooltip" /></p>
+      <p><img src="images/icon_view_selected_entity.png" width="265" height="66" alt="View Selected Entity Tooltips" /></p></td></tr>
+      <tr><td scope="row"><p>SoftEntity Tabs</p></td><td><p>CAPITAL</p></td><td><p>SEARCH RESULTS</p>
+      <p>NOMINAL</p><p>ASSOCIATION</p><p>CUSTOM FIELDS</p><p>ACCESS CONTROLLS</p></td></tr>
+      
+    </tbody></table>
+
+</div>
+
+<!-- :::::::::::::::::::::  The Portlet – Background Colour :::::::::::::::::::::::::::::: --> 
+
+
+<div class="elements_container">
+<a name="portletBackground"></a>
+<h2>4. The Portlet – Background Colour</h2>
+
+<p>The portlet background colour generally consists of one of two colours; white (<strong>#E6F1F5</strong>) or light grey (<strong>#F2F4F4</strong>)</p>
+
+<p>The ‘smaller’ portlets often have the light grey background, whereas the larger transactional based portlets have white backgrounds with the content tables coloured accordingly. </p>
+
+<p>It is important to point out that the standard default portlet background is defined as white in the custom.css, thus:</p>
+
+<pre><code>.portlet {
+	border: 1px solid #cad7d9;
+	background: #E6F1F5 none;
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	padding: 0px;
+	color: #1e4585;
+}
+section.portlet .portlet-topper {
+    background-color: #e6f1f5;
+    border-bottom-color: #b7bcae;
+    padding: 0 10px
+}
+section.portlet .portlet-content {
+    background-color: #e6f1f5;
+    padding: 5px 10px 5px 10px
+}
+</code></pre>
+<p>This can be overridden by defining a specific CSS class for a portlet and defining as follows:</p>
+<pre><code>.portlet-incident .portlet {
+	border: 1px solid #cad7d9;
+	background: #F2F4F4 none;
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 15px;
+	padding: 0px;
+	color: #1e4585;
+}
+</code></pre>
+
+
+
+</div>
+ 
+<!-- :::::::::::::::::::::  3.1.5	The Portlet – How to define a specific portlet  :::::::::::::::::::
+	  :::::::::::::::::::   CSS class to override the default CSS  					:::::::::::::::::: --> 
+
+<div class="elements_container">
+<a name="portletCSS"></a>
+<h2>5. The Portlet – How to define a specific portlet CSS class to override the default CSS </h2>
+
+<p>All portlets have a <strong>liferay-portlet.xml</strong>. </p>
+
+<p>The <css-class-wrapper> tag gives the ability to specify a CSS class which can be used to override default CSS classes within the custom.css. For example:</p>
+
+<pre><code>&lt;?xml version="1.0"?&gt;
+&lt;!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 5.2.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_5_2_0.dtd"&gt;
+
+&lt;liferay-portlet-app&gt;
+	&lt;portlet&gt;
+		&lt;portlet-name&gt;softentity&lt;/portlet-name&gt;
+		&lt;virtual-path&gt;/holmes2/holmes2ng-softentity-ui&lt;/virtual-path&gt;
+		&lt;instanceable&gt;true&lt;/instanceable>
+		&lt;private-request-attributes&gt;false&lt;/private-request-attributes&gt;
+		&lt;private-session-attributes&gt;false&lt;/private-session-attributes&gt;
+		<span class="red">&lt;css-class-wrapper&gt;portlet-softentity&lt;/css-class-wrapper&gt;</span>
+	&lt;/portlet&gt;
+&lt;/liferay-portlet-app&gt;
+
+
+</code></pre>
+
+<p>The CSS class defined as the &lt;css-class-wrapper&gt; is then used within the custom.css as follows, effectively overriding any default CSS styles for the default .portlet class :</p>
+
+<pre><code>.portlet-softentity .portlet {
+	border: 1px solid #cad7d9;
+	background: #FFFFFF none;
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-right: 24px;
+	margin-bottom: 15px;
+	padding: 0px;
+	color: #1e4585;
+}
+</code></pre>
+
+
+
+
+</div>
+ 
+<!-- :::::::::::::::::::::   Action Buttons :::::::::::::::::::::::::::::: --> 
+
+
+<div class="elements_container">
+<a name="actionButtons"></a>
+
+<h2>6. Action Buttons</h2>
+<p>All action buttons should follow the standard style. Action buttons must have meaningful alt texts. Buttons are categorized by importance and can be applied to a variety of html nodes. Each variation has intention and should be used sparingly.</p>
+
+
+<div class="example_container">
+<input class="btn btn-primary btn-medium" id="searchButton" type="submit" name="disposition" value="PRIMARY" title="Search" onclick="return false;" tabindex="113">
+	<input class="btn btn-secondary btn-medium" id="countButton" type="button" name="disposition" value="SECONDARY" title="Count" onclick="return false;" tabindex="114">
+	<input class="btn btn-secondary btn-medium btn-delete" id="deleteButton" type="button" name="disposition" value="WARNING" title="Delete">
+</div>
+
+Notes
+	<li>You can create buttons using the button HTML tag accompanied by the button class.</li>
+
+<li>To style an anchor (a) tag as a button use the button class.</li>
+
+<li>To style an input as a button use the button class and define a label by adding a value attribute.</li>
+
+<div class="tabs-wrapper">
+<div id="jquery-tabs">
+<ul class="nav">
+<!-- <li class="nav-one"><a href="#example" class=" example">Example</a></li>-->
+<li class="nav-two"><a href="#actionButton" class="current html">HTML Markup</a></li>
+<li class="nav-three"><a href="#actionButtonCSS" class="css">CSS</a></li>
+
+
+</ul>
+<div class="list-wrap">
+<ul id="actionButton">
+<h3>HTML snippet for action button</h3>
+<p>All buttons should have an appropriate title attribute, for example title=”Create an alert”, which will display on hover. </p>
+<pre id="longselectexample" style="display: block; "><code>
+&lt;button class="btn btn-primary btn-medium">Default&lt;/button&gt;
+&lt;button class="btn btn-secondary btn-medium">Important&lt;/button&gt;
+&lt;button class="btn btn-primary btn-medium btn-red">Caution&lt;/button&gt;
+</code></pre>
+</ul>
+<ul id="actionButtonCSS" class="hide">
+<h3>CSS for Page Title example</h3>
+<pre id="longselectexample" style="display: block; "><code>Button CSS is defined in the 'custom.css' as follows:
+
+
+input.btn {
+    margin: 3px 0 3px 0;
+    border-radius: 3px;
+    padding: 7px 3px!important;
+    text-transform: uppercase;
+    font-family: "Open Sans Bold",Tahoma;
+    word-wrap: break-word;
+	height: auto;
+	cursor: pointer;
+}
+.btn-primary {
+    -moz-box-shadow: 0 0 0 0 #d7ffcc;
+    -webkit-box-shadow: 0 0 0 0 #d7ffcc;
+    box-shadow: 0 0 0 0 #d7ffcc;
+    background: #2d92b4;
+    background-color: #2d92b4;
+    border: 1px solid #2d92b4;
+    color: #fff
+}
+.btn-secondary {
+    background: #fff;
+}
+input.btn-primary:hover,
+input.btn-primary:focus,
+input.btn-secondary:hover,
+input.btn-secondary:focus
+
+{
+    background: #09779f;
+    background-color: #09779f;
+    color: #fff;
+	-webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+    -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05)
+}
+input.btn-medium {
+    padding: 10px 8px !important;
+    font-size: 12px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px
+}
+
+.btn-delete:hover,.btn-delete:focus {
+    background: #f00b0b!important;
+    color: #fff;
+    border-color: #f00b0b!important
+}
+</code></pre>
+</ul>
+
+
+</div> <!-- END List Wrap -->
+</div> <!-- END Organic Tabs (Example One) -->
+</div><!-- END tabs wrapper --> 
+
+   
+
+<!-- :::::::::::::::::::::   Data Grid View :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: --> 
+
+<div class="elements_container">
+<a name="dataGrid"></a>
+
+<h2>7. Data Table View</h2>
+
+<p>Data Grid is been used across U-LEAF application for representing and manipulating tabular data. Functionality is often required which requires a significant number of records to be displayed in a list. For example, the incident list portlet.</p>
+<p>jqGrid, an Ajax-enabled JavaScript control is been used for this functionality. jqGrid uses a jQuery Java Script Library and is written as plugin for that package. </p>
+
+<p>When a large number of records are being listed, and especially when paging is required, JQuery jqGrid should always be used and follow the style shown below. The background colour should be white with light grey gridlines.</p>
+
+<div class="example_container">
+<h3>Example</h3>
+<img src="images/data_grid.png" alt="Data Grid" /> 
+</div>
+<div class="tabs-wrapper">
+<div id="jquery-tabs-fourty">
+<ul class="nav">
+<!-- <li class="nav-one"><a href="#example" class=" example">Example</a></li>-->
+<li class="nav-two"><a href="#dataGridHTML" class="current html">HTML Markup</a></li>
+<li class="nav-three"><a href="#dataGridCSS" class="css">CSS</a></li>
+<li class="nav-four"><a href="#dataGridJquery" class="jQuery">jQuery</a></li>
+
+</ul>
+<div class="list-wrap">
+<ul id="dataGridHTML">
+<h3>Step 1: You need only the following HTML for data grid. Rest is jQuery's Job...</h3>
+<pre id="longselectexample" style="display: block; ">
+<code>&lt;table id="<span class="red">jqGridList</span>" class="<span class="red">scroll</span>" width="100%"&gt;&lt;/table&gt;&lt;!-- Grid header and content --&gt;
+&lt;div id="<span class="red">pcolch</span>"&gt;&lt;/div&gt; &lt;!-- grid footer with  pagination--&gt;
+</code>
+</pre>
+<p>jQuery use id's to insert the right content in the grid content and footer containers. For example <strong>jqGridList</strong> for content and <strong>pcolch</strong> for footer. ID's should be relevant to the functionality you are inserting JQGrid. For instance, SoftEntity Access Controll JQGrid id's are <span class="red">accessControlGrid</span> and <span class="red">accessControlPager</span> simultaneously</p>
+</ul>
+<ul id="dataGridCSS" class="hide">
+<h3>Step 2 : Following stylesheets defines all styles needed for jQGrid. Just make sure the following style sheets are included.</h3>
+<pre><code>
+&lt;link rel="stylesheet" type="text/css" media="screen" href="${sharedContextPath}/css/holmes/<span class="red">jquery-ui.custom.css</span>" /&gt;
+&lt;link rel="stylesheet" type="text/css" media="screen" href="${sharedContextPath}/css/<span class="red">ui.jqgrid.css</span>" /&gt;
+</code></pre>
+</ul>
+<ul id="dataGridJquery" class="hide">
+<h3>Step 3: Here is the magic. Following JQuery plugins are used for JQGrid implementation</h3>
+<p class="default"><strong>Default jQuery Latest version</strong></p>
+<p class="default"><strong>Note</strong>Current version of jQuery is 3.2.1 and JQGrid version is v4.8.2</p>   
+<pre><code>
+&lt;script type="text/javascript" src="${sharedContextPath}/js/jquery.min.js"&gt;placeholder&lt;/script&gt;
+</pre></code>
+<strong>jQuery UI</strong>
+<pre><code>
+&lt;script type="text/javascript" src="${sharedContextPath}/js/jquery-ui.custom.min.js"&gt;placeholder&lt;/script&gt;
+&lt;script type="text/javascript" src="${sharedContextPath}/js/jquery.layout.js"&gt;placeholder&lt;/script&gt;
+</pre></code>
+<strong>To display messages etc</strong>
+<pre><code>
+&lt;script type="text/javascript" src="${sharedContextPath}/js/i18n/grid.locale-en.js"&gt;placeholder&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+jQuery.jgrid.no_legacy_api = true;
+&lt;/script&gt;
+<br />
+</pre></code>
+<strong>jQGrid plugin</strong></u>
+<pre><code>
+&lt;script type="text/javascript" src="${sharedContextPath}/js/jquery.jqGrid.min.js"&gt;placeholder&lt;/script&gt;
+
+<strong>Above section already been called if you are working on existing module in most occassions.</strong>
+
+<h3>Grid Customisation for local use in .jsp files</h3>                               
+h2JQuery(document).ready(function($){
+$("<span class="red">#jqGridList</span>").jqGrid({
+url:'${populateListUrl}', 
+autowidth:true, //<span class="red">Auto width</span>
+height:250, //<span class="red"> Height</span>
+datatype: 'json',
+mtype: 'GET',
+colNames:['Id','Name', 'Description', 'Incident Id','LastUpdated By', 'LastUpdated Date', 'Created By', 'Created Date', 'Owner', 'User Tags'], //<span class="red"> Column Titles</span>
+colModel :[
+{name:'id', index:'id', align:'left', hidden:true},
+{name:'name', index:'name', width:100, align:'left', editable:true},
+{name:'description', index:'description', width:200, align:'left', editable:true},
+{name:'incidentId', index:'incidentId', width:100, align:'left'},
+{name:'updatedBy', index:'updatedBy', width:70, align:'left', editable:false},
+{name:'updatedDate', index:'updatedDate', width:110, align:'left', editable:false},
+{name:'createdBy', index:'createdBy', width:70, align:'left', editable:false},
+{name:'createdDate', index:'createdDate', width:110, align:'left', editable:false},
+{name:'username', index:'username', width:70, align:'left', editable:false},
+{name:'userTags', index:'userTags', width:90, align:'left', editable:false}],
+pager: $('<span class="red">#pcolch</span>'),
+firstimg: '"/${sessionScope.instanceName}${pageContext.request.contextPath}/themes/sand/off-first.gif',
+rowList:[10,20,30,40,50,100], //<span class="red"> for dropdown selection</span>
+rowNum:20, //<span class="red">number of rows by default</span>
+sortname: 'name',
+sortorder: 'asc',
+viewrecords: true,
+multiboxonly: true,
+multiselect: true,
+loadonce: false,
+caption: 'List',
+onSelectRow: function(ids) {
+var gridData = $("#jqGridList").jqGrid('getGridParam','selarrrow'); 
+listId = 0;
+listName = "";
+listDescription = "";
+if( gridData != null  && gridData != "" && gridData.length == 1) {
+rowData = $("#jqGridList").jqGrid('getRowData',gridData);
+listId = rowData["id"];
+listName = rowData["name"];
+listDescription = rowData["description"];
+} 
+$("#jqGridDetailList").jqGrid('setGridParam',{
+url:'${populateListItemUrl}' +'&q=1&listId='+listId,page:1
+});
+var caption = "List Items";
+if(listName != "") {
+caption += " - "+listName;
+}
+if(listDescription != "") {
+caption += " (" + listDescription + ")";
+}
+$("#jqGridDetailList").jqGrid('setCaption',caption).trigger('reloadGrid');
+},
+onSortCol: function(index, colindex, sortorder) {
+$("#jqGridList").jqGrid('setGridParam',{sortname:index, sortorder:sortorder});
+$("#jqGridList").trigger("reloadGrid");
+}
+});
+$("<span class="red">#jqGridList</span>").jqGrid('navGrid','<span class="red">#pcolch</span>',{add:false,edit:false,del:false,search:false});
+$("<span class="red">#jqGridList</span>").jqGrid('navButtonAdd','#pcolch',{ buttonicon:"ui-icon-newwin", title: "Create new list",  caption: "Create", onClickButton : function (){
+window.location.href = "${createListUrl}" ;
+} });
+$("<span class="red">#jqGridList</span>").jqGrid('navButtonAdd','#pcolch',{ buttonicon:"ui-icon-pencil", title: "Edit the selected list",  caption: "Edit", onClickButton : function (){
+var gridData = $("<span class="red">#jqGridList</span>").jqGrid('getGridParam','selarrrow');
+if( gridData != null  && gridData != "" && gridData.length == 1) {
+window.location.href = "${editListUrl}" + "&listId=" + $("#jqGridList").jqGrid("getCell",gridData[0],"id");
+}
+else {
+alert("Please select one row to edit!");
+}
+} });
+$("<span class="red">#jqGridList</span>").jqGrid('navButtonAdd','<span class="red">#pcolch</span>',{buttonicon:"ui-icon-trash",title: "Delete the selected list(s)",  caption: "Delete", onClickButton : function (){
+var gridData = $("<span class="red">#jqGridList</span>").jqGrid('getGridParam','selarrrow'); 
+if( gridData != null  && gridData != "" && gridData.length > 0) {
+var confirmation = confirm("Do you want to Delete the selected List(s)?");
+if(confirmation == true) {
+var listIds = new Array();
+for(var x=0; x&lt;gridData.length; x++) {
+var ret = $("<span class="red">#jqGridList</span>").jqGrid('getRowData',gridData[x]);
+listIds[x] = ret["id"];
+}
+window.location.href = "${deleteListUrl}" + "&listIds=" + listIds.join(',');
+}
+}
+else { 
+alert("Please select one or more rows to delete!");
+}				
+} });
+$("<span class="red">#jqGridList</span>").jqGrid('navButtonAdd','<span class="red">#pcolch</span>',{ buttonicon:"ui-icon-copy",caption: "Copy", title: "Copy and create new list", onClickButton : function (){
+var gridData = $("<span class="red">#jqGridList</span>").jqGrid('getGridParam','selarrrow');
+if( gridData != null  && gridData != "" && gridData.length != 1) {
+alert("Please select one row to copy!");
+}
+else {
+window.location.href = "${copyListUrl}" + "&listId=" + $("<span class="red">#jqGridList</span>").jqGrid("getCell",gridData[0],"id");
+}
+} });
+$("<span class="red">#jqGridList</span>").jqGrid('navButtonAdd','<span class="red">#pcolch</span>',{buttonicon:"ui-icon-folder-collapsed",caption: "Merge", title: "Merge the selected lists", onClickButton : function (){
+var gridData = $("<span class="red">#jqGridList</span>").jqGrid('getGridParam','selarrrow'); 
+if( gridData != null  && gridData != "" && gridData.length > 1) {
+var listIds = new Array();
+for(var x=0; x&lt;gridData.length; x++) {
+var ret = $("<span class="red">#jqGridList</span>").jqGrid('getRowData',gridData[x]);
+listIds[x] = ret["id"];
+}
+window.location.href = "${mergeListUrl}" + "&listIds=" + listIds.join(',');
+}
+else { 
+alert("Please select two or more rows to merge!");
+}
+} });
+
+});
+
+
+
+</code></pre>
+</ul>
+</div> <!-- END List Wrap -->
+</div> <!-- END Organic Tabs (Example One) -->
+</div><!-- END tabs wrapper --> 
+
+   
+
+<!-- :::::::::::::::::::::   Status Messages  :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: --> 
+
+<div class="elements_container">             
+<a name="statusMessages"></a>
+<h2>8. Status Messages - Success & Validation </h2> 
+<p>Currently U-LEAF supports Success and Validation messages to provide feedback for user actions.</p>
+<p>Web application design involves responding to errors in a way that is informative and helps users get back on track.</p>
+<div class="example_container"> 
+<h3>Success message</h3>
+<div class="success"  title="Success">Success message(s) listed here</div><!-- message ends -->
+</div>
+<p>Success messages should be displayed after user successfully completes an operation. For example, the message can say: "Entity profile has been saved successfully". This means that intended operation in this process (saving profile) has been successfully performed.</p>
+
+
+<div class="example_container">                
+<h3>Validation Message</h3>
+<div class="data_sections">
+<div class="portlet-msg-error" id="formErrors" title="Alert">	    	    	        
+<span>Please select a valid document type<br></span>
+<span>Please enter valid date taken<br></span>
+<span>Please enter a valid source reference<br></span>
+</div>
+</div>     
+</div>
+
+
+<p>When an error occurs, let the user know. Return the page with feedback right at the top of the section, indicating that an error occurred. An alert icon can be helpful in drawing attention to an error message, but be sure to include alternate text with the image (alt="Alert!") so that nonvisual users know that the icon and text comprise an error message. Provide specifics about what happened: "Your password is incorrect" rather than "Your username and password do not match." Provide this explanation next to the field in question—in this case, next to the password. Proximity counts! If the user makes an error, provide specific, descriptive help in the immediate area of the problem.</p>
+<p>In responding to errors, make sure error messages are tuned to users' needs. Error messages are too often written in programmer speak, either too detailed and specific or too vague, offering little in the way of explanation and guidance on where to go next ("Operation failed: try again"). Give users just enough information about what happened. They don't need to know that the error number is "404," but they do need to know that the page they requested cannot be found on the server. Provide guidance about what to do in response to the error.</p>
+<p>
+<strong>Note</strong>: Do not use field default text for essential instructions. Default text displays within an input field and can provide help and instructions without using precious screen space. However, default text disappears when the user activates the field to enter information, which is just when the instructions are needed most (Was that year, month, day, or day, month, year?). The best location for instructions is on the screen, alongside the corresponding form element.</p>
+
+
+
+
+
+
+
+<div class="tabs-wrapper">
+<div id="jquery-tabs-one">
+<ul class="nav">
+<!-- <li class="nav-one"><a href="#example" class=" example">Example</a></li>-->
+<li class="nav-two"><a href="#html" class="current html">HTML Markup</a></li>
+<li class="nav-three"><a href="#css" class="css">CSS</a></li>
+
+</ul>
+<div class="list-wrap">
+<ul id="html">
+<h3>HTML Snippet for Success Message box</h3>
+<pre><code>
+&lt;div id="information"&gt;
+&lt;span class="portlet-msg-success"&gt;<span class="red">Success messge displays here</span>&lt;br&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+
+<h3>HTML Snippet for Data validation error Message box</h3>
+<pre><code>&lt;div id="formErrors"&gt;
+&lt;span class="portlet-msg-error"&gt;<span class="red">Validation error messge displays here</span>&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+
+
+</ul>
+<ul id="css" class="hide">
+<h3>CSS for Success Messages</h3>
+<p>Holmes-theme/css/portlet.css</p>
+<pre><code>.portlet-msg-success {
+background: url("../images/messages/success.png") no-repeat scroll 6px 50% #F4FDEF;
+border: 1px solid #ACDFA7;
+color: #384F34;
+display: block;
+font-weight: bold;
+margin: 2px auto 14px;
+padding: 6px 6px 6px 5px;
+text-align: left;
+}
+</code></pre>
+
+<h3>CSS for Data Validation Error Messages</h3>
+<p>Holmes-theme/css/portlet.css</p>
+<pre><code>.portlet-msg-error {
+background: url("../images/messages/error.png") no-repeat scroll 6px 50% #FFBABA;
+border: 1px solid #FCB59C;
+color: #D8000C;
+display: block;
+font-weight: bold;
+margin: 2px auto 14px;
+padding: 6px 6px 6px 5px;
+text-align: left;
+}
+</code></pre>
+</ul>
+
+</div> <!-- END List Wrap -->
+</div> <!-- END Organic Tabs (Example One) --> </div>
+
+
+
+</div>
+          
+
+<!-- :::::::::::::::::::::   Soft Entity Tabs  :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: --> 
+
+<div class="elements_container">    
+
+<a name="softtabs"></a>
+<h2>9 . Soft Entity Tabs</h2>
+<p>Tabs allow a user to navigate through stacked panels of content without having to refresh the page.</p>
+
+<h3>Tabs Disabled Mode</h3>           
+<div id="softEntityContainer" class="reveal softEntityContainer softEntity-Nominal ui-tabs ui-widget ui-widget-content ui-corner-all" style="display: block; width: 130%">
+
+<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">	
+<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active">
+<a id="softEntitySearch" name="Search" title="Search" accesskey="s" href="#searchTab">
+<span><span class="searchIcon">&nbsp;</span>Search</span>
+</a>
+</li>
+<li class="ui-state-default ui-corner-top ui-state-disabled">
+<a id="softEntitySearchResult" name="Search Results" title="Search Results" accesskey="r" href="#searchResultsTab">
+<span><span class="viewSearchResultsIcon">&nbsp;</span>Search Results</span>
+</a>
+</li>
+<li class="ui-state-default ui-corner-top ui-state-disabled">
+<a title="Nominal" name="softEntity-Nominal" id="softEntityNominal" accesskey="e" href="#entityTab">
+<span><span class="softEntity-Nominal">&nbsp;</span>Nominal</span>
+</a>
+</li>
+<li class="ui-state-default ui-corner-top ui-state-disabled">
+<a title="PDF" name="softEntity-PDF" id="softEntityPDF" href="#tab-526">
+<span><span class="PDFIcon">&nbsp;</span>PDF</span>
+</a>
+</li>
+<li class="ui-state-default ui-corner-top ui-state-disabled">
+<a title="Associations" name="softEntityAssociations" id="softEntityAssociations" accesskey="a" href="#associationsTab">
+<span><span class="associationsIcon">&nbsp;</span>Associations</span>
+</a>
+</li>
+<li class="ui-state-default ui-corner-top ui-state-disabled">
+<a title="Custom Fields" name="softEntityCustomFields" id="softEntityCustomFields" accesskey="u" href="#udfTab">
+<span><span class="customFieldsIcon">&nbsp;</span>Custom Fields</span>
+</a>
+</li>
+<li class="ui-state-default ui-corner-top ui-state-disabled">
+<a title="Tags" name="softEntityTags" id="softEntityTags" accesskey="t" href="#tagsTab">
+<span><span class="tagsIcon">&nbsp;</span>Tags</span>
+</a>
+</li>
+<li class="ui-state-default ui-corner-top ui-state-disabled">
+<a title="Attachments" name="softEntityAttachments" id="softEntityAttachments" accesskey="f" href="#attachmentsTab">
+<span><span class="attachmentsIcon">&nbsp;</span>Attachments</span>
+</a>
+</li>
+<li class="ui-state-default ui-corner-top ui-state-disabled">
+<a title="Access Control" name="softEntityAccessControl" id="softEntityAccessControl" accesskey="f" href="#accessControlTab">
+<span><span class="accessControlIcon">&nbsp;</span>Access Control</span>
+</a>
+</li>
+<li class="ui-state-default ui-corner-top ui-state-disabled">
+<a title="History" name="softEntityHistory" id="softEntityHistory" accesskey="h" href="#auditSummaryTab">
+<span><span class="historyIcon">&nbsp;</span>History</span>
+</a>
+</li>
+</ul>
+
+</div>      
+
+<p><br /><br /></p>
+<h3>Tabs Enabled Mode</h3>           
+<div id="softEntityContainer" class="reveal softEntityContainer softEntity-Nominal ui-tabs ui-widget ui-widget-content ui-corner-all" style="display: block; width: 130%">
+
+<ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">	
+<li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active">
+<a id="softEntitySearch" name="Search" title="Search" accesskey="s" href="#searchTab">
+<span><span class="searchIcon">&nbsp;</span>Search</span>
+</a>
+</li>
+<li class="ui-state-default ui-corner-top ui-state-active">
+<a id="softEntitySearchResult" name="Search Results" title="Search Results" accesskey="r" href="#searchResultsTab">
+<span><span class="viewSearchResultsIcon">&nbsp;</span>Search Results</span>
+</a>
+</li>
+<li class="ui-state-default ui-corner-top ui-state-active">
+<a title="Nominal" name="softEntity-Nominal" id="softEntityNominal" accesskey="e" href="#entityTab">
+<span><span class="softEntity-Nominal">&nbsp;</span>Nominal</span>
+</a>
+</li>
+<li class="ui-state-default ui-corner-top ui-state-active">
+<a title="PDF" name="softEntity-PDF" id="softEntityPDF" href="#tab-526">
+<span><span class="PDFIcon">&nbsp;</span>PDF</span>
+</a>
+</li>
+<li class="ui-state-default ui-corner-top ui-state-active">
+<a title="Associations" name="softEntityAssociations" id="softEntityAssociations" accesskey="a" href="#associationsTab">
+<span><span class="associationsIcon">&nbsp;</span>Associations</span>
+</a>
+</li>
+<li class="ui-state-default ui-corner-top ui-state-active">
+<a title="Custom Fields" name="softEntityCustomFields" id="softEntityCustomFields" accesskey="u" href="#udfTab">
+<span><span class="customFieldsIcon">&nbsp;</span>Custom Fields</span>
+</a>
+</li>
+<li class="ui-state-default ui-corner-top ui-state-active">
+<a title="Tags" name="softEntityTags" id="softEntityTags" accesskey="t" href="#tagsTab">
+<span><span class="tagsIcon">&nbsp;</span>Tags</span>
+</a>
+</li>
+<li class="ui-state-default ui-corner-top ui-state-active">
+<a title="Attachments" name="softEntityAttachments" id="softEntityAttachments" accesskey="f" href="#attachmentsTab">
+<span><span class="attachmentsIcon">&nbsp;</span>Attachments</span>
+</a>
+</li>
+<li class="ui-state-default ui-corner-top ui-state-active">
+<a title="Access Control" name="softEntityAccessControl" id="softEntityAccessControl" accesskey="f" href="#accessControlTab">
+<span><span class="accessControlIcon">&nbsp;</span>Access Control</span>
+</a>
+</li>
+<li class="ui-state-default ui-corner-top ui-state-active">
+<a title="History" name="softEntityHistory" id="softEntityHistory" accesskey="h" href="#auditSummaryTab">
+<span><span class="historyIcon">&nbsp;</span>History</span>
+</a>
+</li>
+</ul>
+
+</div>              
+
+
+
+
+
+
+
+<div class="tabs-wrapper">
+<div id="jquery-tabs-fourteen">
+<ul class="nav">
+<!-- <li class="nav-one"><a href="#example" class=" example">Example</a></li>-->
+<li class="nav-two"><a href="#html" class="current html">HTML Markup</a></li>
+<li class="nav-three"><a href="#css" class="css">CSS</a></li>
+</ul>
+<div class="list-wrap">
+<ul id="html">
+
+<pre><code>&lt;ul class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all"&gt;	
+&lt;li class="ui-state-default ui-corner-top ui-tabs-selected ui-state-active"&gt;
+&lt;a id="softEntitySearch" name="Search" title="Search" accesskey="s" href="#searchTab"&gt;
+&lt;span&gt;&lt;span class="searchIcon"&gt;&nbsp;&lt;/span&gt;Search&lt;/span&gt;
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="ui-state-default ui-corner-top ui-state-disabled"&gt;
+&lt;a id="softEntitySearchResult" name="Search Results" title="Search Results" accesskey="r" href="#searchResultsTab"&gt;
+&lt;span&gt;&lt;span class="viewSearchResultsIcon"&gt;&nbsp;&lt;/span&gt;Search Results&lt;/span&gt;
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="ui-state-default ui-corner-top ui-state-disabled"&gt;
+&lt;a title="Nominal" name="softEntity-Nominal" id="softEntityNominal" accesskey="e" href="#entityTab"&gt;
+&lt;span&gt;&lt;span class="softEntity-Nominal"&gt;&nbsp;&lt;/span&gt;Nominal&lt;/span&gt;
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="ui-state-default ui-corner-top ui-state-disabled"&gt;
+&lt;a title="PDF" name="softEntity-PDF" id="softEntityPDF" href="#tab-526"&gt;
+&lt;span&gt;&lt;span class="PDFIcon"&gt;&nbsp;&lt;/span&gt;PDF&lt;/span&gt;
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="ui-state-default ui-corner-top ui-state-disabled"&gt;
+&lt;a title="Associations" name="softEntityAssociations" id="softEntityAssociations" accesskey="a" href="#associationsTab"&gt;
+&lt;span&gt;&lt;span class="associationsIcon"&gt;&nbsp;&lt;/span&gt;Associations&lt;/span&gt;
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="ui-state-default ui-corner-top ui-state-disabled"&gt;
+&lt;a title="Custom Fields" name="softEntityCustomFields" id="softEntityCustomFields" accesskey="u" href="#udfTab"&gt;
+&lt;span&gt;&lt;span class="customFieldsIcon"&gt;&nbsp;&lt;/span&gt;Custom Fields&lt;/span&gt;
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="ui-state-default ui-corner-top ui-state-disabled"&gt;
+&lt;a title="Tags" name="softEntityTags" id="softEntityTags" accesskey="t" href="#tagsTab"&gt;
+&lt;span&gt;&lt;span class="tagsIcon"&gt;&nbsp;&lt;/span&gt;Tags&lt;/span&gt;
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="ui-state-default ui-corner-top ui-state-disabled"&gt;
+&lt;a title="Attachments" name="softEntityAttachments" id="softEntityAttachments" accesskey="f" href="#attachmentsTab"&gt;
+&lt;span&gt;&lt;span class="attachmentsIcon"&gt;&nbsp;&lt;/span&gt;Attachments&lt;/span&gt;
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="ui-state-default ui-corner-top ui-state-disabled"&gt;
+&lt;a title="Access Control" name="softEntityAccessControl" id="softEntityAccessControl" accesskey="f" href="#accessControlTab"&gt;
+&lt;span&gt;&lt;span class="accessControlIcon"&gt;&nbsp;&lt;/span&gt;Access Control&lt;/span&gt;
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;li class="ui-state-default ui-corner-top ui-state-disabled"&gt;
+&lt;a title="History" name="softEntityHistory" id="softEntityHistory" accesskey="h" href="#auditSummaryTab"&gt;
+&lt;span&gt;&lt;span class="historyIcon"&gt;&nbsp;&lt;/span&gt;History&lt;/span&gt;
+&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</ul>
+<ul id="css" class="hide">
+<h3>CSS: Styles are defined in "shared-ui/css/holmes/jquery-ui.custom.css"</h3>
+<p>NOTE: These styles will be merged with Holmes-themes/css/custom.css in near future</p>
+<pre><code>.ui-tabs {
+background: none repeat scroll 0 0 #FFFFFF;
+border-bottom: 1px none;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav {
+-moz-border-bottom-colors: none;
+-moz-border-image: none;
+-moz-border-left-colors: none;
+-moz-border-right-colors: none;
+-moz-border-top-colors: none;
+background: none repeat scroll 0 0 #FFFFFF;
+border-color: -moz-use-text-color #FFFFFF -moz-use-text-color -moz-use-text-color;
+border-style: none solid none none;
+border-width: medium 0 medium medium;
+bottom: 0;
+float: left;
+font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
+font-size: 1.1em;
+line-height: 30px;
+list-style: none outside none;
+margin-bottom: 0;
+margin-left: 6px;
+outline: 0 none;
+padding: 0;
+position: relative;
+text-decoration: none;
+z-index: 1;
+}
+.ui-tabs .ui-tabs-nav ul {
+background: none repeat scroll 0 0 #FFFFFF;
+border: 0 none;
+font-size: 100%;
+line-height: 30px;
+list-style: none outside none;
+margin: 0;
+outline: 0 none;
+padding: 0;
+text-decoration: none;
+}
+.ui-tabs .ui-tabs-nav li {
+background: none repeat scroll 0 0 #FFFFFF;
+border: medium none;
+font-size: 100%;
+height: 30px;
+line-height: 30px;
+list-style: none outside none;
+margin-left: -6px;
+margin-right: 0;
+padding: 0;
+text-decoration: none;
+}
+.ui-tabs .ui-tabs-nav li a {
+background: url("../../images/tab_left_off.gif") no-repeat scroll left top transparent;
+border: medium none;
+float: left;
+height: 30px;
+margin-left: 0;
+margin-right: 0;
+padding: 0 5px;
+}
+.ui-tabs .ui-tabs-nav li a:hover {
+background: url("../../images/tab_left_off.gif") no-repeat scroll left top transparent;
+border: medium none;
+color: #FFFFFF;
+margin-left: 0;
+margin-right: 0;
+margin-top: 0;
+padding-right: 5px;
+}
+.ui-tabs .ui-tabs-nav li a span {
+background: url("../../images/tab_right_big_off.gif") no-repeat scroll right top transparent;
+border: medium none;
+float: left;
+height: 30px;
+margin-left: 0;
+margin-right: 0;
+padding: 0 10px 0 5px;
+}
+.ui-tabs .ui-tabs-nav li a:hover span {
+border: medium none;
+color: #FFFFFF;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected {
+border: medium none;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a {
+background: url("../../images/tab_left_on.gif") no-repeat scroll left top transparent;
+border-bottom-color: #FFFFFF;
+float: left;
+height: 30px;
+margin-left: 0;
+margin-right: 0;
+padding: 0 5px;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a:hover {
+background: url("../../images/tab_left_on.gif") no-repeat scroll left top transparent;
+border: medium none;
+color: #FFFFFF;
+margin-left: 0;
+margin-right: 0;
+margin-top: 0;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a span {
+background: url("../../images/tab_right_big_on.gif") no-repeat scroll right top transparent;
+border-bottom-color: #FFFFFF;
+float: left;
+height: 30px;
+margin-left: 0;
+margin-right: 0;
+padding: 0 10px 0 5px;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a:hover span {
+border: medium none;
+color: #39559C;
+}
+.ui-tabs .ui-tabs-nav li span.softEntity-Nominal {
+background: url("../../images/nominalIcon.png") no-repeat scroll left top transparent;
+margin-left: 0;
+margin-right: 3px;
+margin-top: 7px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected span.softEntity-Nominal {
+background: url("../../images/nominalIcon.png") no-repeat scroll left top transparent;
+margin-left: 0;
+margin-right: 3px;
+margin-top: 7px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li span.softEntity-Vehicle {
+background: url("../../images/vehicleIcon.png") no-repeat scroll left top transparent;
+margin-left: 0;
+margin-right: 3px;
+margin-top: 7px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected span.softEntity-Vehicle {
+background: url("../../images/vehicleIcon.png") no-repeat scroll left top transparent;
+margin-left: 0;
+margin-right: 3px;
+margin-top: 7px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li span.softEntity-Category {
+background: url("../../images/categoryIcon.png") no-repeat scroll left top transparent;
+margin-left: -1px;
+margin-right: 2px;
+margin-top: 6px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected span.softEntity-Category {
+background: url("../../images/categoryIcon.png") no-repeat scroll left top transparent;
+margin-left: -1px;
+margin-right: 2px;
+margin-top: 6px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li span.softEntity-Exhibit {
+background: url("../../images/exhibitIcon.png") no-repeat scroll left top transparent;
+margin-left: -1px;
+margin-right: 0;
+margin-top: 7px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected span.softEntity-Exhibit {
+background: url("../../images/exhibitIcon.png") no-repeat scroll left top transparent;
+margin-left: -1px;
+margin-right: 0;
+margin-top: 7px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li span.softEntity-Location {
+background: url("../../images/locationIcon.png") no-repeat scroll left top transparent;
+margin-left: -1px;
+margin-right: 2px;
+margin-top: 7px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected span.softEntity-Location {
+background: url("../../images/locationIcon.png") no-repeat scroll left top transparent;
+margin-left: -1px;
+margin-right: 2px;
+margin-top: 7px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li span.softEntity-Organisation {
+background: url("../../images/organisationIcon.png") no-repeat scroll left top transparent;
+margin-left: 1px;
+margin-right: 2px;
+margin-top: 7px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected span.softEntity-Organisation {
+background: url("../../images/organisationIcon.png") no-repeat scroll left top transparent;
+margin-left: 1px;
+margin-right: 2px;
+margin-top: 7px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li span.softEntity-Telephone {
+background: url("../../images/telephoneIcon.png") no-repeat scroll left top transparent;
+margin-left: 1px;
+margin-right: 2px;
+margin-top: 6px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected span.softEntity-Telephone {
+background: url("../../images/telephoneIcon.png") no-repeat scroll left top transparent;
+margin-left: 1px;
+margin-right: 2px;
+margin-top: 6px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li span.softEntity-Policy.File {
+background: url("../../images/policyFileIcon.png") no-repeat scroll left top transparent;
+margin-left: 1px;
+margin-right: 3px;
+margin-top: 7px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected span.softEntity-Policy.File {
+background: url("../../images/policyFileIcon.png") no-repeat scroll left top transparent;
+margin-left: 1px;
+margin-right: 3px;
+margin-top: 7px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li span.softEntity-Log.Of.Event {
+background: url("../../images/logOfEventsIcon.png") no-repeat scroll left top transparent;
+margin-left: 1px;
+margin-right: 3px;
+margin-top: 7px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected span.softEntity-Log.Of.Event {
+background: url("../../images/logOfEventsIcon.png") no-repeat scroll left top transparent;
+margin-left: 1px;
+margin-right: 3px;
+margin-top: 7px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li span.PDFIcon {
+background: url("../../images/pdfIcon.png") no-repeat scroll left top transparent;
+margin-left: 0;
+margin-right: 4px;
+margin-top: 7px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected span.PDFIcon {
+background: url("../../images/pdfIcon.png") no-repeat scroll left top transparent;
+margin-left: 0;
+margin-right: 4px;
+margin-top: 7px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a span {
+background: url("../../images/tab_right_big_on.gif") no-repeat scroll right top transparent;
+border-bottom-color: #FFFFFF;
+float: left;
+height: 30px;
+margin-left: 0;
+margin-right: 0;
+padding: 0 10px 0 5px;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a span:hover {
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected span.searchIcon {
+background: url("../../images/searchIcon.png") no-repeat scroll left top transparent;
+margin-left: 0;
+margin-right: 1px;
+margin-top: 8px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected span.searchIcon:hover {
+}
+.ui-tabs .ui-tabs-nav li span.searchIcon {
+background: url("../../images/searchIcon.png") no-repeat scroll left top transparent;
+margin-left: 0;
+margin-right: 1px;
+margin-top: 8px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li span.viewSearchResultsIcon {
+background: url("../../images/viewSearchResultsIcon.png") no-repeat scroll left top transparent;
+margin-left: -1px;
+margin-right: 1px;
+margin-top: 7px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected span.viewSearchResultsIcon {
+background: url("../../images/viewSearchResultsIcon.png") no-repeat scroll left top transparent;
+margin-left: -1px;
+margin-right: 1px;
+margin-top: 7px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li span.associationsIcon {
+background: url("../../images/associationsIcon.png") no-repeat scroll left top transparent;
+margin-left: -1px;
+margin-right: 3px;
+margin-top: 7px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected span.associationsIcon {
+background: url("../../images/associationsIcon.png") no-repeat scroll left top transparent;
+margin-left: -1px;
+margin-right: 3px;
+margin-top: 7px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li span.customFieldsIcon {
+background: url("../../images/customFieldsIcon.png") no-repeat scroll left top transparent;
+margin-left: -1px;
+margin-right: 3px;
+margin-top: 7px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected span.customFieldsIcon {
+background: url("../../images/customFieldsIcon.png") no-repeat scroll left top transparent;
+margin-left: -1px;
+margin-right: 3px;
+margin-top: 7px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li span.tagsIcon {
+background: url("../../images/tagsIcon.png") no-repeat scroll left top transparent;
+margin-left: -1px;
+margin-right: 3px;
+margin-top: 7px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected span.tagsIcon {
+background: url("../../images/tagsIcon.png") no-repeat scroll left top transparent;
+margin-left: -1px;
+margin-right: 3px;
+margin-top: 7px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li span.attachmentsIcon {
+background: url("../../images/attachmentsIcon.png") no-repeat scroll left top transparent;
+margin-left: -2px;
+margin-right: 1px;
+margin-top: 8px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected span.attachmentsIcon {
+background: url("../../images/attachmentsIcon.png") no-repeat scroll left top transparent;
+margin-left: -2px;
+margin-right: 1px;
+margin-top: 8px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li span.accessControlIcon {
+background: url("../../images/padlockIcon.png") no-repeat scroll left top transparent;
+margin-left: -2px;
+margin-right: 1px;
+margin-top: 8px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected span.accessControlIcon {
+background: url("../../images/padlockIcon.png") no-repeat scroll left top transparent;
+margin-left: -2px;
+margin-right: 1px;
+margin-top: 8px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li span.historyIcon {
+background: url("../../images/historyIcon.png") no-repeat scroll left top transparent;
+margin-left: -1px;
+margin-right: 2px;
+margin-top: 8px;
+position: relative;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected span.historyIcon {
+background: url("../../images/historyIcon.png") no-repeat scroll left top transparent;
+margin-left: -1px;
+margin-right: 2px;
+margin-top: 8px;
+position: relative;
+}
+.ui-tabs .ui-tabs-panel {
+background: none repeat scroll 0 0 #F2F4F4;
+border: 1px solid #848284;
+clear: left;
+color: #FFFFFF;
+font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif;
+font-size: 1.1em;
+line-height: 1.3;
+list-style: none outside none;
+margin: 0;
+outline: 0 none;
+padding: 1.5em 1.7em;
+text-decoration: none;
+}
+.ui-tabs .ui-tabs-hide {
+display: none;
+}
+.tabContainer {
+border: medium none;
+margin-left: 5px;
+margin-top: 0;
+padding-left: 0;
+width: 98%;
+}
+</code></pre></ul>
+</div> <!-- END List Wrap -->
+</div> <!-- END Organic Tabs (Example One) --> 
+</div><!-- END tabs wrapper -->
+
+
+
+
+</div>
+
+
+<!-- :::::::::::::::::::::   ULEAF Wiki Help Configuration  :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: --> 
+
+<div class="elements_container">    
+
+<a name="help"></a>
+<h2>10 . ULEAF Wiki Help Configuration</h2>
+
+<h3>Technical information to create Wiki Help</h3>
+<li>(1)<strong> wiki-help.properties</strong> file location is under application server root folder i.e. under <strong>jboss-5.1.0.GA</strong> folder
+<li>(2) This properties file contains all the key-values where "<strong>key</strong>" holds the unique id of the Wiki Help page and "<strong>value</strong>" holds the actual Wiki Help page name. e.g: <strong>category.search=Category Search</strong> 
+    <br />&nbsp;&nbsp;<strong>key</strong> : contains all lower case alphabets with dot in between e.g. category.search
+    <br />&nbsp;&nbsp;<strong>value</strong> : Wiki Help page name is Category Search
+<li><3) <strong>NOTE: </strong>Make sure <strong> wiki-help.properties</strong> up-to-date before adding the new key-values in it</li>
+<li>(4) In the jsp page just include the block as follows
+  <pre><code>&lt;script&gt;
+  jQuery('.portlet-topper').prepend('&lt;div id="wikiHelp" class="helpIcon" title="Help"&gt;&lt;/div&gt;');
+  jQuery('#wikiHelp').bind('click', function(){
+	launchHelp('&lt;h2ng:help pageNameKey="action.viewproofoflifeaction"/&gt;');
+  }); 
+&lt;/script&gt;</code></pre>
+ <li>(5) Help <strong>icon</strong>(images/icons)/<strong>css</strong>(uleaf.css)/<strong>javascript</strong>(javascript.js) can be found under <strong>Holmes-theme</strong> project
+ <li>(6) Help Tag library that reads the "wiki-help.properties" and brings the Page name for the given key can be found under common-presentation project
+
+<h3>Technical information to create Wiki Help for tabbed pages like <span class="green">SoftEntity</span></h3>
+<li>In the jsp page just include the block as follows </li>
+<pre><code>&lt;div id="helpLink" class="helpIconSoftEntity" title="add title" 
+            onClick="launchHelp('&lt;h2ng:help pageNameKey="${entity.specification.name}.view"/&gt;')"&gt;
+        &lt;/div&gt;
+<p>'${entity.specification.name}.view' is the page name key which will add the relevant page name. E.g nominal.view</p></code></pre>
+
+<h3>To add newly created Wiki Help pages in your <span class="green">local WIKI</span></h3>
+<li>
+<li>- Go to ULEAF Menu --> Help --> Content Management</li>
+<li>- In WIKI portlet, click button 'Add Page'</li>
+<li>- In Add page, copy the value from  <strong>key-values</strong> in the title field. <strong>NOTE:</strong> Value should be exactly matching with value of 'wiki-help.properties' file under  <strong>jboss-5.1.0.GA</strong>  folder</li>
+<li>- Select the format for the WIKI Help text as HTML</li>
+<li>- Add help content in the HTML TINYMCE Editor</li>
+<li>- Leave other sections blank</li>
+<li>- Click button 'Save'</li>
+
+<h3 class="red">To add newly created Wiki Help pages in other <strong>Servers</strong></h3>
+<li>This tasks needs to be co-ordinated with the <strong>Delivery Manager</strong> who can provide access to the server where LAR files are generated.</li>
+
+<h3 class="red">To include updated 'wiki-help.properties' as part of the defect</h3>
+<li>In <strong>ClearQuest</strong> update 'Program' section under 'Low Level Design' tab, adding 'Webapps - Liferay Configuration'.</li>
+<li>Attach updated 'wiki-help.properties' in 'Attachments' section tab of ClearQuest</li>
+<li>Email the <strong>Build Manager</strong> with details of defect you are making changes against to copy <strong>wiki-help.properties</strong> to the servers he is delivering the build.</li> 
+
+<h3 class="red">Wiki Help configuration</h3> 
+
+<strong>NOTE</strong>
+<li>User must have ULEAF <strong class="red">System Administrator</strong> and <strong class="red">Liferay Administrator Role</strong> to setup Wiki Help configuration
+<li> Make sure your Liferay <span class="green">"<strong>Toggle Edit Control</strong>"</span> option is <strong>ON</strong> for Portlet configuration
+
+
+
+
+<h3>Wiki Help Menu and Page creation</h3>
+<ul>
+	<li>-Got to Liferay Menu --> Control Panel --> Organizations --> "HOLMES" Action button --> Manage Page --> Private Pages 
+<li>-Create Menu Page "Help" and add child page "Content Management" and "Wiki"
+<li>-Make Wiki page Hidden
+<li>-NOTE : User/Group should have capability "ADMINISTRATION - HELP" to access these menus
+</ul>
+<h3>Wiki Help Portlet layout creation</h3>
+
+<li>- Wiki is a hidden page so get the URL from Liferay's "Manage Page" and paste it to address bar i.e. on Lestrade its "http://gbhlm-lestrade.holmes.site:8180/uleaf/liferay/group/holmes/wiki"
+<li>- Admin should see wiki page now.
+<li>- Select layout as "1 Column"
+<li>- Drop Liferay "Wiki" portlet to Help->Wiki page
+<p></p>
+<li>- Click on Look and Feel --> Advance styling and copy below lines in the text area
+<p></p>	    
+        <li>/* Hide some areas we don't want shown */
+	    <li>.article-actions, #footer, .headerContainerRow {
+	    display: none;
+	    }
+<p></p>
+<li>	Click on "Save" button
+<p></p>
+<li>	This setting would not show ULEAF Menu and footer on any Wiki Help page
+<p></p>
+
+<li> - From ULEAF Menu go to Help --> "Content Management" page
+<li>- Select layout template as "1-2-1 Columns"
+<li>- Drop Liferay "Image Gallery" portlet into 2nd row 1st column of the page layout
+<li>- Drop Liferay "Document Library" portlet into 2nd row 2nd column of the page layout
+<li>- Drop Liferay "Wiki" portlet into 3rd row of the page layout
+<li>- Do not drop ant portlet into 1st row of the page layout
+<li>- Drop ULEAF footer at the bottom of the page layout
+</ul>
+
+
+<h3>Wiki Node creation</h3>
+<h5> (1)Wiki Node</h5>
+<p><strong>NOTE</strong> : This steps to be done at the very beginning stage when Wiki Portlet is empty</p>
+<ul><li>	ULEAF Menu --> Help --> Content Management
+<li>	Click on the left most corner of Wiki Portlet tool icon "Manage Wikis"
+<li>	Click on button "Add Wiki"
+<li>	Enter Name and Description as "Help"
+<li>	Click on Configure link
+<li>	Click on More link
+<li>	For Organization and Guest only keep "View" checkbox checked and uncheck all other checkboxes
+<li>	Click on "Save" button
+<p></p>
+<h5>(2) Wiki Page Permission </h5>
+<li>	- Liferay file <strong>portal-impl.jar</strong> has been updated for the default Wiki page permission. This file should be replaced to <strong>jboss-5.1.0.GA\server\holmes2\deploy\liferay-portal.war\WEB-INF\lib\portal-impl.jar</strong>
+<li>	- Administrator Wiki Page permission are ADD_DISCUSSION, DELETE, SUBSCRIBE, UPDATE, VIEW
+<li>	- Normal User Wiki Page permission is only VIEW
+
+
+<h3>Import/Export Wiki Portlets Lar files</h3>
+<strong>NOTE</strong> : Import/Export can take few minutes depending upon the lar file size
+<li>(1) Save 3 lar files e.g. "ImageGallary-201311111427.portlet.lar", "DocumentLibrary-201311111427.portlet.lar" and "Wiki-201311111427.portlet.lar" to any location.
+<li>(2) Help--> Content Management --> Wiki Portlet
+<p></p>
+<li> - In the Wiki Portlet Title bar, you can see four buttons on the right
+<li> - Click on first "three dot" image button and click on "Export/Import"
+<li> - Select "Import"
+<li> - Browse the file location of "Wiki-201311111427.portlet.lar"
+<li> - Select "all options" while importing
+<li> - Click on "Import" button
+<p></p>(3) Similarly, when you want to export the lar files
+<li> - Select "Export"
+<li> - Select all options while exporting
+<li> - Click on "Export" button and save the file to any location
+
+<h3>Liferay portal-ext.properties config</h3>
+<p>On JBoss application server copy below lines at the end of "jboss-5.1.0.GA\liferay-portal.war\WEB-INF\classes\portal-ext.properties" </p>
+  <li>wiki.initial.node.name=Help
+  <li>wiki.front.page.name=Index
+  <li>wiki.page.ratings.enabled=false
+  <li>wiki.page.comments.enabled=false
+  <li>wiki.formats=html
+  <li>wiki.formats.default=html
+
+<h3>OWASP config in Owasp.CsrfGuard.properties </h3>
+On JBoss application server copy below lines in "\liferay-portal.war\WEB-INF\classes\Owasp.CsrfGuard.properties"
+  <li><strong>NOTE</strong> : change server instance name "/holmes2/liferay" as per server instance name configuration which can be found in portal-ext.properties "portal.ctx" value
+<p></p>
+  <li>org.owasp.csrfguard.unprotected.LiferayControlPanel=/holmes2/liferay/group/control_panel/*
+  <li>org.owasp.csrfguard.unprotected.LiferayUI=/holmes2/liferay/html/*
+  <li>org.owasp.csrfguard.unprotected.LiferayImages=/holmes2/liferay/image/*
+  <li>org.owasp.csrfguard.unprotected.LiferayLayout=/holmes2/liferay/layouttpl/*
+  <li>org.owasp.csrfguard.unprotected.LiferayWiki=/holmes2/liferay/group/holmes/wiki/*
+  <li>org.owasp.csrfguard.unprotected.LiferayWikiContentManagement=/holmes2/liferay/group/holmes/content-management/*
+  <li>org.owasp.csrfguard.unprotected.LiferayWikiFriendlyURL=/holmes2/liferay/group/holmes/wiki/-/*
+
+
+
+
+<!-- :::::::::::::::::::::   Links  :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: --> 
+
+<div class="elements_container links">
+<a name="links"></a>
+
+<h2>11. Links</h2>
+<li><strong>Link</strong></li>
+<li class="U-LEAF_link"><a href="#" >U-LEAF</a></li>
+<li>&nbsp;</li>
+<li><strong>Visited</strong></li>
+<li class="U-LEAF_link"><a href="#" class='visited'>U-LEAF</a></li>
+<li>&nbsp;</li>
+<li><strong>Active</strong></li>
+<li class="U-LEAF_link"><a href="#" >U-LEAF</a></li>
+<li>&nbsp;</li>
+<li><strong>Hover</strong></li>
+<li class="U-LEAF_link"><a href="#" class="hover" >U-LEAF</a></li>
+</div>
+<div class="tabs-wrapper">
+<div id="jquery-tabs-sixteen">
+<ul class="nav">
+<!-- <li class="nav-one"><a href="#example" class=" example">Example</a></li>-->
+<li class="nav-two"><a href="#html" class="current html">HTML Markup</a></li>
+<li class="nav-three"><a href="#css" class="css">CSS</a></li>
+</ul>
+<div class="list-wrap">
+<ul id="html">
+<h3>HTML</h3>
+<pre><code>&lt;li class="U-LEAF_link"&gt;&lt;a href="#" &gt;U-LEAF&lt;/a&gt;&lt;/li&gt;
+&lt;li class="U-LEAF_link"&gt;&lt;a href="#" class='visited'&gt;U-LEAF&lt;/a&gt;&lt;/li&gt;
+&lt;li class="U-LEAF_link"&gt;&lt;a href="#" &gt;U-LEAF&lt;/a&gt;&lt;/li&gt;
+&lt;li class="U-LEAF_link"&gt;&lt;a href="#" class="hover" &gt;U-LEAF&lt;/a&gt;&lt;/li&gt;
+</code></pre>
+
+</ul>
+<ul id="css" class="hide">
+<h3>CSS</h3>
+<pre><code>.links li { list-style:none;}
+li.U-LEAF_link a { text-decoration:none; list-style-type:none; colour:#00ccff }
+li.U-LEAF_link a.visited { text-decoration:none; list-style-type:none; colour:#1898ca }
+li.U-LEAF_link a.active { text-decoration:none ; list-style-type:none; colour:#1898ca }
+li.U-LEAF_link a.hover { text-decoration:underline ; list-style-type:none; colour:#1898ca}
+</code></pre>
+</ul>
+</div> <!-- END List Wrap -->
+</div> <!-- END Organic Tabs (Example One) --> 
+</div><!-- END tabs wrapper -->
+
+
+<!-- :::::::::::::::::::::   Titles  :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: --> 
+
+<a name="titles"></a>
+<a name="formElements"></a>
+
+<h1>U-LEAF Form Elements</h1>
+
+
+
+<h2>12. Titles</h2>
+<p>You can add titles to essentially everything in HTML, including the entire range of form tags. Even if you're also using the accessible HTML catalogued in exacting detail here, there is no harm and possibly quite a bit of benefit in using titles in forms. There is some indication that certain screen readers have trouble wading through forms whose elements lack a title. That really means every single element – every check box, every radio button, every text-entry field, the lot. It is most useful to assign titles to input and textarea fields – anywhere you must enter your own information. </p>
+
+<h3>Example</h3>
+<p></p>
+<label style="display:inline" for="namerequired" title="Your full name">Name <strong title="Required" 
+class="required">*</strong></label> : <input type="text" id="namerequired" name="namerequired" value="" />
+
+
+<div class="tabs-wrapper">
+<div id="jquery-tabs-seventeen">
+<ul class="nav">
+<!-- <li class="nav-one"><a href="#example" class=" example">Example</a></li>-->
+<li class="nav-two"><a href="#html" class="current html">HTML Markup</a></li>
+<li class="nav-three"><a href="#css" class="css">CSS</a></li>
+</ul>
+<div class="list-wrap">
+<ul id="html">
+<h3>HTML</h3>
+
+<pre><code>&lt;label style="display:inline" for="namereq" title="Your full name"&gt;Name &lt;strong title="Required" 
+class="required"&gt;*&lt;/strong&gt;&lt;/label&gt; : &lt;input type="text" id="namereq" name="namereq" value=""&gt;</code></pre>
+</ul>
+<ul id="css" class="hide">
+</ul>
+</div> <!-- END List Wrap -->
+</div> <!-- END Organic Tabs (Example One) --> 
+</div><!-- END tabs wrapper -->
+
+
+
+
+
+
+<!-- :::::::::::::::::::::   Text Box Control :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: --> 
+<div class="elements_container">
+<a name="textbox_control"></a>
+<h2>13. Textbox control</h2>
+<h3>Text box control example</h3>
+<div class="form">
+<h3>XSmall:</h3><input type="text" title="" value="" class="xsmall" />
+<h3>Small</h3><input type="text" title="" value="" class="small" />
+<h3>Medium</h3><input type="text" title="" value="" class="medium" />
+<h3>Large</h3><input type="text" title="" value="" class="large" />
+<h3>XLarge</h3><input type="text" title="" value="" class="xlarge" />
+</div>
+<div class="tabs-wrapper">
+<div id="jquery-tabs-nineteen">
+<ul class="nav">
+<!-- <li class="nav-one"><a href="#example" class=" example">Example</a></li>-->
+<li class="nav-two"><a href="#html" class="current html">HTML Markup</a></li>
+<li class="nav-three"><a href="#css" class="css">CSS</a></li>
+</ul>
+<div class="list-wrap">
+<ul id="html">
+
+<pre><code><h3>XSmall:</h3>&lt;input type="text" title="" value="" class="xsmall" /&gt;
+<h3>Small</h3>&lt;input type="text" title="" value="" class="small" /&gt;
+<h3>Medium</h3>&lt;input type="text" title="" value="" class="medium" /&gt;
+<h3>Large</h3>&lt;input type="text" title="" value="" class="large" /&gt;
+<h3>XLarge</h3>&lt;input type="text" title="" value="" class="xlarge" /&gt;
+</code></pre>
+</ul>
+<ul id="css" class="hide">
+<h3>CSS</h3>
+<pre><code>.form input { height:20px; border-color:#ccc; color:#000; font-size:11px}
+
+<span class="important">Text Boxes</span>
+input.xsmall { width:40px}
+input.small { width:100px}
+input.medium { width:150px}
+input.large { width:200px}
+input.xlarge { width:300px}
+input.xsmall, input.small, input.medium, input.large, input.xlarge { height:15px; border-color:#CCC; margin-top:1px}
+</code></pre>
+</ul>
+</div> <!-- END List Wrap -->
+</div> <!-- END Organic Tabs (Example One) --> 
+</div><!-- END tabs wrapper -->
+</div>
+
+
+
+<!-- :::::::::::::::::::::   Labels :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: --> 
+
+<a name="labels"></a>
+
+<div class="elements_container">
+
+<h2>14. Labels</h2>
+<p>Labels may be hidden from the display by using display:none. This has the effect of not rendering the label on screen but, because it's in a form, screen readers will still read the label aloud. Note this technique only applies to form elements and that labels should be visible wherever possible.</p>
+<p> A form with text boxes and radio buttons that don't have labels (prompts or requests for information) is likely to be pretty well useless for U-LEAF application users.</p>
+<h3>Examples</h3>
+<label for="phonehm">Phone Home: </label>
+<input id="phonehm" type="text" title="type your home phone number" name="homephone" size="15" />
+<div class="tabs-wrapper">
+<div id="jquery-tabs-twenty">
+<ul class="nav">
+<!-- <li class="nav-one"><a href="#example" class=" example">Example</a></li>-->
+<li class="nav-two"><a href="#html" class="current html">HTML Markup</a></li>
+<li class="nav-three"><a href="#css" class="css">CSS</a></li>
+</ul>
+<div class="list-wrap">
+<ul id="html">
+<h3>HTML</h3>
+<pre><code>&lt;label for=&quot;phonehm&quot;&gt;Phone Home: &lt;/label&gt;
+&lt;input id=&quot;phonehm&quot; type=&quot;text&quot; title=&quot;type your home phone number&quot; name=&quot;homephone&quot; size=&quot;15&quot;&gt;</code></pre>
+
+
+
+</ul>
+<ul id="css" class="hide">
+<h3>CSS</h3>
+<pre><code>#phonehm {font-size:11px; font-weight:bold; colour:#000}</code></pre></ul>
+</div> <!-- END List Wrap -->
+</div> <!-- END Organic Tabs (Example One) --> 
+</div><!-- END tabs wrapper -->
+</div>
+
+
+
+
+
+<!-- :::::::::::::::::::::  ListBox control :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: --> 
+
+
+<a name="listbox_control"></a>
+<div class="elements_container">
+<h2>15. ListBox control</h2>
+<p>List box have the benefit of providing many choices in a small space, but they can be hard to use. In particular, menus with many options, such as to choose your state or country, are challenging to scan. It's easier to enter a state or country code than to choose it from a select menu.</p>
+
+<h3>Example</h3>
+<div class="form_control_select">
+<select>
+<option>None</option>
+<option>1</option>
+<option>2</option>
+</select>
+</div>
+<p></p> 
+<h3>HTML</h3>
+<pre><code>&lt;select&gt;
+&lt;option&gt;None&lt;/option&gt;
+&lt;option&lt;1&lt;/option&gt;
+&lt;option&lt;2&lt;/option&gt;
+&lt;/select&lt;</code></pre> 
+<p></p>
+<h3>CSS</h3>
+<pre><code>select { font-size:11px;}</code></pre>
+<p></p>
+<p>A set of standard default widths for select boxes are available to choose from. This will make the appliation screens look neater and more aligned where multiple select boxes exist on the screen. There are four standard widths - small, medium, large and xlarge. These select boxes are CSS driven and linked to the attribute via the CSSclass field in the configuration. </p>
+
+<h3>HTML</h3>
+<pre><code>&lt;select class="small"&gt;
+&lt;option&gt;None&lt;/option&gt;
+&lt;option&lt;1&lt;/option&gt;
+&lt;option&lt;2&lt;/option&gt;
+&lt;/select&lt;</code></pre> 
+<p></p>
+<h3>CSS</h3>
+<pre><code>select.small { width:150px}
+select.medium { width:200px}
+select.large { width:250px}
+select.xlarge { width:300px}</code></pre>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- :::::::::::::::::::::  Radio buttons :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: --> 
+
+
+<a name="radio_buttons"></a>
+<div class="elements_container">
+<h2>16. Radio buttons</h2>
+<p>Radio buttons are easy to scan because the options display on the page. However, because a long list takes up screen space, and because long lists are hard for readers to parse, limit your radio button groups to four to six options.</p>
+
+<h3>Examples</h3>
+
+<div class="radio_button">
+<li class="form_label">Apportion by</li	>
+<div class="form-field">
+<input id="opt1" type="radio" name="opt1"/><label for="opt1">CMS</label>&nbsp;&nbsp;
+<input class="radio" type="radio" name="opt1" id="opt2" title="Arrears" /><label for="opt2">Arrears</label>
+</div>
+</div>
+
+
+<h3>Guidelines</h3>
+<ul>
+<li>	Radio inputs must have a label. It makes the option text click-able thus presenting a larger area to aide those with shaky hands.
+</li><li>	It may be judicious to add a title element duplicating the descriptive text.
+</li><li>	Radio input must precede it's descriptive text.
+</li><li>	Horizontal radio input lists must have enough surrounding space to clearly distinguish between choices.
+</li><li>	Radio inputs for simple boolean (yes / no) responses should not be used. Use a checkbox.
+</li><li>	Radio inputs should replace select inputs wherever possible. Five or less options should always be coded as radio inputs.
+</li></ul>
+
+<p></p>
+
+<h3>Radio button example XHTML snippet:</h3>
+<pre><code>&lt;label for="rad_0"&gt;
+&lt;input type="radio" name="rad" id="rad_0" title="Red" checked="checked" /&gt;Red
+&lt;/label&gt;
+&lt;label for="rad_1"&gt;
+&lt;input type="radio" name="rad" id="rad_1" title="Blue" /&gt;Blue
+&lt;/label&gt;</code></pre>
+
+<p></p>
+<h3>CSS for the radio button example:</h3>
+<pre><code>label {display:block}
+input.radio  {margin-right:1em}
+input.radio:focus {border:2px solid red}</code></pre>
+
+
+
+</div>
+
+
+<!-- :::::::::::::::::::::  Check boxes :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: --> 
+<div class="elements_container">
+<a name="check_boxes"></a>
+<h2>17. Check boxes</h2> 
+
+Always set menus to non actionable defaults to keep users from submitting information that is incorrect simply by neglecting to choose from the menu. For example, make the checkbox default unchecked, and the first item of a select menu a null value, such as "None" or "Select an item"
+<p></p>
+
+<div class="example_container">
+
+<div class="buttonlist">
+<label for="chk_0"><input class="check" type="checkbox" name="chk_0" id="chk_0" title="Aged over 42" checked="checked" />I am aged over forty-two</label>
+<label for="chk_1"><input class="check" type="checkbox" name="chk_1" id="chk_1" title="Request information" />I wish to request further information</label>
+</div> <!-- class="buttonlist" -->
+
+</div>
+
+
+<ol><li>Using a label makes the checkbox descriptive text click-able presenting a larger area to aide those with motor neuron deficiencies [S A]
+</li><li>	use a title element duplicating the descriptive text 
+</li><li>	use a checkbox for simple boolean (yes / no) responses not radio inputs 
+</li><li>	use a fieldset to group related inputs [S U A]
+</li><li>	do not check a checkbox by default if it has implications beyond the forms main purpose [L]
+
+
+</li></ol>  <p></p>    
+<h3>Check Box example XHTML snippet:</h3>
+<pre><code>&lt;label for="chk_0"&gt;
+&lt;input type="checkbox" name="chk_0" id="chk_0" title="Request information" /&gt;
+Request further information
+&lt;/label&gt;
+&lt;label for="chk_1"&gt;
+&lt;input type="checkbox" name="chk_1" id="chk_1" title="Aged over 42" checked="checked" /&gt;
+I am aged over forty-two
+&lt;/label&gt;</code></pre>           
+
+
+
+</div>
+
+
+
+<!-- :::::::::::::::::::::  Date picker control :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: --> 
+
+<div class="elements_container">
+<a name="date_picker_control"></a>
+<h2>18. Date picker control</h2>
+<p>A web form often needs to provide instructions beyond simple form labels. Some types of information, such as dates and credit card numbers, for example, need to share a standard format. A date can be entered in a variety of formats, but your backend system architecture may require a specific format, such as date, month, and year. Provide an example in the field label, for example, "Departing (dd/mm/yy)."Also, be sure to note which fields are required, and use a universally accessible method. Don't rely on colour, because not all users can distinguish colours. One convention is to use an asterisk ("*") to denote required fields.</p>
+
+<div class="example_container">
+<h3>Examples</h3>
+<p>
+<label for="datepicker">Start Date : </label>
+<input  type="text" title="select start date" name="datepicker" size="15" id="datepicker" />
+</p>
+</div>
+<h3>HTML</h3>
+<pre><code>&lt;label for="datepicker"&gt;Start Date : &lt;/label&gt;
+&lt;input id="startDate" type="text" title="select start date" name="datepicker" size="15" id="datepicker" &gt;
+</code></pre>
+
+<h3>jQuery</h3>
+<pre><code>&lt;script type="text/javascript" src="script/jquery-1.6.2.js"&gt;&lt;/script&gt;
+&lt;script src="script/jquery.ui.core.min.js"&gt;&lt;/script&gt;
+&lt;script src="script/jquery.ui.datepicker.min.js"&gt;&lt;/script&gt;
+
+&lt;script&gt;
+$(function() {
+$( "#datepicker" ).datepicker({
+showOn: "button",
+buttonImage: "images/icons/calendar.png",
+buttonImageOnly: true,
+changeMonth: true,		
+changeYear: true
+});
+});
+&lt;/script&gt;</code></pre>
+<h3>CSS</h3>
+<pre><code>&lt;link rel="stylesheet" href="includes/jq/jquery.ui.all.css"&gt;
+</code></pre>
+
+
+</div>
+
+
+
+
+<!-- ******************** Textarea control ***********************************-->
+<!--<div class="elements_container">
+<a name="text_area_control"></a>
+<h2>9. Textarea control</h2>
+<p>This section explains....</p>
+<p>Display screen here</p>
+<h3>CSS</h3>
+</div>
+
+
+-->
+
+
+<!-- :::::::::::::::::::::  Required fields :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: --> 
+
+
+<div class="elements_container">
+<a name="required_fields"></a>
+<h2>19. Required fields</h2>
+<ul>
+<li>	Required fields must not be indicated by colour alone and colour is used as a visual clue
+</li><li>	The term "required" should be stated in the text description
+</li><li>	If a mark such as * is used then its meaning must be announced prior to the first occurrence.
+</li><li>	On hover the asterisk title states "Required" and cursor changes to help.
+</li><li>	an explanation that * denotes a required field mustprecede the form / element, never after it. 
+</li><li>	The asterisk must be inside the label
+</li></ul>
+<h3>Example</h3>
+
+<p>Fields marked <strong title="Required" class="required">*</strong> are required for submission</p>
+<label style="display:inline" for="namereq">Name <strong title="Required" class="required">*</strong></label>: 
+<input type="text" id="namereq" name="namereq" value="" />
+
+
+
+<h3>Mark-up</h3>
+<pre><code>&lt;p&gt;Fields marked &lt;strong title="Required" class="required"&gt;*&lt;/strong&gt; are required for submission&lt;/p&gt;
+&lt;label for="namereq""&gt;
+Name &lt;strong title="Required" class="required"&gt;*&lt;/strong&gt;
+&lt;/label&gt; :
+&lt;input type="text" id="namereq" name="namereq" value="" /&gt;</code></pre>
+
+
+
+</div>
+
+
+<!--<a name="access"></a>
+<h2>&nbsp;</h2>
+<a name="access"></a>
+<h2>Select Menus</h2> 
+
+<p>: Select menus have the benefit of providing many choices in a small space, but they can be hard to use. In particular, menus with many options, such as to choose your state or country, are challenging to scan. It's easier to enter a state or country code than to choose it from a select menu. </p>
+<p>If there are more than 11 options try to split them into groups and label them accordingly with opt groups . </p>
+
+<div class="codeexamples">
+<label for="favcity2">Which is your favourite city?
+<select id="favcity2" name="favcity2">
+<optgroup label="Europe">
+<option value="1">Amsterdam</option>
+<option value="3">Interlaken</option>
+<option value="4">Moscow</option>
+<option value="5">Dresden</option>
+</optgroup>
+<optgroup label="North America">
+<option value="2">New York</option>
+<option value="6">Salt Lake City</option>
+<option value="7">Montreal</option>
+</optgroup>
+<optgroup label="South America">
+<option value="8">Buenos Aires</option>
+<option value="9">Asuncion</option>
+</optgroup>
+<optgroup label="Asia">
+<option value="10">Hong Kong</option>
+<option value="11">Tokyo</option>
+<option value="12">New Dehli</option>
+</optgroup>
+</select>
+</label>
+</div>
+<pre id="longselectexample" style="display: block; "><code>&lt;label for="favcity2"&gt;Which is your favourite city?
+&lt;select id="favcity2" name="favcity2"&gt;
+&lt;optgroup label="Europe"&gt;
+&lt;option value="1"&gt;Amsterdam&lt;/option&gt;
+&lt;option value="3"&gt;Interlaken&lt;/option&gt;
+&lt;option value="4"&gt;Moscow&lt;/option&gt;
+&lt;option value="5"&gt;Dresden&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;optgroup label="North America"&gt;
+&lt;option value="2"&gt;New York&lt;/option&gt;
+&lt;option value="6"&gt;Salt Lake City&lt;/option&gt;
+&lt;option value="7"&gt;Montreal&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;optgroup label="South America"&gt;
+&lt;option value="8"&gt;Buenos Aires&lt;/option&gt;
+&lt;option value="9"&gt;Asuncion&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;optgroup label="Asia"&gt;
+&lt;option value="10"&gt;Hong Kong&lt;/option&gt;
+&lt;option value="11"&gt;Tokyo&lt;/option&gt;
+&lt;option value="12"&gt;New Dehli&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;/select&gt;
+&lt;/label&gt;
+</code></pre>
+-->
+
+
+
+
+<!-- :::::::::::::::::::::  Input fields and Text areas :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: --> 
+<div class="elements_container">
+<a name="input_fields"></a>
+
+
+<h2>20. Input fields and Text areas</h2> 
+<p>Input fields require implicit descriptions wherever possible. Text description must directly precede input (except radio and checkbox types) and the label should surround both description and input field, although they may appear on different lines.  </p>
+
+<p>
+<label>Description:
+<input type="text" id="description" />
+</label>
+</p>
+
+<p>Text before input (vice-versa on radio or checkbox types) with a label. </p>
+<pre><code>&lt;label&gt;Description:
+&lt;input type=&quot;text&quot; id=&quot;description&quot; /&gt;
+&lt;/label&gt;</code></pre>      
+<p></p>
+<p>Input elements without visible labels should continue to contain text (search, login) but ensure that the default text is either removed or selected upon focus. Try to keep input field sizes relevant to the expected user input. Selecting the text upon focus is also recommended.</p> 
+
+<pre><code>&lt;label for="description"&gt;Description	:
+&lt;input type="text" id="description" /&gt;
+&lt;/label&gt;
+</code></pre>
+<p></p>
+<ul><li>	Input fields require explicit descriptions . The "for" attribute in the label element must be associated to the input id.   
+</li><li>	 Text type fields may have a default value .Recommendation by the <a href="http://www.rnib.org.uk/professionals/webaccessibility/designbuild/Pages/design_build.aspx" target="_blank">RNIB</a>.   
+</li><li> Text type fields should have the text selected upon focus [U]
+</li></ul>
+
+
+</div>
+
+
+
+
+
+<!-- ::::::::::::::::::::: Field labels :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: --> 
+
+
+
+<div class="elements_container">
+<a name="field_labels"></a>
+<h2>21. Field labels</h2>
+
+<p>Html provides a means to attach form labels to form fields, so there is never any mystery about what information is being requested. The &lt;label for&gt; tag associates a label with its element using the "id" attribute:
+
+</p><p>
+<label for="departdate">Departing (YY/MM/DD):</label><input type="text" id="departdate" />
+<img src="images/icons/calendar.png" alt="Calendar" />
+</p>
+
+<p>When form fields are marked up with labels, that relation of label to field is available to software. For example, users of screen readers can enter a form field and hear its label, along with any instructions contained within the label. Without the label, that information must be gleaned from browsing the surrounding text.</p>
+</div>
+
+
+
+
+
+<!-- ::::::::::::::::::::: Tabindex :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: --> 
+
+<div class="elements_container">
+<a name="tabindex"></a>
+<h2>22 Tabindex:</h2> 
+
+<p>It should not normally be necessary to use tabindex. Avoid usage if possible. Only use them if the logical order of the form dictates .
+Help & Instructions: Contextual help offers answers and guidance within the context of the page. A common implementation of this is the "(What's this? – System help)" option to explain page features. Contextual help is offered in a second, auxiliary window. This method allows users to get help without having to deviate from the task at hand.</p>
+
+</div>
+
+
+<!-- ::::::::::::::::::::: Data Tables :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: --> 
+
+
+
+<div class="elements_container">
+<a name="data_tables"></a>
+<h2>23. Data Tables</h2> 
+<p>Forms contain data and, if tabular, may be held in data tables. Data tables can be complex objects. Please ensure as a minimum:</p>
+<ul><li>	A table summary is stated. Outlining the purpose of the tables contents .
+</li><li>	Use a caption to state the purpose of the tables contents .
+</li><li>	Define column and or row headers along with their scope 
+</li><li>	Define, where required, colgroups and their scope 
+</li><li>	Use <thead></thead> and <tbody></tbody> to separate content from headers where applicable .
+</li><li>	Consider table linearisation carefully before separating a label from its associated input.
+</li></ul>
+<p><strong>Note</strong>: Usually constructs of form, legend, fieldset and label are sufficient to layout a form. Use a table only if the data input is tabular by nature.
+File Upload box and button: </p>
+
+<p>Remember when uploading files:</p>
+<ul><li>	Do not allow spaces in the filename. Some browsers do not resolve spaces well. Use an underscore or a hyphen instead.
+</li><li>	Use only lowercase. Apache servers are case sensitive but NT servers are not. Simply using lowercase every time prevents this becoming an issue.
+</li><li>	Use server-side scripting to ensure lowercase, and no spaces, in the filename.</li></ul>
+
+<p></p>
+<label for="upload">Upload file: <input type="file" id="upload" name="uploaded_file" /></label>
+<p></p>
+
+<p><span class="bold">Note: </span>File-upload inputs are rendered completely differently in Safari on a Mac.</p>
+</div>
+
+
+
+<!-- ::::::::::::::::::::: Box Shadows :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: --> 
+
+
+<div class="elements_container">
+<a name="box_shadows"></a>
+
+
+
+
+<!-- ::::::::::::::::::::: Proposed functionalities :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: --> 
+
+<div class="elements_container">
+
+
+<a name="proposed"></a>
+<a name="warningMessage"></a>
+<h1>Proposed functionalities</h1>
+<p class="red">Following functionalities are recomendations and still under investigation which may or may not be implemented as described.</p>
+<h2>1. Warning Message</h2>
+<div class="example_container">                
+<h3>Warning</h3>
+<!--<div class="warning">Warning<em>-</em></div>-->
+<div class="data_sections">
+<div class="warning">Warning Message display here...
+</div><!-- message ends -->
+</div> 
+</div>
+<p>Warning messages should be displayed to a user when an operation couldn't be completed in a whole or some information is not available in the system which is requered as standard in the process. For example "Drawn record not found, Building and content insurance not found etc". Usual warning colour is yellow and icon exclamation.</p>
+
+<p>Currently U-LEAF uses jQuery 'alert' functionality heavily for display warning messages and is not user friendly. User forced to close the warning message to proceed further. Warning messages will alert the user without additional interaction with the system. </p>
+
+</div>
+
+
+<!-- ::::::::::::::::::::: System Help :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: --> 
+
+<div class="elements_container">    
+    <a name="systemHelp"></a>
+    <h2>2. System Help</h2>
+    <p>Help window appears OnClick of help icon on the right  of portlet title bar. </p>
+    <p>Help window provides user required information about the page functionality which includes general description of the functionality and details of all screen elements and interactions. Additional sections are the required data type each field needed if the screen is in edit mode. </p>
+    <h3>System Help example</h3>
+	<div class="example_container">      
+
+        <img src="images/system_help.png" width="496" height="465" alt="System Help" /> </div>                        
+    </div>  
+    
+</div>
+
+
+
+
+<!-- ::::::::::::::::::::: Tooltips :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+
+
+    
+    <div class="elements_container">    
+        <a name="toolTips"></a>
+        <h2>3. Tooltips</h2>
+        <p>Tooltips are triggered when a user clicks or rolls over an item on a page. They provide additional information or contextual help about a page element.</p>
+        <p>Tooltip example</p>
+        <div class="example_container">      
+            <img src="images/tooltips.png" alt="Tooltip" /> </div>                        
+  </div>  
+    </div>
+        
+    
+
+<!-- ::::::::::::::::::::: Data Validations Error messages :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+
+
+    <div class="elements_container">    
+        <a name="dataValidations"></a>
+        <h2>4. Data Validations Error messages </h2>
+    	<p>When an error occurs, let the user know. Return the page with feedback right at the top of the section, indicating that an error occurred. An alert icon can be helpful in drawing attention to an error message, but be sure to include alternate text with the image (alt="Alert!") so that nonvisual users know that the icon and text comprise an error message. Provide specifics about what happened: "Your password is incorrect" rather than "Your username and password do not match." Highlight the lable and field in question—in with red color. Proximity counts! If the user makes an error, provide specific, descriptive help in the immediate area of the problem.</p>
+    
+        <p>In responding to errors, make sure error messages are tuned to users' needs. Error messages are too often written in programmer speak, either too detailed and specific or too vague, offering little in the way of explanation and guidance on where to go next ("Operation failed: try again"). Give users just enough information about what happened. They don't need to know that the error number is "404," but they do need to know that the page they requested cannot be found on the server. Provide guidance about what to do in response to the error.</p>
+    
+        <h3>Data Validation example</h3>
+        <div class="example_container">      
+            <img src="images/form_validations.png" alt="Tooltip" /> </div>                        
+  </div>  
+        <div class="tabs-wrapper"><!-- END Organic Tabs (Example One) --> </div>
+    </div>
+         
+
+<!-- ::::::::::::::::::::: Document History :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+            <div class="elements_container">        
+                <a name="documentHistory"></a>
+                <h2>Document History</h2>
+                
+                <table width="90%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <th>Date</th>
+                        <th>Version</th>
+                        <th>Change</th>
+                        <th>Author</th>
+                    </tr>
+                    <tr>
+                        <td>27 June 2012</td>
+                        <td>1.0</td>
+                        <td>First draft of Semantic markup standards</td>
+                        <td>Shilpi Kumar, Phil Storer, Jojest Thomson</td>
+                    </tr>
+					<tr>
+                        <td>10 April 2019</td>
+                        <td>2.0</td>
+                        <td>Updated Semantic markup standards</td>
+                        <td>Jojest Thomson</td>
+                    </tr>
+                </table>
+                
+            </div>
+            
+        </div><!-- end content-area-->
+    </div><!-- end  main-content -->
+    </div>
+
+    <div id="footer">
+        <div class="copyright">
+            <h3>Confidential</h3>
+            <p> This document is confidential and proprietary to Unisys Corporation. It is not to be used, reproduced, or disclosed outside Unisys without the written consent of Unisys Corporation. The information in this document is furnished for use by Unisys support personnel in servicing customer’s equipment or by a customer under a license agreement with Unisys.</p>
+            <p>Copyright © 2019 Unisys Corporation. All Rights Reserved.</p>
+            <p>Unisys is a trademark of Unisys Corporation.</p>
+            <p>All other brands and products referenced herein are acknowledged to be trademarks or registered trademarks of their respective holders.</p>
+            <p><strong>Version 2.0</strong> </p>
+        </div>
+    </div>
+</div><!-- end of wrapper -->
+<div id="toTop">^ Back to Top</div>
+</body>
+</html>

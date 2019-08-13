@@ -1,0 +1,111 @@
+/*===========================================================================
+// U-LEAF
+//
+// Copyright (c) 2011, Unisys Corporation. All Rights Reserved.
+//
+// Warning: This computer program is protected by copyright law and international treaties.
+// Unauthorised reproduction or distribution of this program, or any portion of it, may result
+// in severe civil and criminal penalties, and will be prosecuted to the maximum extent
+// possible under law.
+//===================================================================================================
+// Filename: tabs.css
+//---------------------------------------------------------------------------------------------------
+// Developer         : Jojest Thomson
+// Application Name  : U-LEAF
+// Date Created      : 29/07/2012
+// Purpose           : This page defines styles for Printing Style guide
+//                                   
+//===================================================================================================
+// M A I N T E N A N C E   H I S T O R Y
+//---------------------------------------------------------------------------------------------------
+//    DATE       CM#     WHO                      DESCRIPTION
+// ----------  --------  -----------------------  ---------------------------------------------------
+//
+//==================================================================================================*/
+
+@charset "utf-8";
+/* CSS Document */
+
+body {background:none; font-family: Arial, Verdana, Tahoma, Helvetica, sans-serif; 
+}
+#wrapper { width:100%; background: url(../images/bg_header.png) left #003466; height:64px; border-top:none; border-bottom:3px solid #cc3300; } /*  Header OUTER Container*/
+
+h1, h2, h3, h4, h5, h6 {
+font-family: "Myriad Pro", Calibri, Tahoma, "Lucida Grande", Arial, Helvetica, sans-serif;
+}	  
+
+#header .logoUnisys { float:left; width:131px; padding:10px 0px;   }
+
+
+#header .logoUISG { float:right; padding:20px 0 0px; font-size:22px; font-weight:bold; letter-spacing:-1px; font-family: "Myriad Pro", Calibri, Tahoma, "Lucida Grande", Arial, Helvetica, sans-serif; margin-bottom:0px
+ }
+#main-content {background:none;
+  -webkit-box-shadow:none;
+  border:0;
+  background-color:#FFF;
+  color:#525252;
+  overflow:hidden }
+
+
+#main-content #nav-col, .date_updated, .menuLeft, #jquery-tabs .nav {display:none}
+
+#jquery-tabs .list-wrap { padding: 10px; padding-left:0; margin: 0px 0 15px 0; position:relative;  float:left;  width:98%; background-color:none; 
+-moz-box-shadow: none;
+-webkit-box-shadow: none;
+box-shadow: none; border-right:0; border-bottom:0; padding-bottom:0px}
+
+#content-area { margin-left:0; min-width:90%; width:100%;}
+#content-area .title { background: none;}
+
+#content-area .sub-title .content_abstract
+	{ 
+	 box-shadow:none !important;
+	}
+#content-area .sub-title .content_abstract div {float:left; width:48%; margin:5px; margin-left:0 ; }
+.hide { display: block !important}
+
+#mainContentOuter #mainContent .contentContainer
+	{ 
+	background:#fff; 
+	width:95%; 
+	border:0px solid #e0e0e0; 
+	float:left; display:block; 
+	margin-left:0px
+	}
+	
+	#mainContentOuter #mainContent .contentContainer .content_title
+	{ 
+	margin:0px;  
+	color:#2c5987 ; 
+	letter-spacing: -1px;
+	line-height: 15px;
+	background:none; padding-left:0px; 
+	font-size:22px; font-weight:bold; 
+	margin-bottom:10px; padding-bottom:15px
+}
+	
+	#mainContentOuter #mainContent .contentContainer .content_abstract
+	{ 
+	margin:0px 20px 0px 0px; border:0px solid ;
+	font-weight:bold; 
+	padding:0px; 
+	float:left; width:95.7% 
+	}
+
+#mainContentOuter #mainContent .contentContainer .content_abstract div { float:left; width:45%; padding-left:0px;  }
+#mainContentOuter #mainContent .contentContainer .content_abstract div li { float:left; width:100%; margin-left:0; padding-left:0;  display:block;  background:url(../images/list_style_title.png) no-repeat;  background-image:none; }
+
+#mainContentOuter #mainContent .contentContainer .content_general{ margin:10px 0px; font-size:12px; font-weight:normal;  padding:10px 0; border:0px solid #f8f3f3;  }
+
+#mainContentOuter #mainContent .contentContainer .date_updated {margin:0px ; font-size:22px; font-weight:normal; font-style:italic;  padding:5px; clear:both; display:block; border:none;}
+
+#mainContentOuter #mainContent .contentContainer .content_intro{ margin:20px 0px; font-size:12px; font-weight:bold;  padding:10px 0px; width:100%; float:left }
+
+#mainContentOuter #mainContent .contentContainer .date_updated {display:none}
+
+#footer .copyright { margin:10px }
+
+span.top {display:none }
+
+#mainContentOuter #mainContent .contentContainer .content_general div.downloadZip {display:none }
+

@@ -1,0 +1,897 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>U-LEAF UI Standards & Guidelines</title>
+<link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=latin" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
+
+<link href="includes/style_new.css" rel="stylesheet" type="text/css" />
+<link href="includes/tabs.css" rel="stylesheet" type="text/css" />
+<link href="includes/element_styles.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="includes/print_style.css" type="text/css" media="print">
+<style type="text/css" media="print">
+.history, #footer, .actionButton, .content_intro, .checklistInstructions, #toTop {display:none !important}
+.title-s h1 {margin-top:10px}
+#wrapper {border-bottom:3px solid #cc3300;}
+.autogrow { padding-bottom:30px !important; width:100% !important}
+.checklistContent a{color:#525252}
+
+</style>
+<style>
+.actionButton {margin:10px 0}
+.checklistContent h2 {margin:2px}
+.checklistContent table {margin-bottom:10px}
+.autogrow {width:98%; margin-bottom:10px; border:2px solid #ccc; padding:5px}
+.checkListContainer input[type="text"] {border:none; background:none; width:99%}
+.checkListContainer table {margin-top:10px; margin-bottom:10px;}
+.checkListContainer table tr {background:none}
+.checkListContainer td {border-top:1px solid #ccc;}
+</style>
+<script type='text/javascript' src='script/jquery-1.6.2.min.js'></script>
+<script type="text/javascript" src="script/organictabs.jquery.js"></script>
+<script type="text/javascript" src="script/jquery_functions.js"></script>
+<script src="script/jquery.hoverIntent.js"></script>
+<script src="script/jquery.colorbox.js"></script>
+<script src="script/jquery.autogrow-textarea.js"></script>
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">
+        <div class="logoUnisys"><a href="index.htm"><img src="images/logo_unisys.png"  alt="Unisys" border="0" /></a></div>
+        <div class="logoUISG">U-LEAF UI Standards & Guidelines 2.0</div>
+    </div>
+    <div id="main-content">
+        <div id="nav-col">
+            <ul>
+                <li class="border-bottom"><a href="about.htm" class="link-about ">About U-LEAF UISG</a></li>
+                <li><a href="usability.htm" class="link-usability">Usability & Information Architecture</a></a></li>
+                <li><a href="accessibility.htm" class="link-accessibility">Accessibility &amp; Browser Support Standards</a></li>
+                <li><a href="egif.htm" class="link-egif">e-GIF Compliance</a></li>
+                <!--<li><a href="interface_design.htm" class="link-interface">User Interface Design</a></li>-->
+                <li class="border-bottom"><a href="site_structure.htm" class="link-structure">U-LEAF Application Structure</a></li>
+                <li><a href="branding.htm" class="link-brand">Branding and colour</a></li>
+				<!--<li><a href="typography.htm" class="link-typography" id=" ">Typography & Icons</a></li>-->                
+                <li><a href="standards.htm" class="link-xhtml">XHTML & Semantic Mark-up Standards</a></li>
+                <li class="border-bottom"><a href="css.htm" class="link-css">CSS</a></li>
+                <li><a href="layouts.htm" class="link-visual ">Layouts and Templates</a></li>
+                <li class="border-bottom"><a href="elements.htm" class="link-xhtml">U-LEAF Interface Elements</a></li>
+                <li><a href="checklist_developers.htm" class="link-checklist">Developer - UI Checklist</a></li>
+                <li class="selected"><a href="checklist_testers.htm" class="link-checklist">Tester - UI Checklist</a></li>
+                <!--<li><a href="forms.htm" class="link-forms menuselect">Form Elements</a></li>-->
+                <!--<li class="checklist"><a href="checklist.htm">Checklist</a></li><li class="glossary"><a href="glossary.htm">Glossary</a></li>-->
+            </ul>
+		</div><!-- end nav-col-->
+        <div id="content-area">
+            <div class="title-s">
+              <h1>GUI Testing Checklist</h1></div>
+            <div class="sub-title-s">
+            	<div class="content_abstract "></div>
+            </div>
+            <div class="date_updated">
+            	<div class="printLink" onClick="printit()">Print checklist</div>
+            </div>
+          <div class="content">
+                <div class="content_intro">
+            <p>Purpose of this GUI Testing Checklist is to help you understand how ULEAF can be tested according to the known and understood standards for GUI. This checklist can give some guidance to the development and QA, both the teams. Development team can make sure that during the development they follow guidelines related to the compliance, aesthetics, navigation etc. but onus of testing GUI is on the QA team and as a tester it is your responsibility to validate ULEAF against GUI standards followed.</p>
+            <p>This GUI test checklist can ensure that all the GUI components are thoroughly tested</p>
+            <p>Following checklist will give some information on items that should be tested to ensure quality of the user interface of ULEAF application. Simply you need update the checklist and save the as PDF and in Clearcase attach the document with the defect you are working.</p>
+            </div>
+                 <div class="checklistInstructions">
+               	   <h3>Instructions</h3>
+                 	<ol>
+                    	<li>Complete the identification details in the header.
+<li>Check each element and mark compliance Met , Not Met or N/A (Not Applicable) column.
+<li>Add comments or notes as necessary, with constructive suggestions for change.
+
+                   </ol>
+            </div>
+                <div class="checkListContainer">
+                 	<table width="80%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="55%" rowspan="2"><strong>&nbsp;&nbsp;Defect ID</strong><input type="text" /></td>
+                        <td width="9%"><strong>Tester</strong></td>
+                        <td width="36%"><input type="text" /></td>
+                      </tr>
+                      <tr>
+                        <td><strong>Test date</strong></td>
+                        <td><input type="text" id="datepicker"/></td>
+                      </tr>
+                    </table>
+				</div>
+			  <div class="checklistContent">
+       		  <h2>Navigation</h2>
+              <table width="80%" border="0" cellspacing="0" cellpadding="0" class="checklist">
+                  <tr>
+                    <th width="5%">N</th>
+                    <th>Navigation</th>
+                    <th width="5%">Met</th>
+                    <th width="6%">Not Met</th>
+                    <th width="5%">N/A</th>
+                </tr>
+                 <tr>
+                    <td>N1</td>
+                    <td><a href="egif.htm#checkpoint_13.3">Are navigation buttons consistently located?</a></td>
+                    <td><input type="radio" name="N1"/></td>
+                    <td><input type="radio" name="N1"/></td>
+                    <td><input type="radio" name="N1"/></td>
+                </tr>
+                <tr>
+                    <td>N2</td>
+                    <td><a href="egif.htm#checkpoint_13.2">Main navigation links are clearly and consistently labeled?</a></td>
+                    <td><input type="radio" name="N2"/></td>
+                    <td><input type="radio" name="N2"/></td>
+                    <td><input type="radio" name="N2"/></td>
+                </tr>
+                <tr>
+                    <td>N3</td>
+                    <td>Have all command buttons on the screen been given appropriate shortcut keys?</td>
+                    <td><input type="radio" name="N3"/></td>
+                    <td><input type="radio" name="N3"/></td>
+                    <td><input type="radio" name="N3"/></td>
+                </tr>
+
+          </table>
+          <h2>Colours</h2>
+                <table width="80%" border="0" cellspacing="0" cellpadding="0" class="checklist">
+                  <tr>
+                    <th width="5%">C</th>
+                    <th>Colors</th>
+                    <th width="5%">Met</th>
+                    <th width="6%">Not Met</th>
+                    <th width="5%">N/A</th>
+                  </tr>
+                  <tr>
+                    <td>C1</td>
+                    <td><a href="accessibility.htm#color">Text colour has sufficient contrast with background colour?</a></td>
+                    <td><input type="radio" name="N1"/></td>
+                    <td><input type="radio" name="N1"/></td>
+                    <td><input type="radio" name="N1"/></td>
+                  </tr>
+                  <tr>
+                    <td>C2</td>
+                    <td>Displays colours as expected on different monitors?</td>
+                    <td><input type="radio" name="C2"/></td>
+                    <td><input type="radio" name="C2"/></td>
+                    <td><input type="radio" name="C2"/></td>
+                  </tr>
+
+ <tr>
+                    <td>C3</td>
+                    <td><a href="egif.htm#checkpoint_2">Colour is not used alone to convey meaning?</a></td>
+                    <td><input type="radio" name="C3"/></td>
+                    <td><input type="radio" name="C3"/></td>
+                    <td><input type="radio" name="C3"/></td>
+                  </tr>
+          </table>
+              <h2>Content</h2>
+                <table width="80%" border="0" cellspacing="0" cellpadding="0" class="checklist">
+                  <tr>
+                    <th width="5%">CN</th>
+                    <th>Content</th>
+                    <th width="5%">Met</th>
+                    <th width="6%">Not Met</th>
+                    <th width="5%">N/A</th>
+                  </tr>
+                  <tr>
+                    <td>CN1</td>
+                    <td><a href="egif.htm#checkpoint_3.3">Fonts, font sizes, and font colours are consistently used according to the guidelines specified? No more than one web font is used?</a></td>
+                    <td><input type="radio" name="CN1"/></td>
+                    <td><input type="radio" name="CN1"/></td>
+                    <td><input type="radio" name="CN1"/></td>
+                  </tr>
+                <tr>
+                    <td>CN2</td>
+                    <td><a href="css.htm#implement">Font styles or sizes are not hard-coded?</a></td>
+                    <td><input type="radio" name="CN2"/></td>
+                    <td><input type="radio" name="CN2"/></td>
+                    <td><input type="radio" name="CN2"/></td>
+                  </tr>
+                  <tr>
+                  <td>CN3</td>
+                  <td><a href="css.htm#typography">Are the fonts easily readable, degrade gracefully and look correct on all accepted screen resolutions?</a></td>
+                  <td><input type="radio" name="CN3"/></td>
+                  <td><input type="radio" name="CN3"/></td>
+                  <td><input type="radio" name="CN3"/></td>
+                </tr>
+                <tr>
+                    <td>CN4</td>
+                    <td>Are all text, form elements and labels properly aligned?</td>
+                    <td><input type="radio" name="CN4"/></td>
+                    <td><input type="radio" name="CN4"/></td>
+                    <td><input type="radio" name="CN4"/></td>
+                  </tr>
+                <tr>
+                    <td>CN5</td>
+                    <td>Are all the headings left aligned?</td>
+                    <td><input type="radio" name="CN5"/></td>
+                    <td><input type="radio" name="CN5"/></td>
+                    <td><input type="radio" name="CN5"/></td>
+                  </tr>
+                <tr>
+                    <td>CN6</td>
+                    <td>Are basic components (e.g., title bars, horizontal and vertical scroll bars) used consistently and according to established standards?</td>
+                    <td><input type="radio" name="CN6"/></td>
+                    <td><input type="radio" name="CN6"/></td>
+                    <td><input type="radio" name="CN6"/></td>
+                  </tr>
+                  <tr>
+                  <td>CN7</td>
+                  <td>Is the layout arranged symmetrically with adequate spacing between components?</td>
+                  <td><input type="radio" name="CN7"/></td>
+                  <td><input type="radio" name="CN7"/></td>
+                  <td><input type="radio" name="CN7"/></td>
+                </tr>
+
+                <tr>
+                  <td>CN8</td>
+                  <td>Are all static text words spelt correctly and abbreviations used only when space is limited?</td>
+                  <td><input type="radio" name="CN8"/></td>
+                  <td><input type="radio" name="CN8"/></td>
+                  <td><input type="radio" name="CN8"/></td>
+                </tr>
+                <tr>
+                  <td>CN9</td>
+                  <td>Is the content free from factual errors, typos, or grammatical errors?</td>
+                  <td><input type="radio" name="CN9"/></td>
+                  <td><input type="radio" name="CN9"/></td>
+                  <td><input type="radio" name="CN9"/></td>
+                </tr>
+                <tr>
+                    <td>CN10</td>
+                    <td><a href="elements.htm#capitalizing">Do Titles, Sub Titles, Sub Menu items, Tooltips for Grid Icons and Labels use Title style capitalization?.</a></td>
+                    <td><input type="radio" name="CN10"/></td>
+                    <td><input type="radio" name="CN10"/></td>
+                    <td><input type="radio" name="CN10"/></td>
+                  </tr>
+                   <tr>
+                    <td>CN11</td>
+                    <td><a href="elements.htm#capitalizing">Do Action Buttons use small style capitalization? e.g. reset, apply, search, mark as read only</a></td>
+                    <td><input type="radio" name="CN11"/></td>
+                    <td><input type="radio" name="CN11"/></td>
+                    <td><input type="radio" name="CN11"/></td>
+                  </tr>
+                <tr>
+                  <td>CN12</td>
+                  <td><a href="elements.htm#actionButtons">Are command buttons all of similar size, shape and use the same font &amp; font size?</a></td>
+                  <td><input type="radio" name="CN12"/></td>
+                  <td><input type="radio" name="CN12"/></td>
+                  <td><input type="radio" name="CN12"/></td>
+                </tr>
+          </table>
+                <h2>Form &amp; Validations</h2>
+                <table width="80%" border="0" cellspacing="0" cellpadding="0" class="checklist">
+                  <tr>
+                    <th width="5%">CN</th>
+                    <th>Form</th>
+                    <th width="5%">Met</th>
+                    <th width="6%">Not Met</th>
+                    <th width="5%">N/A</th>
+                  </tr>
+                  <tr>
+                    <td>F1</td>
+                    <td><a href="standards.htm#forms">Forms are navigable using the keyboard?</a></td>
+                    <td><input type="radio" name="F1"/></td>
+                    <td><input type="radio" name="F1"/></td>
+                    <td><input type="radio" name="F1"/></td>
+                  </tr>
+                  <tr>
+                    <td>F2</td>
+                    <td><a href="standards.htm#mandatoryFields">Are mandatory fields marked clearly on the screen? (red asterisk)</a></td>
+                    <td><input type="radio" name="F2"/></td>
+                    <td><input type="radio" name="F2"/></td>
+                    <td><input type="radio" name="F2"/></td>
+                  </tr>
+                  <tr>
+                    <td>F3</td>
+                    <td>Are default values provided in fields, where appropriate?</td>
+                    <td><input type="radio" name="F3"/></td>
+                    <td><input type="radio" name="F3"/></td>
+                    <td><input type="radio" name="F3"/></td>
+                  </tr>
+                  <tr>
+                    <td>F4</td>
+                    <td>Are field sizes large enough to handle all valid entries? (maxlength)</td>
+                    <td><input type="radio" name="F4"/></td>
+                    <td><input type="radio" name="F4"/></td>
+                    <td><input type="radio" name="F4"/></td>
+                  </tr>
+                  <tr>
+                    <td>F5</td>
+                    <td>Are descriptive labels provided for all the fields?</td>
+                    <td><input type="radio" name="F5"/></td>
+                    <td><input type="radio" name="F5"/></td>
+                    <td><input type="radio" name="F5"/></td>
+                  </tr>
+                  <tr>
+                    <td>F6</td>
+                    <td>Are disabled fields avoided in the Tab sequence?</td>
+                    <td><input type="radio" name="F6"/></td>
+                    <td><input type="radio" name="F6"/></td>
+                    <td><input type="radio" name="F6"/></td>
+                  </tr>
+                  <tr>
+                    <td>F7</td>
+                    <td>Are all the read-only fields avoided in the Tab sequence?</td>
+                    <td><input type="radio" name="F7"/></td>
+                    <td><input type="radio" name="F7"/></td>
+                    <td><input type="radio" name="F7"/></td>
+                  </tr>
+                  <tr>
+                    <td>F8</td>
+                    <td>Does the TAB order specified on the screen go in sequence from Top Left to Bottom Right? And SHIFT + TAB order go in sequence backwords. This the default unless otherwise specified?</td>
+                    <td><input type="radio" name="F8"/></td>
+                    <td><input type="radio" name="F8"/></td>
+                    <td><input type="radio" name="F8"/></td>
+                  </tr>
+                  <tr>
+                    <td>F9</td>
+                    <td>Does the screen avoid situations where users can make errors by providing only appropriate choices and making potentially dangerous actions reversible or recoverable? </td>
+                    <td><input type="radio" name="F9"/></td>
+                    <td><input type="radio" name="F9"/></td>
+                    <td><input type="radio" name="F9"/></td>
+                  </tr>
+                  <tr>
+                    <td>F10</td>
+                    <td><a href="elements.htm#dataValidations">Are meaningful, concise messages provided when an error or problem exists?</a></td>
+                    <td><input type="radio" name="F10"/></td>
+                    <td><input type="radio" name="F10"/></td>
+                    <td><input type="radio" name="F10"/></td>
+                  </tr>
+                  <tr>
+                    <td>F11</td>
+                    <td><a href="elements.htm#dataValidations">Do error messages include guidance as to what constitutes a correct entry (e.g. the number must be numeric)?</a></td>
+                    <td><input type="radio" name="F11"/></td>
+                    <td><input type="radio" name="F11"/></td>
+                    <td><input type="radio" name="F11"/></td>
+                  </tr>
+                  <tr>
+                    <td>F12</td>
+                    <td><a href="elements.htm#statusMessages">Do error messages follow project standards for consistent terminology (e.g. use of Nominal No., Nominal Number, or Nominal URN)?</a></td>
+                    <td><input type="radio" name="F12"/></td>
+                    <td><input type="radio" name="F12"/></td>
+                    <td><input type="radio" name="F12"/></td>
+                  </tr>
+                  <tr>
+                    <td>F13</td>
+                    <td><a href="css.htm#colors">Are colours used following the project standards for consistency and according to the guidelines specified in Guidelines?</a></td>
+                    <td><input type="radio" name="F13"/></td>
+                    <td><input type="radio" name="F13"/></td>
+                    <td><input type="radio" name="F13"/></td>
+                  </tr>
+                </table>
+                <h2>Browser Compatibility & Screen resolution</h2>
+                <table width="80%" border="0" cellspacing="0" cellpadding="0" class="checklist">
+                <tr>
+                    <th width="5%">BC</th>
+                    <th>Browser Compatibility & Screen resolution</th>
+                  <th width="5%">Met</th>
+                  <th width="6%">Not Met</th>
+                  <th width="5%">N/A</th>
+                  </tr>
+                <tr>
+                    <td>BC1</td>
+                    <td>Does the screens functionality perform as required in IE  11 and current versions of Mozilla Firefox and Google Chrome?</td>
+                    <td><input type="radio" name="BC1"/></td>
+                    <td><input type="radio" name="BC1"/></td>
+                    <td><input type="radio" name="BC1"/></td>
+                  </tr>
+                <tr>
+                    <td>BC2</td>
+                    <td>Displays suitably when window is resized?</td>
+                    <td><input type="radio" name="BC5"/></td>
+                    <td><input type="radio" name="BC5"/></td>
+                    <td><input type="radio" name="BC5"/></td>
+                  </tr>
+                <tr>
+                    <td>BC3</td>
+                    <td>Displays suitably when fonts are resized?</td>
+                    <td><input type="radio" name="BC3"/></td>
+                    <td><input type="radio" name="BC3"/></td>
+                    <td><input type="radio" name="BC3"/></td>
+                  </tr>
+                  <tr>
+                    <td>BC4</td>
+                    <td> Displays without horizontal scrolling at 1024×768 and higher resolutions?</td>
+                    <td><input type="radio" name="BC4"/></td>
+                    <td><input type="radio" name="BC4"/></td>
+                    <td><input type="radio" name="BC4"/></td>
+                  </tr>
+ 					<tr>
+                    <td>BC5</td>
+                    <td>Checked on common variations of Screen Resolution
+ 					and display suitably?</td>
+                    <td><input type="radio" name="BC5"/></td>
+                    <td><input type="radio" name="BC5"/></td>
+                    <td><input type="radio" name="BC5"/></td>
+                  </tr>
+
+          </table><h2>eGIF</h2>
+          <h3>Priority 1</h3>
+          <table width="80%" border="0" cellspacing="0" cellpadding="0" class="checklist">
+            <tr>
+              <th width="5%">SV</th>
+              <th>Screen Validation</th>
+              <th width="5%">Met</th>
+              <th width="6%">Not Met</th>
+              <th width="5%">N/A</th>
+            </tr>
+            <tr>
+              <td>EGP1</td>
+              <td><a href="checklist_testers.htm">Provided equivalent alternatives to auditory and visual content?</a></td>
+              <td><input type="radio" name="EGP1"/></td>
+              <td><input type="radio" name="EGP1"/></td>
+              <td><input type="radio" name="EGP1"/></td>
+            </tr>
+            <tr>
+              <td>EGP2</td>
+              <td><a href="egif.htm#checkpoint_2.1">Ensured that all information conveyed with colour is also available without color?</a></td>
+              <td><input type="radio" name="EGP2"/></td>
+              <td><input type="radio" name="EGP2"/></td>
+              <td><input type="radio" name="EGP2"/></td>
+            </tr>
+            <tr>
+              <td>EGP3</td>
+              <td><a href="egif.htm#checkpoint_3.5">Does all lists and list items marked up properly?</a></td>
+              <td><input type="radio" name="EGP3"/></td>
+              <td><input type="radio" name="EGP3"/></td>
+              <td><input type="radio" name="EGP3"/></td>
+            </tr>
+            <tr>
+              <td>EGP5</td>
+              <td><a href="egif.htm#checkpoint_5.1">For data tables, identify row and column headers. For example, in HTML, use TD to identify data cells and TH to
+                identify headers?</a></td>
+              <td><input type="radio" name="EGP5"/></td>
+              <td><input type="radio" name="EGP5"/></td>
+              <td><input type="radio" name="EGP5"/></td>
+            </tr>
+            <tr>
+              <td>EGP6</td>
+              <td><a href="egif.htm#checkpoint_4.3">Organize documents so they may be read without style sheets?</a></td>
+              <td><input type="radio" name="EGP6"/></td>
+              <td><input type="radio" name="EGP6"/></td>
+              <td><input type="radio" name="EGP6"/></td>
+            </tr>
+            <tr>
+              <td>EGP7</td>
+              <td><a href="egif.htm#checkpoint_8.1">Make programmatic elements such as scripts and applets directly accessible or compatible with assistive technologies if functionality is important and not presented elsewhereFollowing?</a></td>
+              <td><input type="radio" name="EGP7"/></td>
+              <td><input type="radio" name="EGP7"/></td>
+              <td><input type="radio" name="EGP7"/></td>
+            </tr>
+            <tr>
+              <td>EGP8</td>
+              <td><a href="egif.htm#checkpoint_9.2">Create a logical tab order through links, form controls, and objects?</a></td>
+              <td><input type="radio" name="EGP8"/></td>
+              <td><input type="radio" name="EGP8"/></td>
+              <td><input type="radio" name="EGP8"/></td>
+            </tr>
+            <tr>
+              <td>EGP9</td>
+              <td><a href="egif.htm#checkpoint_9.3">Provided keyboard shortcuts to important links (including those in client-side image maps), form controls, and groups of form controls?</a></td>
+              <td><input type="radio" name="EGP9"/></td>
+              <td><input type="radio" name="EGP9"/></td>
+              <td><input type="radio" name="EGP9"/></td>
+            </tr>
+            <tr>
+              <td>EGP10</td>
+              <td><a href="egif.htm#checkpoint_11.1">Used W3C technologies and guidelines?</a></td>
+              <td><input type="radio" name="EGP10"/></td>
+              <td><input type="radio" name="EGP10"/></td>
+              <td><input type="radio" name="EGP10"/></td>
+            </tr>
+            <tr>
+              <td>EGP11</td>
+              <td><a href="egif.htm#checkpoint_12.2">Divide large blocks of information into more manageable groups where natural and appropriate?</a></td>
+              <td><input type="radio" name="EGP11"/></td>
+              <td><input type="radio" name="EGP11"/></td>
+              <td><input type="radio" name="EGP11"/></td>
+            </tr>
+            <tr>
+              <td>EGP12</td>
+              <td><a href="egif.htm#checkpoint_12.3">Associate labels explicitly with their controls. For example, in HTML use LABEL and its &quot;for&quot; attribute?</a></td>
+              <td><input type="radio" name="EGP12"/></td>
+              <td><input type="radio" name="EGP12"/></td>
+              <td><input type="radio" name="EGP12"/></td>
+            </tr>
+            <tr>
+              <td>EGP13</td>
+              <td><a href="egif.htm#checkpoint_13.1">Clearly identify the target of each link?</a></td>
+              <td><input type="radio" name="EGP13"/></td>
+              <td><input type="radio" name="EGP13"/></td>
+              <td><input type="radio" name="EGP13"/></td>
+            </tr>
+            <tr>
+              <td>EGP14</td>
+              <td><a href="egif.htm#checkpoint_13.2">Use navigation mechanisms in a consistent manner?</a></td>
+              <td><input type="radio" name="EGP14"/></td>
+              <td><input type="radio" name="EGP14"/></td>
+              <td><input type="radio" name="EGP14"/></td>
+            </tr>
+            <tr>
+              <td>EGP15</td>
+              <td><a href="egif.htm#checkpoint_13.3">Provide navigation bars to highlight and give access to the navigation mechanism?</a></td>
+              <td><input type="radio" name="EGP15"/></td>
+              <td><input type="radio" name="EGP15"/></td>
+              <td><input type="radio" name="EGP15"/></td>
+            </tr>
+            <tr>
+              <td>EGP16</td>
+              <td><a href="egif.htm#checkpoint_14.1">Use the clearest and simplest language appropriate for a site's content?</a></td>
+              <td><input type="radio" name="EGP16"/></td>
+              <td><input type="radio" name="EGP16"/></td>
+              <td><input type="radio" name="EGP16"/></td>
+            </tr>
+            <tr>
+              <td>EGP17</td>
+              <td><a href="egif.htm#checkpoint_14.2">Create a style of presentation that is consistent across pages?</a></td>
+              <td><input type="radio" name="EGP17"/></td>
+              <td><input type="radio" name="EGP17"/></td>
+              <td><input type="radio" name="EGP17"/></td>
+            </tr>
+          </table>
+          <h3>Priority 2</h3>
+          <table width="80%" border="0" cellspacing="0" cellpadding="0" class="checklist">
+            <tr>
+              <th width="7%">SV</th>
+              <th width="77%">Screen Validation</th>
+              <th width="5%">Met</th>
+              <th width="6%">Not Met</th>
+              <th width="5%">N/A</th>
+            </tr>
+            <tr>
+              <td>EGP2-1</td>
+              <td><a href="egif.htm#checkpoint_2.2">Ensured that foreground and background colour combinations provide sufficient contrast when viewed by someone having colour deficits or when viewed on a black and white screen?</a></td>
+              <td><input type="radio" name="EGP2-1"/></td>
+              <td><input type="radio" name="EGP2-1"/></td>
+              <td><input type="radio" name="EGP2-1"/></td>
+            </tr>
+            <tr>
+              <td>EGP2-2</td>
+              <td><a href="egif.htm#checkpoint_3.1">When an appropriate markup language exists, used markup rather than images to convey information?</a></td>
+              <td><input type="radio" name="EGP2-2"/></td>
+              <td><input type="radio" name="EGP2-2"/></td>
+              <td><input type="radio" name="EGP2-2"/></td>
+            </tr>
+            <tr>
+              <td>EGP2-3</td>
+              <td><a href="egif.htm#checkpoint_3.2">Used style sheets to control layout and presentation?</a></td>
+              <td><input type="radio" name="EGP2-3"/></td>
+              <td><input type="radio" name="EGP2-3"/></td>
+              <td><input type="radio" name="EGP2-3"/></td>
+            </tr>
+            <tr>
+              <td>EGP2-4</td>
+              <td><a href="egif.htm#checkpoint_3.3">Used relative rather than absolute units in markup language attribute values and style sheet property values?</a></td>
+              <td><input type="radio" name="EGP2-4"/></td>
+              <td><input type="radio" name="EGP2-4"/></td>
+              <td><input type="radio" name="EGP2-4"/></td>
+            </tr>
+            <tr>
+              <td>EGP2-5</td>
+              <td><a href="egif.htm#checkpoint_3.4">Used header elements to convey document structure and use them according to specification?</a></td>
+              <td><input type="radio" name="EGP2-5"/></td>
+              <td><input type="radio" name="EGP2-5"/></td>
+              <td><input type="radio" name="EGP2-5"/></td>
+            </tr>
+            <tr>
+              <td>EGP2-6</td>
+              <td><a href="egif.htm#checkpoint_3.5">Does all lists and list items marked up properly?</a></td>
+              <td><input type="radio" name="EGP2-6"/></td>
+              <td><input type="radio" name="EGP2-6"/></td>
+              <td><input type="radio" name="EGP2-6"/></td>
+            </tr>
+          </table>
+          <h2>Accessibility</h2>
+                <table width="80%" border="0" cellspacing="0" cellpadding="0" class="checklist">
+                  <tr>
+                    <th width="5%">AC</th>
+                    <th>Accessibility</th>
+                    <th width="5%">Met</th>
+                    <th width="6%">Not Met</th>
+                    <th width="5%">N/A</th>
+                  </tr>
+                   <tr>
+                    <td>AC1</td>
+                    <td><a href="egif.htm#checkpoint_1"> Are “alt” or 'title' attributes used for all descriptive images, buttons, Links etc?</a></td>
+                    <td><input type="radio" name="AC1"/></td>
+                    <td><input type="radio" name="AC1"/></td>
+                    <td><input type="radio" name="AC1"/></td>
+                  </tr>
+ <tr>
+                    <td>AC2</td>
+                    <td><a href="egif.htm#checkpoint_3.3"> Does the site use relative units rather than absolute units for text size?</a></td>
+                    <td><input type="radio" name="AC2"/></td>
+                    <td><input type="radio" name="AC2"/></td>
+                    <td><input type="radio" name="AC2"/></td>
+                  </tr>
+ <tr>
+                    <td>AC3</td>
+                    <td> Do any aspects of the layout break if font size is increased?</td>
+                    <td><input type="radio" name="AC3"/></td>
+                    <td><input type="radio" name="AC3"/></td>
+                    <td><input type="radio" name="AC3"/></td>
+                  </tr>
+ <tr>
+                    <td>AC4</td>
+                    <td><a href="standards.htm#forms"> Does the site use accessible forms?</a></td>
+                    <td><input type="radio" name="AC4"/></td>
+                    <td><input type="radio" name="AC4"/></td>
+                    <td><input type="radio" name="AC4"/></td>
+                  </tr>
+ <tr>
+                    <td>AC5</td>
+                    <td><a href="egif.htm#checkpoint_5"> Does the site use accessible tables?</a></td>
+                    <td><input type="radio" name="AC5"/></td>
+                    <td><input type="radio" name="AC5"/></td>
+                    <td><input type="radio" name="AC5"/></td>
+                  </tr>
+ <tr>
+                    <td>AC6</td>
+                    <td> Is there sufficient colour brightness/contrasts?</td>
+                    <td><input type="radio" name="AC6"/></td>
+                    <td><input type="radio" name="AC6"/></td>
+                    <td><input type="radio" name="AC6"/></td>
+                  </tr>
+ <tr>
+                    <td>AC7</td>
+                    <td> Is colour alone used for critical information?</td>
+                    <td><input type="radio" name="AC7"/></td>
+                    <td><input type="radio" name="AC7"/></td>
+                    <td><input type="radio" name="AC7"/></td>
+                  </tr>
+ <tr>
+                    <td>AC8</td>
+                    <td> Are all links and command buttons descriptive?</td>
+                    <td><input type="radio" name="AC8"/></td>
+                    <td><input type="radio" name="AC8"/></td>
+                    <td><input type="radio" name="AC8"/></td>
+                  </tr>
+
+ <tr>
+                    <td>AC9</td>
+                    <td><a href="egif.htm#checkpoint_6.1"> Is the content accessible with CSS switched off or not supported?</a></td>
+                    <td><input type="radio" name="AC9"/></td>
+                    <td><input type="radio" name="AC9"/></td>
+                    <td><input type="radio" name="AC9"/></td>
+                  </tr>
+ <tr>
+                    <td>AC10</td>
+                    <td><a href="accessibility.htm#images">Is the content accessible with images switched off or not supported?</a></td>
+                    <td><input type="radio" name="AC10"/></td>
+                    <td><input type="radio" name="AC10"/></td>
+                    <td><input type="radio" name="AC10"/></td>
+                  </tr>
+ <tr>
+                    <td>AC11</td>
+                    <td> Does the site work well when printed?</td>
+                    <td><input type="radio" name="AC11"/></td>
+                    <td><input type="radio" name="AC11"/></td>
+                    <td><input type="radio" name="AC11"/></td>
+                  </tr>
+ <tr>
+                    <td>AC12</td>
+                    <td><a href="accessibility.htm#keyboard"> Are keyboard commands provided for frequent users and those who prefer keyboard use over the mouse?</a></td>
+                    <td><input type="radio" name="AC12"/></td>
+                    <td><input type="radio" name="AC12"/></td>
+                    <td><input type="radio" name="AC12"/></td>
+                  </tr>
+                   <tr>
+                    <td>AC13</td>
+                    <td><a href="accessibility.htm#keyboard"> Does each element on a page is reachable and can be manipulated via the keyboard?</a></td>
+                    <td><input type="radio" name="AC13"/></td>
+                    <td><input type="radio" name="AC13"/></td>
+                    <td><input type="radio" name="AC13"/></td>
+                  </tr>
+ <tr>
+                    <td>AC14</td>
+                    <td><a href="accessibility.htm#keyboardShortcuts">Are shortcut keys provided, where appropriate, as a method for activating controls on pulldown or cascading menus using the keyboard, without first having to select the menu (e.g., Ctrl+S saves the document)?</a></td>
+                    <td><input type="radio" name="AC14"/></td>
+                    <td><input type="radio" name="AC14"/></td>
+                    <td><input type="radio" name="AC14"/></td>
+                  </tr>
+ <tr>
+                    <td>AC15</td>
+                    <td><a href="accessibility.htm#keyboard"> Are standards followed for mouse and keyboard navigation, manipulation, and interaction (e.g., TAB, SHIFT+TAB, double-click, selection of elements and objects, drag and drop)?</a></td>
+                    <td><input type="radio" name="AC15"/></td>
+                    <td><input type="radio" name="AC15"/></td>
+                    <td><input type="radio" name="AC15"/></td>
+                  </tr>
+ <tr>
+                    <td>AC16</td>
+                    <td>Is disabling used to indicate to the user when actions (including selection of specific menu items and use of objects such as checkboxes) are not valid, temporarily unavailable or do not pertain to the current state of the window?</td>
+                    <td><input type="radio" name="AC16"/></td>
+                    <td><input type="radio" name="AC16"/></td>
+                    <td><input type="radio" name="AC16"/></td>
+                  </tr>
+ <tr>
+                    <td>AC17</td>
+                    <td> Is an animation control used to indicate system activity when the total duration of the operation is unknown (e.g., animation clips of a magnifying glass rotating over a document can be used to indicate that a Find operation is underway)?</td>
+                    <td><input type="radio" name="AC17"/></td>
+                    <td><input type="radio" name="AC17"/></td>
+                    <td><input type="radio" name="AC17"/></td>
+                  </tr>
+                  <tr>
+                    <td>AC18</td>
+                    <td><a href="accessibility.htm#Tabbing">Is the focus indicator visible when a user uses the keyboard to tab from element to element and were it always be apparent where they are?</a></td>
+                    <td><input type="radio" name="AC18"/></td>
+                    <td><input type="radio" name="AC18"/></td>
+                    <td><input type="radio" name="AC18"/></td>
+                  </tr>
+ <!--<tr>
+                    <td>EU18</td>
+                    <td> Test all pages for accessibility using an evaluation tool (http://
+wave.webaim.org), but only after you have done all you can to
+ensure it is accessible using the recommendations here.</td>
+                    <td><input type="radio" name="EU15"/></td>
+                    <td><input type="radio" name="EU15"/></td>
+                    <td><input type="radio" name="EU15"/></td>
+                  </tr>-->
+ <tr>
+                    <td>AC19</td>
+                    <td><a href="standards.htm#codeStyle"> Is content structurally separate from navigational elements?</a></td>
+                    <td><input type="radio" name="AC19"/></td>
+                    <td><input type="radio" name="AC19"/></td>
+                    <td><input type="radio" name="AC19"/></td>
+                  </tr>
+ <tr>
+                    <td>AC20</td>
+                    <td> Configured frames with frame titles and placed meaningful content in the noframes area?</td>
+                    <td><input type="radio" name="AC20"/></td>
+                    <td><input type="radio" name="AC20"/></td>
+                    <td><input type="radio" name="AC20"/></td>
+                  </tr>
+
+                </table>
+                <h2>Ease of use (Usability)</h2>
+                <table width="80%" border="0" cellspacing="0" cellpadding="0" class="checklist">
+                  <tr>
+                    <th width="5%">EU</th>
+                    <th>Ease of use</th>
+                    <th width="5%">Met</th>
+                    <th width="6%">Not Met</th>
+                    <th width="5%">N/A</th>
+                  </tr>
+                  <tr>
+                    <td>EU1</td>
+                    <td>
+                Are help (tooltip) facilities provided as appropriate?</td>
+                    <td><input type="radio" name="EU1"/></td>
+                    <td><input type="radio" name="EU1"/></td>
+                    <td><input type="radio" name="EU1"/></td>
+                  </tr>
+                <tr>
+                    <td>EU2</td>
+                    <td> Are selection options clear?</td>
+                    <td><input type="radio" name="EU2"/></td>
+                    <td><input type="radio" name="EU2"/></td>
+                    <td><input type="radio" name="EU2"/></td>
+                  </tr>
+                <tr>
+                    <td>EU3</td>
+                    <td> Is the terminology appropriate for intended users?</td>
+                    <td><input type="radio" name="EU3"/></td>
+                    <td><input type="radio" name="EU3"/></td>
+                    <td><input type="radio" name="EU3"/></td>
+                  </tr>
+                <tr>
+                    <td>EU4</td>
+                    <td> Is there minimal scrolling and resizeable screens?</td>
+                    <td><input type="radio" name="EU4"/></td>
+                    <td><input type="radio" name="EU4"/></td>
+                    <td><input type="radio" name="EU4"/></td>
+                  </tr>
+                <tr>
+                    <td>EU5</td>
+                    <td> Are messages understandable?</td>
+                    <td><input type="radio" name="EU5"/></td>
+                    <td><input type="radio" name="EU5"/></td>
+                    <td><input type="radio" name="EU5"/></td>
+                  </tr>
+                <tr>
+                    <td>EU6</td>
+                    <td> Are confirmation messages available as appropriate?</td>
+                    <td><input type="radio" name="EU6"/></td>
+                    <td><input type="radio" name="EU6"/></td>
+                    <td><input type="radio" name="EU6"/></td>
+                  </tr>
+                <tr>
+                    <td>EU7</td>
+                    <td> Are names in command button & option box names are not abbreviations?</td>
+                    <td><input type="radio" name="EU7"/></td>
+                    <td><input type="radio" name="EU7"/></td>
+                    <td><input type="radio" name="EU7"/></td>
+                  </tr>
+                <tr>
+                    <td>EU8</td>
+                    <td> Are fonts too large or too small to read?</td>
+                    <td><input type="radio" name="EU8"/></td>
+                    <td><input type="radio" name="EU8"/></td>
+                    <td><input type="radio" name="EU8"/></td>
+                  </tr>
+                  <tr>
+                    <td>EU9</td>
+                    <td> Are all dropdowns on this screen sorted correctly? Alphabetic sorting is the default unless otherwise specified. Primary navigation is an exception.</td>
+                    <td><input type="radio" name="EU9"/></td>
+                    <td><input type="radio" name="EU9"/></td>
+                    <td><input type="radio" name="EU9"/></td>
+                  </tr>
+                  <tr>
+                    <td>EU10</td>
+                    <td> Is all date entry required is in DD/MM/YYY format?</td>
+                    <td><input type="radio" name="EU10"/></td>
+                    <td><input type="radio" name="EU10"/></td>
+                    <td><input type="radio" name="EU10"/></td>
+                  </tr>
+                   <tr>
+                    <td>EU11</td>
+                    <td> Do all the fields edit boxes indicate the number of characters they will hold by there length? e.g. a 30 character field should be a lot longer</td>
+                    <td><input type="radio" name="EU11"/></td>
+                    <td><input type="radio" name="EU11"/></td>
+                    <td><input type="radio" name="EU11"/></td>
+                  </tr>
+<tr>
+                    <td>EU12</td>
+                    <td>
+              <a href="egif.htm#checkpoint_14">Balance of text/graphics/white space on page.</a></td>
+                    <td><input type="radio" name="EU12"/></td>
+                    <td><input type="radio" name="EU12"/></td>
+                    <td><input type="radio" name="EU12"/></td>
+                  </tr>
+
+                </table>
+
+
+          <div class="checklistComments">
+            <h3>General comments about this section</h3>
+            <textarea name="text" cols="70" rows="1" class="autogrow"></textarea>
+          </div>
+          <h2>
+          	<button onClick="window.print()" class="actionButton">Save Checklist as PDF</button>
+          </h2>
+          <p class="download_pdflite">
+           <span class="red">To print checklist as PDF, it is required tp install PDFLite or similar  PDF generating software. If you have not installed one yet, <a href="http://www.pdflite.com/" target="_blank">'<strong>Download PDFLite now</strong>'</a></span>
+           </p>
+</div>
+<div class="history">
+<a name="documentHistory"></a>
+        <h2>Document History</h2>  
+        <table width="90%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+  <th>Date</th>
+     <th>Version</th>
+    <th>Change</th>
+     <th>Author</th>
+  
+  </tr>
+  <tr>
+    <td>08 April 2013</td>
+    <td>1.0</td>
+    <td>First draft of GUI Testing checklist</td>
+    <td>Phil Storer, Jojest Thomson</td>
+  </tr>
+</table>
+</div>
+			</div><!-- end content-->
+		</div><!-- end content-area-->
+	</div><!-- end  main-content -->
+    <div id="footer">
+	    <div class="copyright">
+        <h3>Confidential</h3>
+       	<p> This document is confidential and proprietary to Unisys Corporation. It is not to be used, reproduced, or disclosed outside Unisys without the written consent of Unisys Corporation. The information in this document is furnished for use by Unisys support personnel in servicing customer’s equipment or by a customer under a license agreement with Unisys.</p>
+		<p>Copyright © 2012 Unisys Corporation. All Rights Reserved.</p>
+		<p>Unisys is a trademark of Unisys Corporation.</p>
+		<p>All other brands and products referenced herein are acknowledged to be trademarks or registered trademarks of their respective holders.</p>
+		<p><strong>Version 1.0</strong> </p>
+        </div>
+    </div>
+</div>
+<div id="toTop">^ Back to Top</div>
+<script>
+$(document).ready(function() {
+  $('.autogrow').css('overflow', 'hidden').autogrow()
+});
+</script>
+</body>
+</html>

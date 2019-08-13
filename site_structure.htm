@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>U-LEAF UI Standards & Guidelines</title>
+<link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=latin" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css' />
+
+<link href="includes/style_new.css" rel="stylesheet" type="text/css" />
+<link href="includes/tabs.css" rel="stylesheet" type="text/css" />
+<link href="includes/element_styles.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="includes/print_style.css" type="text/css" media="print" />
+
+
+<script type='text/javascript' src='script/jquery-1.6.2.min.js'></script>
+<script type="text/javascript" src="script/organictabs.jquery.js"></script>
+<script type="text/javascript" src="script/jquery_functions.js"></script>
+<script src="script/jquery.hoverIntent.js"></script>
+<script src="script/jquery.colorbox.js"></script>
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">
+        <div class="logoUnisys"><a href="index.htm"><img src="images/logo_unisys.png"  alt="Unisys" border="0" /></a></div>
+        <div class="logoUISG">U-LEAF UI Standards & Guidelines 2.0</div>
+    </div>
+    <div id="main-content">
+        <div id="nav-col">
+            <ul>
+                <li class="border-bottom"><a href="about.htm" class="link-about ">About U-LEAF UISG</a></li>
+                <li><a href="usability.htm" class="link-usability">Usability & Information Architecture</a></a></li>
+                <li><a href="accessibility.htm" class="link-accessibility">Accessibility &amp; Browser Support Standards</a></li>
+                <li><a href="egif.htm" class="link-egif">e-GIF Compliance</a></li>
+                <!--<li><a href="interface_design.htm" class="link-interface">User Interface Design</a></li>-->
+                <li class="border-bottom selected"><a href="site_structure.htm" class="link-structure">U-LEAF Application Structure</a></li>
+                <li><a href="branding.htm" class="link-brand">Branding and colour</a></li>
+				<!--<li><a href="typography.htm" class="link-typography" id=" ">Typography & Icons</a></li>-->                
+                <li><a href="standards.htm" class="link-xhtml">XHTML & Semantic Mark-up Standards</a></li>
+                <li  class="border-bottom"><a href="css.htm" class="link-css">CSS</a></li>
+                <li><a href="layouts.htm" class="link-visual ">Layouts and Templates</a></li>
+                <li class="border-bottom"><a href="elements.htm" class="link-xhtml">U-LEAF Interface Elements</a></li>
+                <li><a href="checklist_developers.htm" class="link-checklist">Developer - UI Checklist</a></li>
+                <li><a href="checklist_testers.htm" class="link-checklist">Tester - UI Checklist</a></li>                
+                <!--<li><a href="forms.htm" class="link-forms menuselect">Form Elements</a></li>-->
+                <!--<li class="checklist"><a href="checklist.htm">Checklist</a></li><li class="glossary"><a href="glossary.htm">Glossary</a></li>-->
+            </ul>
+		</div><!-- end nav-col-->
+        <div id="content-area">
+            <div class="title-s"><h1>U-LEAF Application Structure</h1></div>
+            <div class="sub-title-s">
+            
+            	<div class="content_abstract ">
+                <div>
+                	
+                    <ul>
+                        <li>1. <a href="#navigation_system">Navigation system</a></li>
+                            <li>2. <a href="#semantic_content_markup">Semantic Content Markup</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>3. <a href="#site_file_structure">Site file structure</a></li>
+                            <li>4. <a href="#document_history">Document history</a></li>
+          			</ul>
+                </div>
+              </div>
+            
+            
+            </div>
+            <div class="date_updated">
+            	<div class="printLink" onClick="printit()">Print this page</div>
+            </div>
+            
+            <div class="content">
+                <div class="content_intro">
+                   <p>The Unisys Law Enforcement Application Framework (U-LEAF) gives resource-challenged law enforcement personnel a tool to help them meet the growing public demand for effective investigations of crime and terror threats. The solution documents and logs evidence and intelligence related to criminal investigations, while facilitating the secure sharing of information across organization boundaries. It provides a single, browser-based interface with multiple analytical views of crime data to improve investigators’ ability to gather, analyze and act upon critical information.</p></div>
+
+<p>When investigating crime, law enforcement officers must contend with a deluge of information from multiple agencies and data sources. With a high percentage of organization data held in unstructured formats, officers are left with the herculean task of sifting through huge quantities of digital data before making decisions.</p>
+
+<p>U-LEAF gives investigators a flexible technology tool to meet challenges in policing, national security, immigration and citizenship enforcement, military and finance. That flexibility allows for easy system configuration as threats, crime patterns, legislation or public expectations change.</p>
+
+<p>“The U-LEAF framework, based on technology Unisys successfully provided to major police organizations in the UK, can give law enforcement, security and intelligence agencies a tool to manage numerous types of data and multiple lines of inquiry, while linking disparate pieces of related information,” said John Wright, global director, public safety and justice, Unisys. “By helping them to mine intelligence, discover links with similar investigations and collaborate with other users, U-LEAF can help them prevent or detect crimes and threats to national security with greater confidence.”</p>
+
+<p>In addition to helping agencies collaborate and manage and analyze data, U-LEAF handles all aspects of an investigation within one application, while integrating data from other agencies and applications and sharing it across jurisdiction and application boundaries. It can also reduce costs by driving more efficient investigations and reducing downtime related to configuration changes.</p>
+
+<p>U-LEAF provides additional capabilities to aid criminal investigations, including security and auditing; workflow management;  evidence management; disaster management; compliance; mobility; advanced analytics and data visualization; watch lists; mapping and geographical information systems; and social media analytics.</p>
+                
+            
+<h2>1. ULEAF CSS Goals</h2>
+				<li>Separates content from design. One of the main goals of CSS is to remove design elements from HTML and place them in another location for the designer to maintain. This also serves to separate designers from developers so that each can focus on their areas of expertise. A designer doesn't have to be a developer to maintain the look of a website.</li>
+<li>Makes maintenance easy. One of the most overlooked elements of web design is maintenance. Unlike print materials, a website is never "one and done." Content, design, and function can and should evolve over time. Having the CSS in a central place, rather than sprinkled throughout the website, makes things much easier to maintain.</li>
+				
+<li>Inline Styles Are Not Best Practice: Inline styles, while they have a purpose, generally are not the best way to maintain ULEAF Application. They go against every one of the best practices. Inline styles don't separate content from design. Inline styles are exactly the same as embedded font and other clunky design tags that modern developers rail against. The styles affect only the particular, individual elements to which they're applied; while that might give you more granular control, it also makes other aspects of design and development—such as consistency—more difficult.
+Inline styles cause maintenance headaches. When you're working with stylesheets, figuring out where a style is being set can be difficult. When you're dealing with a mixture of inline, embedded and external styles, you have many locations to check. </li>
+				<li>Instead of using inline styles, use external stylesheets. They give you all the benefits of CSS best practices and are easy to use.</li>
+
+<p></p>
+<a name="site_file_structure"></a>
+<h2>2. ULEAF file structure</h2>
+<h3>ULEAF-THEME</h3>
+	<p>The _diffs folder that’s created inside the docroot directory of your theme is important; this is where you place your theme’s code. The _diffs folder must mirror the parent theme’s directory structure. Since you’ll only customize the parts of your theme that differ from the parent theme, place only the folders and files you’ll customize there.</p>
+				<p><strong>Refer the following link for more information on Liferay theme anatomy. <a href="https://dev.liferay.com/develop/tutorials/-/knowledge_base/6-1/anatomy-of-a-theme" target="_blank">LIFERAY THEME ANATOMY</a></strong></p>
+	Theme File Structure
+	<h4>CSS/SASS</h4>
+		<li><strong>aui</strong>:</li>
+		<li><strong>color_schemes</strong>:</li>
+		<li><strong>Custom Fonts</strong> : </li>
+		<li><strong>Custom fonts Icons</strong> : </li>
+
+	<h4>Images</h4>
+	<h4>JavaScript</h4>
+	<h4>Templates</h4>
+	<h4>Color Schemes</h4>
+		<li>Current Colors Schemes</li>
+		<li>Add new color schemes: 
+			<ol>Step 1: Open ULEAF-THEME/WEB-INF/liferay-look-and-feel.xml and add selected code snipped to add a new color scheme.<img src="images/adding_new_colors.png" width="1221" height="386" alt=""/></ol>
+			<ol>Step 2:ULEAF-THEME/_diffs/css/color-duplicate <strong>darkGreen.css</strong> and change variable values on top to match new color combination. Refer the image below <br><img src="images/adding_new_colors2.png" width="383" height="443" alt=""/>
+			</ol>	
+				</li>
+			  
+<h4>WEB-INF</h4>
+		<li>liferay-look-and-feel.xml</li>
+<h3>Shared Files</h3>
+	<h5>CSS</h5>
+	<h5>Javascript Libraries</h5>
+				<li>jQuery</li>
+				<li>Libraries</li>
+				<li>Recommended Libraries
+					<ol>Charts
+						<li>
+							<a href="https://morrisjs.github.io/morris.js/" title="MORRIS CHART" target="_blank">Morris</a>
+						</li>
+						<li><a href="https://www.flotcharts.org/" title="Flot Chart" target="_blank">Flot</a></li><li><a href="https://www.chartjs.org/" title="ChartJS" target="_blank">ChartJS</a></li>
+						<li><a href="https://www.highcharts.com/demo/sparkline" title="Sparkline Charts" target="_blank">Sparkline</a></li>
+						<li><a href="http://anthonyterrien.com/demo/knob/" title="JQuery Knob" target="_blank">JQuery Knob</a></li>
+						<li><a href="https://c3js.org/" title="C3 Chart" target="_blank">C3 Chart</a></li></ol>
+				</li>
+	<h5>Images</h5>
+<h3>In Module Javascript and CSS</h3>
+	<h5>CSS</h5>
+	<h5>Javascript</h5>
+
+<h3>Embedded Styles & JS Scripts</h3>
+	<h5>Embedded Styles</h5>
+	<h5>Embedded Javascript</h5>
+<h3>Inline Styles</h3>
+<h3>Choosing themes</h3>
+	<p>Steps to choose theme</p>
+
+					
+
+
+
+
+<a name="document_history"></a>
+<h2>4. Document history</h2>
+
+<table width="90%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<th>Date</th>
+<th>Version</th>
+<th>Change</th>
+<th>Author</th>
+
+</tr>
+<tr>
+<td>27 June 2012</td>
+<td>1.0</td>
+<td>First draft of Semantic markup standards</td>
+<td>Shilpi Kumar, Phil Storer, Jojest Thomson</td>
+</tr>
+<tr>
+<td>09 April 2019</td>
+<td>2.0</td>
+<td>Modifications</td>
+<td>Jojest Thomson</td>
+</tr>
+
+</table>
+
+			</div><!-- end content-->
+		</div><!-- end content-area-->
+	</div><!-- end  main-content -->
+    <div id="footer">
+	    <div class="copyright">
+        <h3>Confidential</h3>
+       	<p> This document is confidential and proprietary to Unisys Corporation. It is not to be used, reproduced, or disclosed outside Unisys without the written consent of Unisys Corporation. The information in this document is furnished for use by Unisys support personnel in servicing customer’s equipment or by a customer under a license agreement with Unisys.</p>
+		<p>Copyright © 2019 Unisys Corporation. All Rights Reserved.</p>
+		<p>Unisys is a trademark of Unisys Corporation.</p>
+		<p>All other brands and products referenced herein are acknowledged to be trademarks or registered trademarks of their respective holders.</p>
+		<p><strong>Version 2.0</strong> </p>
+        </div>
+    </div>
+</div>
+</ul>
+<div id="toTop">^ Back to Top</div>
+</body>
+</html>

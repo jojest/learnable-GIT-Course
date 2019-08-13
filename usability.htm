@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>U-LEAF UI Standards & Guidelines</title>
+<link href="https://fonts.googleapis.com/css?family=Lato|Montserrat|Open+Sans|Raleway|Roboto" rel="stylesheet">
+	
+<link href="includes/style_new.css" rel="stylesheet" type="text/css" />
+<link href="includes/tabs.css" rel="stylesheet" type="text/css" />
+<link href="includes/element_styles.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="includes/print_style.css" type="text/css" media="print" />
+
+
+<script type='text/javascript' src='script/jquery-1.6.2.min.js'></script>
+<script type="text/javascript" src="script/organictabs.jquery.js"></script>
+<script type="text/javascript" src="script/jquery_functions.js"></script>
+<script src="script/jquery.hoverIntent.js"></script>
+<script src="script/jquery.colorbox.js"></script>
+
+
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">
+        <div class="logoUnisys"><a href="index.htm"><img src="images/logo_unisys.png"  alt="Unisys" border="0" /></a></div>
+        <div class="logoUISG">U-LEAF UI Standards & Guidelines 2.0</div>
+    </div>
+    <div id="main-content">
+                <div id="nav-col">
+            <ul>
+                <li class="border-bottom"><a href="about.htm" class="link-about ">About U-LEAF UISG</a></li>
+                <li class="selected"><a href="usability.htm" class="link-usability">Usability & Information Architecture</a></a></li>
+                <li><a href="accessibility.htm" class="link-accessibility">Accessibility &amp; Browser Support Standards</a></li>
+                <li><a href="egif.htm" class="link-egif">e-GIF Compliance</a></li>
+                <!--<li><a href="interface_design.htm" class="link-interface">User Interface Design</a></li>-->
+                <li class="border-bottom"><a href="site_structure.htm" class="link-structure">U-LEAF Application Structure</a></li>
+                <li><a href="branding.htm" class="link-brand">Branding and colour</a></li>
+				<!--<li><a href="typography.htm" class="link-typography" id=" ">Typography & Icons</a></li>-->                
+                <li><a href="standards.htm" class="link-xhtml">XHTML & Semantic Mark-up Standards</a></li>
+                <li  class="border-bottom"><a href="css.htm" class="link-css">CSS</a></li>
+                <li><a href="layouts.htm" class="link-visual ">Layouts and Templates</a></li>
+                <li class="border-bottom"><a href="elements.htm" class="link-xhtml">U-LEAF Interface Elements</a></li>
+                <li><a href="checklist_developers.htm" class="link-checklist">Developer - UI Checklist</a></li>
+                <li><a href="checklist_testers.htm" class="link-checklist">Tester - UI Checklist</a></li>                
+                <!--<li><a href="forms.htm" class="link-forms menuselect">Form Elements</a></li>-->
+                <!--<li class="checklist"><a href="checklist.htm">Checklist</a></li><li class="glossary"><a href="glossary.htm">Glossary</a></li>-->
+            </ul>
+		</div><!-- end nav-col-->
+        <div id="content-area">
+            <div class="title-s"><h1>Usability & Information Architecture Standards</h1></div>
+            <div class="sub-title-s">
+            
+            	<div class="content_abstract ">
+                <div>
+                	
+                    <ul>
+                        <li>1. <a href="#ucd">User-centered design</a></li>
+                        <li>2. <a href="#userRequirements">Establish user requirements</a></li>
+                        <li>3. <a href="#meetUsersExpectations">Understand and meet user's expectations</a></li>
+                        <li>4. <a href="#involve">Involve users in establishing user requirements</a></li>
+                        <li>5. <a href="#focus">Focus on performance before preference</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>6. <a href="#consider">Consider as many user interface issues as possible during the design process</a></li>
+                    <li>7. <a href="#usersTerminology">Use users' terminology in help documentation.</a></li>
+                    <li><h3 style="margin-bottom:0"><a href="#proposed"><span class="red">Recommended Usability Standards</span></a></h3></li>
+                    <li>1. <a href="#printingOptions">Provide printing options</a></li>
+                    
+          			</ul>
+                </div>
+              </div>
+            
+            
+            </div>
+            <div class="date_updated">
+            	<div class="printLink" onClick="printit()">Print this page</div>
+            </div>
+            
+            <div class="content">
+                <div class="content_intro">
+                   <p>U-LEAF should be designed to facilitate and encourage efficient and effective human-computer interactions. There are several usability-related issues, methods, and procedures that require careful consideration when designing and developing U-LEAF Applications. The most important of these are presented in this chapter, including 'up-front' issues such as setting clear and concise goals for a layout, determining a correct and exhaustive set of user requirements, ensuring that the U-LEAF meets user's expectations, setting usability goals, and providing useful functionalities.</p>
+
+<p>To ensure the best possible outcome, designers should consider a full range of user-interface issues, and work to create the application that enables the best possible human performance.</p>
+                </div>
+            
+				<a name="ucd"></a>
+              <h2>1. User-centered design</h2> 
+            	
+              
+<p>The objective of the design approach is to enable users to be in control of the advancing technologies by enhancing human abilities, overcoming human limitations, and fostering user acceptance. </p> 
+<p>To meet this objective, designers must understand users and the tasks they wish to achieve. In order to understand the user the designer needs to identify the different characteristics of the intended users. Relevant factors may include knowledge, skill, experience, education, training, physical attributes, habits and motor-sensory capabilities of the people concerned. </p>  
+<p>It is only when all the information has been gathered that the designers can develop a usable interface that will:  
+    </p><ul>
+        <li>Reflect workflows that are familiar or comfortable to users.  
+        </li><li> Support the user's learning style.  
+        </li><li> Be compatible to the user's working environment.  
+        </li><li> Encompass a design concept (metaphor or idiom).  
+        </li><li> Have a consistent presentation (layout, icons, search functionality) that is reliable and easy to learn.  
+        </li><li> Use language and illustrations that are familiar to the user or are easy to learn.
+    </li></ul>
+<p></p> 
+
+	
+    
+	
+<a name="userRequirements"></a>
+<h2>2. Establish user requirements</h2>
+
+<p>The greater the number of exchanges of information with potential users, the better the designers understanding of the users' requirements. The more information that can be exchanged between designers and users, the higher the probability of having a successful design. These could include customer support lines, customer surveys and interviews, bulletin boards, sales people, user groups, trade show experiences, focus groups, etc. Successful projects require at least four (and average five) different sources of information. Do not rely too heavily on user intermediaries.
+ 
+
+</p>
+
+<a name="meetUsersExpectations"></a>
+<h2>3. Understand and meet user's expectations</h2>
+<p>Ensure that U-LEAF pages meet user expectations, especially related to navigation, content, and organization. Users define 'usability' as their perception of how consistent, efficient, productive, organized, easy to use, intuitive, and straightforward it is to accomplish tasks within a system.
+
+ 
+</p>
+
+<a name="involve"></a>
+<h2>4. Involve users in establishing user requirements</h2>
+
+<p>One of the basic principles of user-centered design is the early and continual focus on users. For this reason, user involvement has become a widely accepted principle in the development of usable systems. Involving users has the most value when trying to improve the completeness and accuracy of user requirements. It is also useful in helping to avoid unused or little-used system features. Users are most valuable in helping designers know what a system should do, but not in helping designers determine how best to have the system do it.
+
+ 
+</p>
+
+
+<a name="focus"></a>
+<h2>5. Focus on performance before preference</h2>
+<p>If user performance is important, make decisions about content, format, interaction, and navigation before deciding on colours and decorative graphics.</p>
+
+<p>Focus on achieving a high rate of user performance before dealing with aesthetics. Graphics issues tend to have little impact, if any, on users' success rates or speed of performance.
+
+ 
+</p>
+
+<a name="consider"></a>
+<h2>6. Consider as many user interface issues as possible during the design process</h2>
+
+<p>Consider numerous usability-related issues during the creation of U-LEAF functional pages. These can include: the context within which users will be visiting U-LEAF applications; the experience levels of the users; the types of tasks users will perform on U-LEAF; the types of computer and connection speeds used when visiting U-LEAF; evaluation of prototypes; and the results of usability tests.</p>
+
+
+
+<p>Users have commented that unsolicited windows or graphics that 'pop up' are annoying and distracting when they are focusing on completing their original activity. Ensure the U-LEAF screens are arranged in a logical way.
+
+ 
+</p>
+
+
+<a name="usersTerminology"></a>
+<h2>7. Use Users' terminology in help documentation.</h2>
+<p>When giving guidance about using U-LEAF, use the users' terminology to describe elements and features. There is varied understanding among users as to what many U-LEAF features are called, and in some cases, how they are used. Even if users know how to use an element, the terms they use to describe it may not be the same terms that a designer would use.
+
+ 
+</p>
+ <a name="proposed"></a>
+<h1>Recommended Usability Standards</h1>
+<a name="printingOptions"></a>
+<h2>8. Provide printing options</h2>
+<p>U-LEAF required to provide information with the expectation that it will either be read online or printed. Provide a link to a complete printable pages that users will want to print or save in one operation.</p>
+
+<p>Documents should be prepared that are consistent with whether users can be expected to read the document online or printed. If users are likely to print one or more pages, develop pages with widths that print properly. It is possible to display pages that are too wide to print completely on standard 8.5 x 11 inch paper in portrait orientation. Ensure that margin to margin printing is possible. 
+
+ 
+</p>
+
+              
+   <p></p>           
+              
+              <a name="documentHistory"></a>
+              <h2>9. Document history</h2>
+  
+        <table width="90%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+  <th>Date</th>
+     <th>Version</th>
+    <th>Change</th>
+     <th>Author</th>
+  
+  </tr>
+  <tr>
+    <td>27 June 2012</td>
+    <td>1.0</td>
+    <td>First draft of Semantic markup standards</td>
+    <td>Shilpi Kumar, Phil Storer, Jojest Thomson</td>
+  </tr>
+			<tr>
+                        <td>08 April 2019</td>
+                        <td>1.1</td>
+                        <td>Minor modifications.</td>
+                        <td>Jojest Thomson</td>
+                    </tr>
+
+
+</table>
+                     
+			</div><!-- end content-->
+		</div><!-- end content-area-->
+	</div><!-- end  main-content -->
+    <div id="footer">
+	    <div class="copyright">
+        <h3>Confidential</h3>
+       	<p> This document is confidential and proprietary to Unisys Corporation. It is not to be used, reproduced, or disclosed outside Unisys without the written consent of Unisys Corporation. The information in this document is furnished for use by Unisys support personnel in servicing customer’s equipment or by a customer under a license agreement with Unisys.</p>
+		<p>Copyright © 2019 Unisys Corporation. All Rights Reserved.</p>
+		<p>Unisys is a trademark of Unisys Corporation.</p>
+		<p>All other brands and products referenced herein are acknowledged to be trademarks or registered trademarks of their respective holders.</p>
+		<p><strong>Version 2.0</strong> </p>
+        </div>
+    </div>
+</div>
+<div id="toTop">^ Back to Top</div>
+</body>
+</html>

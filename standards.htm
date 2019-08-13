@@ -1,0 +1,449 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>U-LEAF UI Standards & Guidelines</title>
+<link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=latin" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
+
+<link href="includes/style_new.css" rel="stylesheet" type="text/css" />
+<link href="includes/tabs.css" rel="stylesheet" type="text/css" />
+<link href="includes/element_styles.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="includes/print_style.css" type="text/css" media="print">
+
+
+<script type='text/javascript' src='script/jquery-1.6.2.min.js'></script>
+<script type="text/javascript" src="script/organictabs.jquery.js"></script>
+<script type="text/javascript" src="script/jquery_functions.js"></script>
+<script src="script/jquery.hoverIntent.js"></script>
+<script src="script/jquery.colorbox.js"></script>
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">
+        <div class="logoUnisys"><a href="index.htm"><img src="images/logo_unisys.png"  alt="Unisys" border="0" /></a></div>
+        <div class="logoUISG">U-LEAF UI Standards & Guidelines 2.0</div>
+    </div>
+    <div id="main-content">
+        <div id="nav-col">
+            <ul>
+                <li class="border-bottom"><a href="about.htm" class="link-about ">About U-LEAF UISG</a></li>
+                <li><a href="usability.htm" class="link-usability">Usability & Information Architecture</a></a></li>
+                <li><a href="accessibility.htm" class="link-accessibility">Accessibility &amp; Browser Support Standards</a></li>
+                <li><a href="egif.htm" class="link-egif">e-GIF Compliance</a></li>
+                <!--<li><a href="interface_design.htm" class="link-interface">User Interface Design</a></li>-->
+                <li class="border-bottom"><a href="site_structure.htm" class="link-structure">U-LEAF Application Structure</a></li>
+                <li><a href="branding.htm" class="link-brand">Branding and colour</a></li>
+				<!--<li><a href="typography.htm" class="link-typography" id=" ">Typography & Icons</a></li>-->                
+                <li class="selected"><a href="standards.htm" class="link-xhtml">XHTML & Semantic Mark-up Standards</a></li>
+                <li  class="border-bottom"><a href="css.htm" class="link-css">CSS</a></li>
+                <li><a href="layouts.htm" class="link-visual ">Layouts and Templates</a></li>
+                <li class="border-bottom"><a href="elements.htm" class="link-xhtml">U-LEAF Interface Elements</a></li>
+                <li><a href="checklist_developers.htm" class="link-checklist">Developer - UI Checklist</a></li>
+                <li><a href="checklist_testers.htm" class="link-checklist">Tester - UI Checklist</a></li>             
+            </ul>
+		</div><!-- end nav-col-->
+        <div id="content-area">
+            <div class="title-s"><h1>XHTML and Semantic Mark-up Standards</h1></div>
+            <div class="sub-title-s">
+            
+            	<div class="content_abstract ">
+                <div>
+                	
+                    <ul>
+                       <h3>XHTML Standards</h3>
+                        <li>1. <a href="#legal">Legal and compliance</a></li>
+                        <li>2. <a href="#browser">Browser support</a></li>
+                        <li>3. <a href="#codeStyle">Code style</a></li>
+                        <li>4. <a href="#images">Images</a></li>
+                        <li>5. <a href="#documentHistory">Document History</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                       <h3>Semantic Mark-up Standards</h3>
+                        <li>1. <a href="#scope">Scope</a></li>
+                        <li>2. <a href="#headings">Headings</a></li>
+                        <li>3. <a href="#lists">Lists</a></li>
+                        <li>4. <a href="#table">Table Mark-up</a></li>
+                       	<li>5. <a href="#otherSematicTags">Other Semantic Tags</a>	
+                        <li>6. <a href="#tagAttributes">Tag Attributes</a></li>
+                        <li>7. <a href="#forms">Forms</a></li>
+                        <li>8. <a href="#appendix">Appendix</a></li>
+          			</ul>
+                </div>
+              </div>
+            
+            
+            </div>
+            <div class="date_updated">
+            	<div class="printLink" onClick="printit()">Print this page</div>
+            </div>
+            
+            <div class="content">
+                <div class="content_intro">
+                   <p>XHTML Design Standards describes the requirements to which you MUST adhere when coding U-LEAF application UNLESS you are maintaining older versions. This standard also features other requirements and recommendations related to the general building of web pages.</p>
+                <p>Semantic mark-up is HTML that describes the content, rather than the manner in which the content is presented. It allows the meaning to be delivered to users regardless of the browser they use, so that content can be provided to the widest possible audience. (See <a href="#appendix">Appendix 1</a> for more.)</p>
+    		<p>As an example, <em>this text</em> uses HTML as it was intended by the W3C, while <i>this text</i> does not. The appearance of this visual browsers (as opposed to screen readers, etc.) will be the same, but only by using semantic HTML is the meaning of the content preserved across all types of browser. Only by using semantic HTML can the emphasis of the words be maintained, whether emphasis is presented visually as italics (as it is by default) or in another way.</p>
+                </div>
+            
+				<h1>XHTML Standards</h1>
+           <a name="legal"></a><h2>1. Legal and compliance</h2>
+              <p>Unisys has statutory obligations, in terms of the Disability Discrimination Act (DDA), to produce accessible content. For details of this see the <a href="accessibility.htm" target="_self">Accessibility & Browser Support Standards.</a></p>
+              <p>You MUST NOT provide inaccessible core content outside of your XHTML (for example, through Javascript or Flash) without providing an alternative for browsers/configurations which might not sufficiently support these technologies. Some browsers and assistive technologies might not sufficiently support these technologies. Also, some users which may have chosen to turn off JavaScript or Flash, etc. </p>
+              <p>
+If you wish to use sIFRs on U-LEAF, you MUST apply for an exemption from the Editor, Standards and Guidelines. Refer to the Textual Equivalents Standards for further information. [Scalable Inman Flash Replacement (sIFR) is an open source JavaScript and Adobe Flash dynamic web fonts implementation, enabling the replacement of text elements on HTML web pages with Flash equivalents. sIFR requires JavaScript to be enabled and the Flash plugin installed in the reading browser. If either condition is not met, the reader's browser will automatically display traditional CSS based styling instead of the sIFR rendering. sIFR is not designed for body copy text as rendering greater bodies of text with Flash place formidable demands on the computer. sIFR embeds a font in a Flash element that displays the text, pre-empting the need for a font to have been manually pre-installed on a user's system. Due to potential font licensing issues it is recommended that you use free fonts when creating sIFRs. ]</p><p>
+You MUST NOT use server-side image maps, as they are not accessible.
+</p>
+                     
+
+<a name="browser"></a><h2>2. Browser Support</h2>
+<p>Unisys U-LEAF supports certain browsers, as listed in the <a href="accessibility.htm#browser">Browser Support Standards</a>. You MUST write your XHTML so that your pages work in all level 1 and level 2 supported browsers.</p>
+                     
+                     
+<a name="codeStyle"></a><h2>3. Code Style</h2>
+<p>3.1 Content MUST be separated from presentation (which is delivered in CSS) and behaviour (which is delivered using Javascript). This is a principle of good web page delivery with extensive benefits including improved maintainability and ease of use for multiple team members working on the same code.</p>
+<p>3.2 You MUST NOT deliver presentation with tables UNLESS the data is tabular. Tables have semantic meaning, using them for non semantic purposes can confuse screen reader users and lead to a poor experience. Tables cause content to not be separated from presentation, as above. Layouts built using tables are less flexible, render slower and cause a heavier codebase.</p>
+<p>3.3 You MUST comply with the <a href="#semantic-markup-standards" target="_self">Semantic Mark-up Standard</a>.</p>
+
+<p>3.4 You MUST NOT use &lt;base&gt; without specifying the full document path to avoid breaking in-page anchors.</p>
+<p>3.5 Code which is produced and maintained by content production systems SHOULD be as compact and comment-free as possible, to minimise file size and download times .</p>
+<p>3.6 If this is done, a readable version of the pre-published code SHOULD be available for maintenance purposes.</p>
+<p>3.7 Code which is manually produced and maintained SHOULD be well laid out to ensure readability. Reasonable use of blank lines, indenting and comments to denote different sections of the page is encouraged. However, their use SHOULD be balanced with file size considerations.</p>
+<p>3.8 You MUST NOT have any comments in your code which include more than two concurrent 'x' characters. Applications that restrict content containing 3 concurrent 'x' characters may believe your page contains adult content, and deny access accordingly.</p>
+                     
+
+<a name="images"></a><h2>4. Images</h2>
+<p>4.1 All images used in &lt;img&gt; tags MUST be in GIF, JPEG or PNG format.</p>
+<p>4.2 If you are using PNG files they MUST degrade gracefully, in line with the Browser Support Standards. PNGs have different levels of support in our supported browsers. We need to ensure that users are delivered any image that is core content correctly, alt tags are often not displayed with a 'failed' png. 
+</p>
+<p>4.3 You SHOULD be cautious particularly when using PNG files with alpha transparency. Known issues at present include, but are not limited to, transparency with IE6.</p>
+<p>4.4 When using an img tag you MUST specify the height and width attributes. This improves the rendering speed of a page; it allows the layout of the page to be understood by the browser as the HTML code is downloaded rather than waiting for the images to download. If this is not supplied the layout of the page can visually jump around as the images are loaded and their visual dimensions discovered. </p>
+<p>4.5 You MUST NOT use height and width attributes to rescale images to provide thumbnail versions of the full image. Instead you MUST use a separate, resized image file. Browsers are not good at resizing images on the fly, leading to poorly displayed images. This is also a waste of bandwidth. Up scaling an image leads to poor quality images also.</p>
+<p> 4.6 Alternative text MUST be supplied as defined in the Textual Equivalents Standards.</p>
+<p>4.7 You MUST NOT use transparent spacer GIFs for layout purposes. The advent of CSS makes this pointless and wasteful of bandwidth and it's also against the principles of separating style and content.</p>
+                     	
+            
+            
+            
+            
+            
+            
+            
+            
+            	<a name="semantic-markup-standards" id="scope"></a>
+              <h1>Semantic Mark-up Standards</h1>
+              <a name="scope" id="scope"></a>
+              <h2>1.&nbsp;Scope</h2>
+              <p>1.1 This standard is an 'ideal' ambition, which cannot be fully realised at this time, due to the legacy of non-semantic content currently on U-LEAF Application.
+<p>1.2 This standard must be applied as far as is possible - to all new.</p>
+<p>1.3 For pages that are in older templates where authors only have control of the content area, you <strong>SHOULD</strong> apply the markup structure (H tag structure) to the 'content' area of the document.</p>
+<p>1.4 You <strong>MUST NOT</strong> use semantic tags outside the purposes defined below, e.g. if you use the blockquote tag you <strong>MUST</strong> <strong>ONLY</strong> use it as defined below and not for any other purpose, such as to set a particular presentation style.</p>
+<p>1.5 If you are capturing semantic meaning in a document, you <strong>MUST</strong> use the appropriate semantic tag, e.g. an &lt;abbr&gt; tag <strong>MUST</strong> be used in preference to &lt;span class="abbr"&gt;</p>
+
+
+
+<a name="headings" id="headings"></a><h2>2. Headings</h2>
+<p>2.1 All pages <strong>MUST</strong> use heading elements
+Heading elements <strong>MUST</strong> convey the structure of the document rather than the emphasis of its content (e.g. the most important section on the page).</p>
+<p>2.2 Heading elements <strong>MUST</strong> be ordered hierarchically, i.e. if there is an H2 element on the page it <strong>SHOULD</strong> be preceded by an H1 element somewhere on the same page, if there is an H3 element on the page it <strong>SHOULD</strong> be preceded by an H2 element somewhere on the same page, if there is an H4element on the page it <strong>SHOULD</strong> be preceded by an H3 element somewhere on the same page, etc. Intermediate levels <strong>MUST NOT</strong> be omitted (e.g. H1 directly to H3).
+<p><strong>NOTE</strong>: this is to maintain well structured pages, which are essential in order to deliver a good user experience to those using assistive technologies such as screenreaders.</p>
+<p>2.3 Headings <strong>SHOULD</strong> be followed by further content, e.g.
+&lt;h3&gt;Title&lt;/h3&gt; &lt;p&gt;Text text&lt;/p&gt;</p>
+<p>2.4 Headings <strong>SHOULD NOT</strong> be treated as 'standalone' content.</p>
+<p>2.5 Headings <strong>MUST NOT</strong> have a consecutive series of same level headings without content between each e.g.
+&lt;h3&gt;Title&lt;/h3&gt;
+&lt;h3&gt;Title&lt;/h3&gt;</p>
+<p>2.6 Headings <strong>MAY</strong> have sequential headings (without content between each) to specify hierarchy. For example:
+&lt;h3&gt;Section&lt;/h3&gt;
+&lt;h4&gt;Sub section&lt;/h4&gt;</p>
+<p>2.7 There <strong>MUST</strong> be one, and only one H1 per page.</p>
+<p>2.8 The H1 <strong>MUST</strong> be name of that page </p>
+
+
+
+
+<a name="lists" id="lists"></a><h2>3. Lists</h2>
+<p>3.1 There are three valid list types: ordered lists &lt;ol&gt;; unordered lists &lt;ul&gt;; definition lists &lt;dl&gt;</p>
+<p>3.2 All lists <strong>SHOULD</strong> be preceded by a header - &lt;h*&gt;description&lt;/h*&gt; - that describes the content of the list. </p>
+<p> 3.3 &lt;ul&gt; unordered list: <strong>MUST ONLY</strong> be used where the order of the list is not editorially significant.</p>
+<p> 3.4 &lt;ol&gt; ordered list:<strong> MUST ONLY</strong> be used where the order of the list items is editorially significant. (Even if the numbers are hidden with CSS).</p>
+<p>3.5 &lt;ul&gt; and &lt;ol&gt; type lists <strong>MUST</strong> have at least one &lt;li&gt; item.</p>
+<p> 3.6 &lt;dl&gt; lists <strong>MUST</strong> contain at least one &lt;t&gt; with a corresponding &lt;dd&gt;.</p>
+<p> 3.7 &lt;dd&gt; <strong>MUST</strong> have at least one corresponding &lt;dt&gt;.</p>
+<p> 3.8 &lt;dl&gt; <strong>MAY</strong> have multiple terms for a given d&lt;finition, as well as multiple definitions for a given term.</p>
+<p> 3.9 &lt;dl&gt; definition list: <strong>MUST</strong> only be used to describe terms and their definitions.</p>
+<p> 3.10 In content, you <strong>SHOULD</strong> use h tag structure rather than nested lists.</p>
+<p> 3.11 In navigation you <strong>MAY</strong> use nested lists.</p>
+<p> 3.12 Nested lists <strong>MUST NOT</strong> be more than 3 levels deep. i.e. this limit is demonstrated as follows:
+    <ul>
+        <li>item</li>
+        <li>item
+            <ul>
+                <li>item</li>
+                <li>item</li>
+            </ul>
+        </li>
+        <li>item
+        	<ul>
+            	<li>item
+            		<ul>
+                        <li>item</li>
+                        <li>item</li>
+            		</ul>
+        		</li>
+    		</ul>
+        </li>
+    </ul>        
+</p>
+
+
+
+<a name="table" id="table"></a><h2>4. Table Mark-up</h2>
+<p>4.1 Tables <strong>SHOULD ONLY</strong> be used for conveying tabular data, not presentational (layout) use.</p>
+<p>4.2 Tables <strong>MUST</strong> be used for tabular data. Tabular data is data that has relationships in two or more dimensions.</p>
+<p>4.3 If you are displaying tabular data you <strong>MUST</strong> use a "summary" attribute to describe the editorial intent of the data.</p>
+<p>4.4 If you wish to apply a caption to your table you <strong>SHOULD</strong> use a caption tag to do this, e.g. source or copyright of data.</p>
+<p>4.5 If you wish to supply a title to your data you <strong>MUST</strong> use a heading tag, so as to enable navigation to the table within the page by screen readers.</p>
+<p>4.6 In a data table you <strong>MUST</strong> make use of &lt;thead&gt; and &lt;tbody&gt;.</p>
+<p> 4.7 If your table has a footer this <strong>MUST</strong> be encapsulated in a &lt;tfoot&gt; tag.</p>
+<p>4.8 If you have table headings you <strong>MUST</strong> use &lt;th&gt; tags for these.
+</p>
+<p class="bolder">Example.</p>
+<p>This example shows how to associate data cells (created with TD) with their corresponding headers by means of the "headers" attribute. The "headers" attribute specifies a list of header cells (row and column labels) associated with the current data cell. This requires each header cell to have an "id" attribute.</p>
+<pre>&lt;TABLE border="1" 
+          summary="This table charts the number of
+                   cups of coffee consumed by each senator,  
+                   the type of coffee (decaf or regular),
+                   and whether taken with sugar."&gt;
+     &lt;CAPTION&gt;Cups of coffee consumed by each senator&lt;/CAPTION&gt;
+     &lt;TR&gt;   
+         &lt;TH id="header1"&gt;Name&lt;/TH&gt;
+         &lt;TH id="header2"&gt;Cups&lt;/TH&gt;     
+         &lt;TH id="header3" abbr="Type"&gt;Type of  Coffee&lt;/TH&gt;   
+         &lt;TH id="header4"&gt;Sugar?&lt;/TH&gt;
+     &lt;TR&gt;  
+         &lt;TD headers="header1"&gt;T. Sexton&lt;/TD&gt;  
+         &lt;TD headers="header2"&gt;10&lt;/TD&gt;
+         &lt;TD headers="header3"&gt;Espresso&lt;/TD&gt;
+         &lt;TD headers="header4"&gt;No&lt;/TD&gt;  
+     &lt;TR&gt;  
+         &lt;TD headers="header1"&gt;J. Dinnen&lt;/TD&gt; 
+         &lt;TD headers="header2"&gt;5&lt;/TD&gt;
+         &lt;TD headers="header3"&gt;Decaf&lt;/TD&gt;
+        &lt;TD headers="header4"&gt;Yes&lt;/TD&gt;
+  &lt;/TABLE&gt;</pre>
+
+
+<a name="otherSematicTags" id="otherSematicTags"></a><h2>5. Other Semantic Tags</h2>
+<p>5.1 These presentational tags <strong>MUST NOT</strong> be used.</p>
+<dl class="defs-table-narrow">
+    <dt><code>&lt;b&gt;</code></dt>
+    <dd>bold contents</dd>
+    <dt><code>&lt;i&gt;</code></dt>
+    <dd>italic contents</dd>
+    <dt><code>&lt;big&gt;</code></dt>
+    <dd>increased font size</dd>
+    <dt><code>&lt;blink&gt;</code></dt>
+    <dd>alternating for- and background colours</dd>
+    <dt><code>&lt;marquee&gt;</code></dt>
+    <dd>for scrolling text</dd>
+    <dt><code>&lt;s&gt;</code></dt>
+    <dd>strikes through text</dd>
+    <dt><code>&lt;small&gt;</code></dt>
+    <dd>decreases font size</dd>
+    <dt><code>&lt;strike&gt;</code></dt>
+    <dd>strikes through text</dd>
+    <dt><code>&lt;tt&gt;</code></dt>
+    <dd>teletypewriter style</dd>
+    <dt><code>&lt;u&gt;</code></dt>
+    <dd>underlines contents</dd>
+    <dt><code>&lt;center&gt;</code></dt>
+    <dd>centers a section of text</dd>
+    <dt><code>&lt;nobr&gt;</code></dt>
+    <dd>creates a region of non-breaking text</dd>
+    <dt><code>&lt;font&gt;</code></dt>
+    <dd>changes the size, style and colour of text</dd>
+</dl>
+<p>5.2 These semantic tags <strong>MUST</strong> be used where the content matches their description:</p>
+<dl class="defs-table-narrow">
+    <dt><code>&lt;p&gt;</code></dt>
+    <dd>defines a paragraph of text.</dd>
+    <dt><code>&lt;em&gt;</code></dt>
+    <dd>indicates emphasis.</dd>
+    <dt><code>&lt;strong&gt;</code></dt>
+    <dd>indicates stronger emphasis.</dd>
+</dl>
+<p>5.3 These semantic tags <strong>SHOULD</strong> be used where the content matches their description:</p>
+<dl class="defs-table-narrow">
+    <dt><code>&lt;blockquote&gt;</code></dt>
+    <dd>defines a block quotation.</dd>
+    <dt><code>&lt;q&gt;</code></dt>
+    <dd>defines a short quotation (inline).</dd>
+    <dt><code>&lt;cite&gt;</code></dt>
+    <dd>contains a citation or a reference to other sources.</dd>
+    <dt><code>&lt;abbr&gt;</code></dt>
+    <dd>indicates an abbreviated form (e.g U-LEAF, <abbr title="Hypertext Mark-up Language">HTML</abbr>).</dd>
+    <dt><code>&lt;dfn&gt;</code></dt>
+    <dd>defines instances of special terms or phrases.</dd>
+    <dt><code>&lt;code&gt;</code></dt>
+    <dd>designates a fragment of computer code.</dd>
+    <dt><code>&lt;samp&gt;</code></dt>
+    <dd>designates sample output from programs, scripts, etc.</dd>
+    <dt><code>&lt;kbd&gt;</code></dt>
+    <dd>indicates text that is typed on a keyboard.</dd>
+    <dt><code>&lt;var&gt;</code></dt>
+    <dd>indicates an instance of a variable or program argument.</dd>
+    <dt><code>&lt;ins&gt;</code></dt>
+    <dd>defines inserted document content.</dd>
+    <dt><code>&lt;del&gt;</code></dt>
+    <dd>defines deleted document content.</dd>
+    <dt><code>&lt;address&gt;</code></dt>
+    <dd>defines an address</dd>
+</dl>
+<p>5.4 These notational tags <strong>MUST</strong> be used.</p>
+<dl class="defs-table-narrow">
+    <dt><code>&lt;sub&gt;</code></dt>
+    <dd>subscripted text</dd>
+    <dt><code>&lt;sup&gt;</code></dt>
+    <dd>superscripted text</dd>
+</dl>
+<p>5.5 These tags <strong>MAY</strong> be used.</p>
+<dl class="defs-table-narrow">
+    <dt><code>&lt;br /&gt;</code></dt>
+    <dd>inserts a line break in to the text flow</dd>
+    <dt><code>&lt;pre&gt;</code></dt>
+    <dd>preformats text - although alternatives to using this tag are recommended</dd>
+</dl>
+<p>5.6 You <strong>MUST ONLY</strong> use <code>&lt;br /&gt;</code> tags to create single line breaks. For more than one line break an alternative should be found (e.g. paragraphs).</p>
+<p>5.7 You <strong>SHOULD NOT</strong> use <code>&lt;br /&gt;</code> tags in general. Recognised exceptions are poetry, address areas and where the line break may be argued as part of the meaning rather than the presentation.</p>
+
+
+<a name="tagAttributes"></a><h2>6. Tag Attributes</h2>
+<p>6.1 You MAY use height and width attributes on images and embedded media.</p>
+<p> 6.2 You SHOULD NOT use height and width attributes on any other tags. Height and width SHOULD be defined by the CSS.</p>
+<p> 6.3 You SHOULD NOT use border attributes on tags. Borders SHOULD be defined by the CSS.</p>
+<p> 6.4 You SHOULD NOT use align, valign or clear attributes.</p>
+<p> 6.5 You SHOULD NOT use style attributes, except where using syndicated content or internal syndicating systems.</p>
+<a name="forms"></a><h2>7. Forms</h2>
+<p>7.1 Forms <strong>MUST</strong> conform to the Semantic Markup standard.</p>
+<p>7.2 Forms <strong>MUST</strong> be navigable using the keyboard.</p>
+<p>7.2 For compound elements (where text is used to label a form element), the &lt;label&gt; tag <strong>MUST</strong> be used to explicitly associate the relevant text label with its form element.</p>
+<p>7.3 This <strong>MUST</strong> be done using a 'for' attribute on the label and a pairing 'id' attribute on the element.</p>
+e.g. &lt;label for="apple"&gt;apple&lt;/label&gt;&lt;input id="apple" /&gt;.</p>
+
+<p>7.4 If there is no text that labels the form element then the element <strong>MUST</strong> have a title attribute.</p>
+<p>7.5 A label-input pair (compound element) <strong>SHOULD</strong> be contained in a block level element (e.g.&lt;div&gt;, &lt;p&gt; or &lt;li&gt; tag).</p>
+<p><strong>7.6 A label-input pair SHOULD NOT be contained in a &lt;dl&gt;, as this provides no additional structural information.</strong></p>
+<p>Helping users understand the form will save them time and ensure that they provide correct input. On the other hand, instructions should be as concise as possible. Always take into account potential users and that your forms address to both new and experienced visitors.</p>
+<p><strong>7.7 All forms should always contain this essential information:</strong></p>
+<ul><li><strong>Title</strong> - what the form is for.
+<li>Send or Submit button at the end, optionally Cancel button.</ul>
+<p></p>
+<p> <strong>7.8 Avoid using forms with a large number of fields to be completed.</strong></p>
+<p> <strong>7.9 Never ask for duplicate information </strong>(when the form has more than one page, this is a common mistake)</p>
+<p> <strong>7.10 It helps to run a use-of-information audit a while after the release of the form to see if the information collected was actually ever used</strong>. If it wasn't, it shouldn't be collected any more.</p>
+<p> <strong>7.11 Split your forms - long forms are confusing.</strong></p>
+
+<p>If your form is too long, try dividing it into several pages, each fulfilling a different task (ex.: one for product details, one for personal data and one for payment and delivery details).</p>
+<p>Each page is individually validated, so it is easier to signal and fix mistakes.</p>
+<p>Ask questions in a logical order. This way, necessary data can be taken automatically from previous pages.</p>
+<p>If an e-form requires navigation through several pages, it should be easy to return to a previous step. This helps in case the user made a mistake or just changed his mind and shouldn't have to start again, but just go back and modify the input.</p>
+<p>Conservation of filled data is very important. When going back to fix a problem, the user should find his form as filled in before. For example, there's no reason why one should have to re-accept the terms of agreement because of a wrong area code.</p>
+<p> <strong>7.12 Forms that look neat are easier to fill in. This requires:</strong></p>
+
+<p>Examination of the layout of the form, including:
+<ul><li>Text
+<li>Localization and accessibility
+<li>Have consistency in capitalization and punctuation marks. (Avoid ALL UPPER CASE sentences. Try to use sentence case or Title Case.)
+<li>Boxes should be aligned, both horizontally and vertically, along with the labels.
+<li>Try to structure your form within one single column, it is easier to read. In the case of two columns, users often just fail to notice the right-hand column. Two columns are recommended only in the case of a big amount of data being constantly referred to.
+<li>Always use a polite tone and run a spell checker and a grammar checker on your forms.</ul>
+<p> <br />
+  <strong>7.13 Take into account the three possible validation levels:</strong></p>
+
+<ul><li><strong>Strict</strong> - user will not be allowed to proceed until entering proper information
+<li><strong>Soft</strong> - user can proceed, but receives a warning that the data is either missing or incorrect
+<li><strong>None </strong>- any input is accepted without warning.</ul>
+<p> <a name="mandatoryFields"></a>
+  <strong>7.14 Make sure that mandatory fields are clearly marked.</strong></p>
+
+You may:
+<ul><li>Use an asterisk and optionally the word "required" in parentheses following the field.
+<li>Color the input area differently (don't use red - it is usually reserved for error messages and might confuse the user).
+<li>Divide the form in two - mandatory and optional parts.
+<li>Either way you choose, always provide a legend (easy to find and understand) with the symbol's meaning.</ul>
+
+<p> <br />
+  <strong>7.15 Return relevant error messages.</strong></p>
+
+<p>Replace cryptic messages with straightforward error messages that are easier to understand. Error messages should tell users what went wrong and offer a possible solution. This can be easily handled now with CSS.</p>
+<p> <strong>7.16 Be especially careful with input fields and drop-down menus.</strong></p>
+
+<ul><li>All input fields should be clearly labeled. This won't bother experienced users, but it will be helpful for rookies. Users expect input field labels to be just above the input box, to the left.
+<li>Try to replace all drop-down list boxes with text fields. Drop-downs are harder to use when providing a larger number of options. Try to use them only for important data or to position them below more important input fields.
+<li>Give the user room to type - at least 20 characters for first and last name fields, minimum 50 characters wide by 10 lines tall for text fields.
+<li>Provide default answers where possible, letting your customer over-ride your choices of answer</ul>
+<p><br />
+  <strong>7.17 Have your form tested out by real users before releasing it.</strong></p>
+<p>Ask some real target-users to fill in your form. Analyze feedback, adapt to their needs. On top of all the tips above stands the rule of common sense: do your users understand what you ask from them? You can judge the accessibility of your html form by how many filled in forms contain mistaken information</p>
+
+<p><strong>Further guidance can be found on the following websites:</strong></p>
+
+<p><a href="https://webaim.org/techniques/forms/" target="_blank">Creating Accessible Forms</a> on WebAIM website.</p>
+<p><a href="http://www.webstandards.org/learn/tutorials/accessible-forms/" target="_blank">HTML/XHTML Accessible Forms Tutorial</a> on the Web Standards Project website.</p>
+<p>Unisys is not responsible for the content of external websites.</p>
+
+
+<a name="appendix"></a><h2>8. Appendix</h2>
+<strong>Appendix 1</strong>
+<p>Historically, designers and developers have been forced to use HTML to control both the content and the presentation of web pages. In order to achieve increasingly complex designs in inconsistent browsers, the limited set of tags provided by HTML was used in more and more convoluted ways, resulting in documents that looked good, but which were vastly inefficient, inflexible and inaccessible.</p>
+<p>As a result pages became simultaneously difficult to maintain and more prone to cross-browser incompatibility: the worst of both worlds. Vitally important tags like &lt;p&gt;, &lt;blockquote&gt; and &lt;table&gt;were misused because of their default presentational characteristics, or replaced by other less meaningful tags. Purely presentational tags like &lt;font&gt; and &lt;b&gt; were used to make things look right, with no attention paid to the editorial meaning of the content. Often, even after many hours spent breaking the rules still further in an attempt to solve problems, pages didn't make sense to non-visual browsers. Following the 2001 DDA (Disability Discrimination Act) unreasonably inaccessible web pages are now illegal.</p>
+<p>With the introduction of CSS (Cascading Style Sheets) and improvements in browser standards, it has become possible to achieve design in a way that preserves the meaning of the content. By separating content from presentation, and by using the proper tools for the job, pages have become smaller, more flexible, easier to maintain, easier to index in search engines, and accessible by all. Finally, the content written by writers can be presented in the way designers intend and in a way that developers can build and maintain.</p>
+
+
+                 
+<a name="documentHistory"></a><h2>9. Document History</h2>
+  
+        <table width="90%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+  <th>Date</th>
+     <th>Version</th>
+    <th>Change</th>
+     <th>Author</th>
+  
+  </tr>
+  <tr>
+    <td>27 June 2012</td>
+    <td>1.0</td>
+    <td>First draft of Semantic markup standards</td>
+    <td>Shilpi Kumar, Phil Storer, Jojest Thomson</td>
+  </tr>
+  <tr>
+    <td>10 April 2013</td>
+    <td>1.1</td>
+    <td>Added extra elements under section Forms</td>
+    <td>Jojest Thomson</td>
+  </tr>
+
+
+</table>
+
+			</div><!-- end content-->
+		</div><!-- end content-area-->
+	</div><!-- end  main-content -->
+    <div id="footer">
+	    <div class="copyright">
+        <h3>Confidential</h3>
+       	<p> This document is confidential and proprietary to Unisys Corporation. It is not to be used, reproduced, or disclosed outside Unisys without the written consent of Unisys Corporation. The information in this document is furnished for use by Unisys support personnel in servicing customer’s equipment or by a customer under a license agreement with Unisys.</p>
+		<p>Copyright © 2012 Unisys Corporation. All Rights Reserved.</p>
+		<p>Unisys is a trademark of Unisys Corporation.</p>
+		<p>All other brands and products referenced herein are acknowledged to be trademarks or registered trademarks of their respective holders.</p>
+		<p><strong>Version 1.0</strong> </p>
+        </div>
+    </div>
+</div>
+<div id="toTop">^ Back to Top</div>
+</body>
+</html>

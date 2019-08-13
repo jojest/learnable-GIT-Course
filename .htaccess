@@ -1,0 +1,26 @@
+Options -Multiviews
+
+RewriteEngine On
+RewriteBase /
+
+# Force search engines to use searchfriendlyurls.com
+RewriteCond %{HTTP_HOST} !^searchfriendlyurls\.com$
+RewriteRule ^(.*) http://searchfriendlyurls.com/$1 [R=301,L]
+
+# Specify search friendly URLs
+RewriteRule ^about$ /about.htm [L]
+RewriteRule ^usability$ /usability.htm [L]
+RewriteRule ^accessibility$ /accessibility.htm [L]
+RewriteRule ^EGIF$ /egif.htm [L]
+RewriteRule ^site_structure$ /site_structure.htm [L]
+RewriteRule ^branding$ /branding.htm [L]
+RewriteRule ^standards$ /standards.htm [L]
+RewriteRule ^CSS$ /css.htm [L]
+RewriteRule ^javascript$ /javascript.htm [L]
+RewriteRule ^JSP$ /jsp.htm [L]
+RewriteRule ^layouts$ /layouts.htm [L]
+RewriteRule ^elements$ /elements.htm [L]
+RewriteRule ^developer-checklist$ /checklist_developers.htm [L]
+RewriteRule ^checklist_testers$ /checklist_testers.htm [L]
+
+# Generated for free at SearchFriendlyURLs.com
